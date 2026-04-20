@@ -6,16 +6,13 @@
     <meta name="description" content="Martinoz Pizza Menu - Explore our wide variety of pizzas, sides, drinks and desserts!">
     <title>Menu - Martinoz Pizza</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- FAVICON -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
 
-    <!-- OG META -->
     <meta property="og:title" content="Martinoz Pizza - Menu">
     <meta property="og:description" content="Explore our delicious menu - Freshly Baked Happiness!">
     <meta property="og:image" content="images/logo.png">
@@ -50,57 +47,39 @@
 <!-- ========== NAVBAR ========== -->
 <nav class="navbar" id="navbar">
     <div class="container">
-
-        <!-- LOGO -->
         <a href="index.html" class="nav-brand">
             <svg xmlns="http://www.w3.org/2000/svg"
                  viewBox="0 0 300 80"
                  class="nav-logo-svg">
-                <circle cx="40" cy="40" r="35"
-                        fill="#1B5E20" opacity="0.15"/>
+                <circle cx="40" cy="40" r="35" fill="#1B5E20" opacity="0.15"/>
                 <circle cx="40" cy="40" r="28" fill="#2E7D32"/>
-                <line x1="40" y1="12" x2="40" y2="68"
-                      stroke="#F9A825" stroke-width="2"/>
-                <line x1="14" y1="30" x2="66" y2="50"
-                      stroke="#F9A825" stroke-width="2"/>
-                <line x1="14" y1="50" x2="66" y2="30"
-                      stroke="#F9A825" stroke-width="2"/>
+                <line x1="40" y1="12" x2="40" y2="68" stroke="#F9A825" stroke-width="2"/>
+                <line x1="14" y1="30" x2="66" y2="50" stroke="#F9A825" stroke-width="2"/>
+                <line x1="14" y1="50" x2="66" y2="30" stroke="#F9A825" stroke-width="2"/>
                 <circle cx="33" cy="30" r="3" fill="#F9A825"/>
                 <circle cx="48" cy="35" r="2.5" fill="#F9A825"/>
                 <circle cx="36" cy="48" r="2.5" fill="#F9A825"/>
                 <circle cx="50" cy="50" r="3" fill="#F9A825"/>
-                <circle cx="40" cy="40" r="28" fill="none"
-                        stroke="#F9A825" stroke-width="2.5"/>
-                <text x="88" y="35"
-                      font-family="Arial Black, sans-serif"
+                <circle cx="40" cy="40" r="28" fill="none" stroke="#F9A825" stroke-width="2.5"/>
+                <text x="88" y="35" font-family="Arial Black, sans-serif"
                       font-size="26" font-weight="900"
                       fill="#1A2E1A" letter-spacing="1">MARTINOZ</text>
-                <text x="90" y="58"
-                      font-family="Arial Black, sans-serif"
+                <text x="90" y="58" font-family="Arial Black, sans-serif"
                       font-size="18" font-weight="900"
                       fill="#2E7D32" letter-spacing="6">PIZZA</text>
-                <text x="90" y="72"
-                      font-family="Arial, sans-serif"
+                <text x="90" y="72" font-family="Arial, sans-serif"
                       font-size="9" fill="#F9A825"
                       letter-spacing="2">FRESHLY BAKED HAPPINESS</text>
             </svg>
         </a>
 
-        <!-- NAV LINKS -->
         <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="menu.html" class="active">Menu</a></li>
             <li><a href="branches.html">Branches</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li>
-                <a href="menu.html" class="btn-order">
-                    <i class="fas fa-shopping-cart"></i>
-                    Order Now
-                </a>
-            </li>
         </ul>
 
-        <!-- HAMBURGER -->
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
@@ -113,24 +92,17 @@
 <section class="menu-hero">
     <div class="container">
         <div class="menu-hero-content">
-
             <span class="section-tag">🍕 Our Menu</span>
-
-            <h1>Explore Our
-                <span class="highlight">Delicious</span> Menu
-            </h1>
-
+            <h1>Explore Our <span class="highlight">Delicious</span> Menu</h1>
             <p>Handcrafted with love using the finest fresh ingredients</p>
 
             <!-- SEARCH BAR -->
             <div class="menu-search">
                 <i class="fas fa-search"></i>
-                <input
-                    type="text"
-                    id="menuSearch"
-                    placeholder="Search your favourite pizza..."
-                    onkeyup="searchMenu()"
-                >
+                <input type="text"
+                       id="menuSearch"
+                       placeholder="Search your favourite pizza..."
+                       onkeyup="searchMenu()">
                 <button onclick="clearSearch()" title="Clear">
                     <i class="fas fa-times"></i>
                 </button>
@@ -138,28 +110,22 @@
 
             <!-- QUICK FILTERS -->
             <div class="quick-filters">
-                <button class="qf-btn active"
-                        onclick="quickFilter('all', this)">
+                <button class="qf-btn active" onclick="quickFilter('all', this)">
                     🍕 All Items
                 </button>
-                <button class="qf-btn"
-                        onclick="quickFilter('veg', this)">
+                <button class="qf-btn" onclick="quickFilter('veg', this)">
                     🟢 Pure Veg
                 </button>
-                <button class="qf-btn"
-                        onclick="quickFilter('nonveg', this)">
+                <button class="qf-btn" onclick="quickFilter('nonveg', this)">
                     🔴 Non Veg
                 </button>
-                <button class="qf-btn"
-                        onclick="quickFilter('bestseller', this)">
+                <button class="qf-btn" onclick="quickFilter('bestseller', this)">
                     ⭐ Best Sellers
                 </button>
-                <button class="qf-btn"
-                        onclick="quickFilter('new', this)">
+                <button class="qf-btn" onclick="quickFilter('new', this)">
                     🆕 New Arrivals
                 </button>
-                <button class="qf-btn"
-                        onclick="quickFilter('offer', this)">
+                <button class="qf-btn" onclick="quickFilter('offer', this)">
                     🔥 On Offer
                 </button>
             </div>
@@ -172,7 +138,7 @@
     <div class="container">
         <div class="menu-layout">
 
-            <!-- ===== SIDEBAR ===== -->
+            <!-- SIDEBAR -->
             <aside class="menu-sidebar" id="menuSidebar">
                 <div class="sidebar-sticky">
                     <h3 class="sidebar-title">
@@ -249,13 +215,12 @@
                     <div class="sidebar-offer">
                         <span>🌿</span>
                         <h4>Today's Special!</h4>
-                        <p>Use code <strong>MARTINOZ10</strong>
-                           for 10% OFF</p>
+                        <p>Use code <strong>MARTINOZ10</strong> for 10% OFF</p>
                     </div>
                 </div>
             </aside>
 
-            <!-- ===== MENU CONTENT ===== -->
+            <!-- MENU CONTENT -->
             <div class="menu-content" id="menuContent">
 
                 <!-- ===== VEG PIZZAS ===== -->
@@ -270,7 +235,6 @@
                         </div>
                         <span class="category-badge veg">Pure Veg</span>
                     </div>
-
                     <div class="items-grid">
 
                         <!-- Margherita -->
@@ -280,8 +244,7 @@
                              data-name="Margherita Classic">
                             <div class="item-img-wrap">
                                 <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=400"
-                                     alt="Margherita Classic"
-                                     loading="lazy">
+                                     alt="Margherita Classic" loading="lazy">
                                 <div class="item-badges">
                                     <span class="ibadge bestseller">⭐ Best Seller</span>
                                     <span class="veg-dot veg"></span>
@@ -297,31 +260,26 @@
                                 <div class="item-sizes">
                                     <span class="size-label">Size:</span>
                                     <div class="size-btns">
-                                        <button class="sz active"
-                                                data-price="9.99"
-                                                onclick="selectSize(this, 'Margherita Classic')">
+                                        <button class="sz active" data-price="9.99"
+                                                onclick="selectSize(this)">
                                             S<br><small>$9.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="13.99"
-                                                onclick="selectSize(this, 'Margherita Classic')">
+                                        <button class="sz" data-price="13.99"
+                                                onclick="selectSize(this)">
                                             M<br><small>$13.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="17.99"
-                                                onclick="selectSize(this, 'Margherita Classic')">
+                                        <button class="sz" data-price="17.99"
+                                                onclick="selectSize(this)">
                                             L<br><small>$17.99</small>
                                         </button>
                                     </div>
                                 </div>
+                                <!-- ❌ ADD BUTTON REMOVE - Only Price Show -->
                                 <div class="item-footer">
                                     <div class="item-price">
                                         <span class="curr-price">$9.99</span>
                                     </div>
-                                    <button class="add-btn"
-                                            onclick="addToCart('Margherita Classic', 9.99)">
-                                        <i class="fas fa-plus"></i> Add
-                                    </button>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -333,8 +291,7 @@
                              data-name="Garden Delight">
                             <div class="item-img-wrap">
                                 <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=400"
-                                     alt="Garden Delight"
-                                     loading="lazy">
+                                     alt="Garden Delight" loading="lazy">
                                 <div class="item-badges">
                                     <span class="ibadge new">🆕 New</span>
                                     <span class="veg-dot veg"></span>
@@ -350,19 +307,16 @@
                                 <div class="item-sizes">
                                     <span class="size-label">Size:</span>
                                     <div class="size-btns">
-                                        <button class="sz active"
-                                                data-price="10.99"
-                                                onclick="selectSize(this, 'Garden Delight')">
+                                        <button class="sz active" data-price="10.99"
+                                                onclick="selectSize(this)">
                                             S<br><small>$10.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="14.99"
-                                                onclick="selectSize(this, 'Garden Delight')">
+                                        <button class="sz" data-price="14.99"
+                                                onclick="selectSize(this)">
                                             M<br><small>$14.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="18.99"
-                                                onclick="selectSize(this, 'Garden Delight')">
+                                        <button class="sz" data-price="18.99"
+                                                onclick="selectSize(this)">
                                             L<br><small>$18.99</small>
                                         </button>
                                     </div>
@@ -371,10 +325,7 @@
                                     <div class="item-price">
                                         <span class="curr-price">$10.99</span>
                                     </div>
-                                    <button class="add-btn"
-                                            onclick="addToCart('Garden Delight', 10.99)">
-                                        <i class="fas fa-plus"></i> Add
-                                    </button>
+                                  
                                 </div>
                             </div>
                         </div>
@@ -386,8 +337,7 @@
                              data-name="Paneer Tikka Pizza">
                             <div class="item-img-wrap">
                                 <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=400"
-                                     alt="Paneer Tikka Pizza"
-                                     loading="lazy">
+                                     alt="Paneer Tikka Pizza" loading="lazy">
                                 <div class="item-badges">
                                     <span class="ibadge offer">🔥 20% OFF</span>
                                     <span class="veg-dot veg"></span>
@@ -403,19 +353,16 @@
                                 <div class="item-sizes">
                                     <span class="size-label">Size:</span>
                                     <div class="size-btns">
-                                        <button class="sz active"
-                                                data-price="11.99"
-                                                onclick="selectSize(this, 'Paneer Tikka Pizza')">
+                                        <button class="sz active" data-price="11.99"
+                                                onclick="selectSize(this)">
                                             S<br><small>$11.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="15.99"
-                                                onclick="selectSize(this, 'Paneer Tikka Pizza')">
+                                        <button class="sz" data-price="15.99"
+                                                onclick="selectSize(this)">
                                             M<br><small>$15.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="19.99"
-                                                onclick="selectSize(this, 'Paneer Tikka Pizza')">
+                                        <button class="sz" data-price="19.99"
+                                                onclick="selectSize(this)">
                                             L<br><small>$19.99</small>
                                         </button>
                                     </div>
@@ -425,10 +372,7 @@
                                         <span class="old-price">$14.99</span>
                                         <span class="curr-price">$11.99</span>
                                     </div>
-                                    <button class="add-btn"
-                                            onclick="addToCart('Paneer Tikka Pizza', 11.99)">
-                                        <i class="fas fa-plus"></i> Add
-                                    </button>
+                                 
                                 </div>
                             </div>
                         </div>
@@ -440,8 +384,7 @@
                              data-name="Double Cheese Pizza">
                             <div class="item-img-wrap">
                                 <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400"
-                                     alt="Double Cheese Pizza"
-                                     loading="lazy">
+                                     alt="Double Cheese Pizza" loading="lazy">
                                 <div class="item-badges">
                                     <span class="ibadge bestseller">⭐ Best Seller</span>
                                     <span class="veg-dot veg"></span>
@@ -457,19 +400,16 @@
                                 <div class="item-sizes">
                                     <span class="size-label">Size:</span>
                                     <div class="size-btns">
-                                        <button class="sz active"
-                                                data-price="12.99"
-                                                onclick="selectSize(this, 'Double Cheese Pizza')">
+                                        <button class="sz active" data-price="12.99"
+                                                onclick="selectSize(this)">
                                             S<br><small>$12.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="16.99"
-                                                onclick="selectSize(this, 'Double Cheese Pizza')">
+                                        <button class="sz" data-price="16.99"
+                                                onclick="selectSize(this)">
                                             M<br><small>$16.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="20.99"
-                                                onclick="selectSize(this, 'Double Cheese Pizza')">
+                                        <button class="sz" data-price="20.99"
+                                                onclick="selectSize(this)">
                                             L<br><small>$20.99</small>
                                         </button>
                                     </div>
@@ -478,10 +418,7 @@
                                     <div class="item-price">
                                         <span class="curr-price">$12.99</span>
                                     </div>
-                                    <button class="add-btn"
-                                            onclick="addToCart('Double Cheese Pizza', 12.99)">
-                                        <i class="fas fa-plus"></i> Add
-                                    </button>
+                                     
                                 </div>
                             </div>
                         </div>
@@ -501,7 +438,6 @@
                         </div>
                         <span class="category-badge nonveg">Non Veg</span>
                     </div>
-
                     <div class="items-grid">
 
                         <!-- BBQ Chicken -->
@@ -511,8 +447,7 @@
                              data-name="BBQ Chicken Pizza">
                             <div class="item-img-wrap">
                                 <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400"
-                                     alt="BBQ Chicken Pizza"
-                                     loading="lazy">
+                                     alt="BBQ Chicken Pizza" loading="lazy">
                                 <div class="item-badges">
                                     <span class="ibadge bestseller">⭐ Best Seller</span>
                                     <span class="veg-dot nonveg"></span>
@@ -528,19 +463,16 @@
                                 <div class="item-sizes">
                                     <span class="size-label">Size:</span>
                                     <div class="size-btns">
-                                        <button class="sz active"
-                                                data-price="13.99"
-                                                onclick="selectSize(this, 'BBQ Chicken Pizza')">
+                                        <button class="sz active" data-price="13.99"
+                                                onclick="selectSize(this)">
                                             S<br><small>$13.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="17.99"
-                                                onclick="selectSize(this, 'BBQ Chicken Pizza')">
+                                        <button class="sz" data-price="17.99"
+                                                onclick="selectSize(this)">
                                             M<br><small>$17.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="21.99"
-                                                onclick="selectSize(this, 'BBQ Chicken Pizza')">
+                                        <button class="sz" data-price="21.99"
+                                                onclick="selectSize(this)">
                                             L<br><small>$21.99</small>
                                         </button>
                                     </div>
@@ -549,10 +481,7 @@
                                     <div class="item-price">
                                         <span class="curr-price">$13.99</span>
                                     </div>
-                                    <button class="add-btn"
-                                            onclick="addToCart('BBQ Chicken Pizza', 13.99)">
-                                        <i class="fas fa-plus"></i> Add
-                                    </button>
+                                     
                                 </div>
                             </div>
                         </div>
@@ -564,8 +493,7 @@
                              data-name="Pepperoni Feast">
                             <div class="item-img-wrap">
                                 <img src="https://images.unsplash.com/photo-1548369937-47519962c11a?w=400"
-                                     alt="Pepperoni Feast"
-                                     loading="lazy">
+                                     alt="Pepperoni Feast" loading="lazy">
                                 <div class="item-badges">
                                     <span class="ibadge hot">🌶️ Spicy</span>
                                     <span class="veg-dot nonveg"></span>
@@ -581,19 +509,16 @@
                                 <div class="item-sizes">
                                     <span class="size-label">Size:</span>
                                     <div class="size-btns">
-                                        <button class="sz active"
-                                                data-price="14.99"
-                                                onclick="selectSize(this, 'Pepperoni Feast')">
+                                        <button class="sz active" data-price="14.99"
+                                                onclick="selectSize(this)">
                                             S<br><small>$14.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="18.99"
-                                                onclick="selectSize(this, 'Pepperoni Feast')">
+                                        <button class="sz" data-price="18.99"
+                                                onclick="selectSize(this)">
                                             M<br><small>$18.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="22.99"
-                                                onclick="selectSize(this, 'Pepperoni Feast')">
+                                        <button class="sz" data-price="22.99"
+                                                onclick="selectSize(this)">
                                             L<br><small>$22.99</small>
                                         </button>
                                     </div>
@@ -602,10 +527,7 @@
                                     <div class="item-price">
                                         <span class="curr-price">$14.99</span>
                                     </div>
-                                    <button class="add-btn"
-                                            onclick="addToCart('Pepperoni Feast', 14.99)">
-                                        <i class="fas fa-plus"></i> Add
-                                    </button>
+                                     
                                 </div>
                             </div>
                         </div>
@@ -617,8 +539,7 @@
                              data-name="Chicken Tikka Pizza">
                             <div class="item-img-wrap">
                                 <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400"
-                                     alt="Chicken Tikka Pizza"
-                                     loading="lazy">
+                                     alt="Chicken Tikka Pizza" loading="lazy">
                                 <div class="item-badges">
                                     <span class="ibadge new">🆕 New</span>
                                     <span class="veg-dot nonveg"></span>
@@ -634,19 +555,16 @@
                                 <div class="item-sizes">
                                     <span class="size-label">Size:</span>
                                     <div class="size-btns">
-                                        <button class="sz active"
-                                                data-price="13.99"
-                                                onclick="selectSize(this, 'Chicken Tikka Pizza')">
+                                        <button class="sz active" data-price="13.99"
+                                                onclick="selectSize(this)">
                                             S<br><small>$13.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="17.99"
-                                                onclick="selectSize(this, 'Chicken Tikka Pizza')">
+                                        <button class="sz" data-price="17.99"
+                                                onclick="selectSize(this)">
                                             M<br><small>$17.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="21.99"
-                                                onclick="selectSize(this, 'Chicken Tikka Pizza')">
+                                        <button class="sz" data-price="21.99"
+                                                onclick="selectSize(this)">
                                             L<br><small>$21.99</small>
                                         </button>
                                     </div>
@@ -655,10 +573,7 @@
                                     <div class="item-price">
                                         <span class="curr-price">$13.99</span>
                                     </div>
-                                    <button class="add-btn"
-                                            onclick="addToCart('Chicken Tikka Pizza', 13.99)">
-                                        <i class="fas fa-plus"></i> Add
-                                    </button>
+                                     
                                 </div>
                             </div>
                         </div>
@@ -670,8 +585,7 @@
                              data-name="Martinoz Special">
                             <div class="item-img-wrap">
                                 <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400"
-                                     alt="Martinoz Special"
-                                     loading="lazy">
+                                     alt="Martinoz Special" loading="lazy">
                                 <div class="item-badges">
                                     <span class="ibadge special">👑 Signature</span>
                                     <span class="veg-dot nonveg"></span>
@@ -687,19 +601,16 @@
                                 <div class="item-sizes">
                                     <span class="size-label">Size:</span>
                                     <div class="size-btns">
-                                        <button class="sz active"
-                                                data-price="15.99"
-                                                onclick="selectSize(this, 'Martinoz Special')">
+                                        <button class="sz active" data-price="15.99"
+                                                onclick="selectSize(this)">
                                             S<br><small>$15.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="19.99"
-                                                onclick="selectSize(this, 'Martinoz Special')">
+                                        <button class="sz" data-price="19.99"
+                                                onclick="selectSize(this)">
                                             M<br><small>$19.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="24.99"
-                                                onclick="selectSize(this, 'Martinoz Special')">
+                                        <button class="sz" data-price="24.99"
+                                                onclick="selectSize(this)">
                                             L<br><small>$24.99</small>
                                         </button>
                                     </div>
@@ -709,10 +620,7 @@
                                         <span class="old-price">$19.99</span>
                                         <span class="curr-price">$15.99</span>
                                     </div>
-                                    <button class="add-btn"
-                                            onclick="addToCart('Martinoz Special', 15.99)">
-                                        <i class="fas fa-plus"></i> Add
-                                    </button>
+                                     
                                 </div>
                             </div>
                         </div>
@@ -732,7 +640,6 @@
                         </div>
                         <span class="category-badge cheese">⭐ Premium</span>
                     </div>
-
                     <div class="items-grid">
 
                         <!-- Classic Cheese Burst -->
@@ -742,8 +649,7 @@
                              data-name="Classic Cheese Burst">
                             <div class="item-img-wrap">
                                 <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=400"
-                                     alt="Classic Cheese Burst"
-                                     loading="lazy">
+                                     alt="Classic Cheese Burst" loading="lazy">
                                 <div class="item-badges">
                                     <span class="ibadge bestseller">⭐ Best Seller</span>
                                     <span class="veg-dot veg"></span>
@@ -759,19 +665,16 @@
                                 <div class="item-sizes">
                                     <span class="size-label">Size:</span>
                                     <div class="size-btns">
-                                        <button class="sz active"
-                                                data-price="16.99"
-                                                onclick="selectSize(this, 'Classic Cheese Burst')">
+                                        <button class="sz active" data-price="16.99"
+                                                onclick="selectSize(this)">
                                             M<br><small>$16.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="21.99"
-                                                onclick="selectSize(this, 'Classic Cheese Burst')">
+                                        <button class="sz" data-price="21.99"
+                                                onclick="selectSize(this)">
                                             L<br><small>$21.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="27.99"
-                                                onclick="selectSize(this, 'Classic Cheese Burst')">
+                                        <button class="sz" data-price="27.99"
+                                                onclick="selectSize(this)">
                                             XL<br><small>$27.99</small>
                                         </button>
                                     </div>
@@ -780,10 +683,7 @@
                                     <div class="item-price">
                                         <span class="curr-price">$16.99</span>
                                     </div>
-                                    <button class="add-btn"
-                                            onclick="addToCart('Classic Cheese Burst', 16.99)">
-                                        <i class="fas fa-plus"></i> Add
-                                    </button>
+                                     
                                 </div>
                             </div>
                         </div>
@@ -795,8 +695,7 @@
                              data-name="Chicken Cheese Burst">
                             <div class="item-img-wrap">
                                 <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400"
-                                     alt="Chicken Cheese Burst"
-                                     loading="lazy">
+                                     alt="Chicken Cheese Burst" loading="lazy">
                                 <div class="item-badges">
                                     <span class="ibadge new">🆕 New</span>
                                     <span class="veg-dot nonveg"></span>
@@ -812,19 +711,16 @@
                                 <div class="item-sizes">
                                     <span class="size-label">Size:</span>
                                     <div class="size-btns">
-                                        <button class="sz active"
-                                                data-price="18.99"
-                                                onclick="selectSize(this, 'Chicken Cheese Burst')">
+                                        <button class="sz active" data-price="18.99"
+                                                onclick="selectSize(this)">
                                             M<br><small>$18.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="23.99"
-                                                onclick="selectSize(this, 'Chicken Cheese Burst')">
+                                        <button class="sz" data-price="23.99"
+                                                onclick="selectSize(this)">
                                             L<br><small>$23.99</small>
                                         </button>
-                                        <button class="sz"
-                                                data-price="29.99"
-                                                onclick="selectSize(this, 'Chicken Cheese Burst')">
+                                        <button class="sz" data-price="29.99"
+                                                onclick="selectSize(this)">
                                             XL<br><small>$29.99</small>
                                         </button>
                                     </div>
@@ -833,10 +729,7 @@
                                     <div class="item-price">
                                         <span class="curr-price">$18.99</span>
                                     </div>
-                                    <button class="add-btn"
-                                            onclick="addToCart('Chicken Cheese Burst', 18.99)">
-                                        <i class="fas fa-plus"></i> Add
-                                    </button>
+                                     
                                 </div>
                             </div>
                         </div>
@@ -856,7 +749,6 @@
                         </div>
                         <span class="category-badge combo">💰 Save More</span>
                     </div>
-
                     <div class="items-grid combo-grid">
 
                         <!-- Family Feast -->
@@ -866,8 +758,7 @@
                              data-name="Family Feast Combo">
                             <div class="item-img-wrap">
                                 <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400"
-                                     alt="Family Feast Combo"
-                                     loading="lazy">
+                                     alt="Family Feast Combo" loading="lazy">
                                 <div class="item-badges">
                                     <span class="ibadge offer">🔥 30% OFF</span>
                                 </div>
@@ -885,10 +776,7 @@
                                         <span class="old-price">$59.99</span>
                                         <span class="curr-price">$39.99</span>
                                     </div>
-                                    <button class="add-btn"
-                                            onclick="addToCart('Family Feast Combo', 39.99)">
-                                        <i class="fas fa-plus"></i> Add
-                                    </button>
+                                     
                                 </div>
                             </div>
                         </div>
@@ -900,8 +788,7 @@
                              data-name="Couple Combo">
                             <div class="item-img-wrap">
                                 <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400"
-                                     alt="Couple Combo"
-                                     loading="lazy">
+                                     alt="Couple Combo" loading="lazy">
                                 <div class="item-badges">
                                     <span class="ibadge offer">🔥 25% OFF</span>
                                 </div>
@@ -919,10 +806,7 @@
                                         <span class="old-price">$29.99</span>
                                         <span class="curr-price">$21.99</span>
                                     </div>
-                                    <button class="add-btn"
-                                            onclick="addToCart('Couple Combo', 21.99)">
-                                        <i class="fas fa-plus"></i> Add
-                                    </button>
+                                     
                                 </div>
                             </div>
                         </div>
@@ -934,8 +818,7 @@
                              data-name="Party Pack">
                             <div class="item-img-wrap">
                                 <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=400"
-                                     alt="Party Pack"
-                                     loading="lazy">
+                                     alt="Party Pack" loading="lazy">
                                 <div class="item-badges">
                                     <span class="ibadge new">🎉 Party</span>
                                 </div>
@@ -953,10 +836,7 @@
                                         <span class="old-price">$109.99</span>
                                         <span class="curr-price">$74.99</span>
                                     </div>
-                                    <button class="add-btn"
-                                            onclick="addToCart('Party Pack', 74.99)">
-                                        <i class="fas fa-plus"></i> Add
-                                    </button>
+                                     
                                 </div>
                             </div>
                         </div>
@@ -976,7 +856,6 @@
                         </div>
                         <span class="category-badge sides">🍟 Snacks</span>
                     </div>
-
                     <div class="items-grid">
 
                         <!-- Garlic Bread -->
@@ -986,8 +865,7 @@
                              data-name="Cheesy Garlic Bread">
                             <div class="item-img-wrap">
                                 <img src="https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?w=400"
-                                     alt="Cheesy Garlic Bread"
-                                     loading="lazy">
+                                     alt="Cheesy Garlic Bread" loading="lazy">
                                 <div class="item-badges">
                                     <span class="ibadge bestseller">⭐ Must Try</span>
                                     <span class="veg-dot veg"></span>
@@ -1004,10 +882,7 @@
                                     <div class="item-price">
                                         <span class="curr-price">$5.99</span>
                                     </div>
-                                    <button class="add-btn"
-                                            onclick="addToCart('Cheesy Garlic Bread', 5.99)">
-                                        <i class="fas fa-plus"></i> Add
-                                    </button>
+                                     
                                 </div>
                             </div>
                         </div>
@@ -1019,8 +894,7 @@
                              data-name="Spicy Chicken Wings">
                             <div class="item-img-wrap">
                                 <img src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=400"
-                                     alt="Spicy Chicken Wings"
-                                     loading="lazy">
+                                     alt="Spicy Chicken Wings" loading="lazy">
                                 <div class="item-badges">
                                     <span class="ibadge hot">🌶️ Spicy</span>
                                     <span class="veg-dot nonveg"></span>
@@ -1037,10 +911,7 @@
                                     <div class="item-price">
                                         <span class="curr-price">$8.99</span>
                                     </div>
-                                    <button class="add-btn"
-                                            onclick="addToCart('Spicy Chicken Wings', 8.99)">
-                                        <i class="fas fa-plus"></i> Add
-                                    </button>
+                                     
                                 </div>
                             </div>
                         </div>
@@ -1052,8 +923,7 @@
                              data-name="Loaded Cheese Fries">
                             <div class="item-img-wrap">
                                 <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400"
-                                     alt="Loaded Cheese Fries"
-                                     loading="lazy">
+                                     alt="Loaded Cheese Fries" loading="lazy">
                                 <div class="item-badges">
                                     <span class="ibadge new">🆕 New</span>
                                     <span class="veg-dot veg"></span>
@@ -1070,10 +940,7 @@
                                     <div class="item-price">
                                         <span class="curr-price">$6.99</span>
                                     </div>
-                                    <button class="add-btn"
-                                            onclick="addToCart('Loaded Cheese Fries', 6.99)">
-                                        <i class="fas fa-plus"></i> Add
-                                    </button>
+                                     
                                 </div>
                             </div>
                         </div>
@@ -1093,7 +960,6 @@
                         </div>
                         <span class="category-badge drinks">🥤 Cold</span>
                     </div>
-
                     <div class="items-grid drinks-grid">
 
                         <div class="menu-item drink-item"
@@ -1105,10 +971,7 @@
                                 <p>Regular / Diet / Zero</p>
                                 <div class="item-footer">
                                     <span class="curr-price">$2.49</span>
-                                    <button class="add-btn small"
-                                            onclick="addToCart('Coca Cola', 2.49)">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
+                                    <!-- ❌ Add Button Remove -->
                                 </div>
                             </div>
                         </div>
@@ -1122,10 +985,6 @@
                                 <p>Regular / Diet</p>
                                 <div class="item-footer">
                                     <span class="curr-price">$2.49</span>
-                                    <button class="add-btn small"
-                                            onclick="addToCart('Pepsi', 2.49)">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -1139,10 +998,6 @@
                                 <p>Sweet / Salted</p>
                                 <div class="item-footer">
                                     <span class="curr-price">$3.49</span>
-                                    <button class="add-btn small"
-                                            onclick="addToCart('Fresh Lime Soda', 3.49)">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -1156,10 +1011,6 @@
                                 <p>Fresh mango yogurt drink</p>
                                 <div class="item-footer">
                                     <span class="curr-price">$4.49</span>
-                                    <button class="add-btn small"
-                                            onclick="addToCart('Mango Lassi', 4.49)">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -1173,10 +1024,6 @@
                                 <p>500ml bottle</p>
                                 <div class="item-footer">
                                     <span class="curr-price">$1.49</span>
-                                    <button class="add-btn small"
-                                            onclick="addToCart('Mineral Water', 1.49)">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -1190,10 +1037,6 @@
                                 <p>Thick creamy chocolate milkshake</p>
                                 <div class="item-footer">
                                     <span class="curr-price">$5.49</span>
-                                    <button class="add-btn small"
-                                            onclick="addToCart('Chocolate Shake', 5.49)">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -1213,7 +1056,6 @@
                         </div>
                         <span class="category-badge dessert">🍰 Sweet</span>
                     </div>
-
                     <div class="items-grid">
 
                         <!-- Choco Lava -->
@@ -1223,8 +1065,7 @@
                              data-name="Choco Lava Cake">
                             <div class="item-img-wrap">
                                 <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400"
-                                     alt="Choco Lava Cake"
-                                     loading="lazy">
+                                     alt="Choco Lava Cake" loading="lazy">
                                 <div class="item-badges">
                                     <span class="ibadge bestseller">⭐ Must Try</span>
                                     <span class="veg-dot veg"></span>
@@ -1241,10 +1082,7 @@
                                     <div class="item-price">
                                         <span class="curr-price">$6.99</span>
                                     </div>
-                                    <button class="add-btn"
-                                            onclick="addToCart('Choco Lava Cake', 6.99)">
-                                        <i class="fas fa-plus"></i> Add
-                                    </button>
+                                     
                                 </div>
                             </div>
                         </div>
@@ -1256,8 +1094,7 @@
                              data-name="Classic Tiramisu">
                             <div class="item-img-wrap">
                                 <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400"
-                                     alt="Classic Tiramisu"
-                                     loading="lazy">
+                                     alt="Classic Tiramisu" loading="lazy">
                                 <div class="item-badges">
                                     <span class="ibadge new">🆕 New</span>
                                     <span class="veg-dot veg"></span>
@@ -1274,10 +1111,7 @@
                                     <div class="item-price">
                                         <span class="curr-price">$7.99</span>
                                     </div>
-                                    <button class="add-btn"
-                                            onclick="addToCart('Classic Tiramisu', 7.99)">
-                                        <i class="fas fa-plus"></i> Add
-                                    </button>
+                                     
                                 </div>
                             </div>
                         </div>
@@ -1289,8 +1123,7 @@
                              data-name="Ice Cream Scoop">
                             <div class="item-img-wrap">
                                 <img src="https://images.unsplash.com/photo-1567206563114-c179706e8442?w=400"
-                                     alt="Ice Cream Scoop"
-                                     loading="lazy">
+                                     alt="Ice Cream Scoop" loading="lazy">
                                 <div class="item-badges">
                                     <span class="ibadge offer">🔥 Offer</span>
                                     <span class="veg-dot veg"></span>
@@ -1308,10 +1141,7 @@
                                         <span class="old-price">$5.99</span>
                                         <span class="curr-price">$3.99</span>
                                     </div>
-                                    <button class="add-btn"
-                                            onclick="addToCart('Ice Cream Scoop', 3.99)">
-                                        <i class="fas fa-plus"></i> Add
-                                    </button>
+                                     
                                 </div>
                             </div>
                         </div>
@@ -1335,49 +1165,11 @@
     </div>
 </section>
 
-<!-- ========== CART SIDEBAR ========== -->
-<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
-<div class="cart-sidebar" id="cartSidebar">
-    <div class="cart-header">
-        <h3>🛒 Your Order</h3>
-        <button onclick="toggleCart()" class="cart-close">✕</button>
-    </div>
-    <div class="cart-items" id="cartItems">
-        <div class="empty-cart">
-            <span>🍕</span>
-            <p>Your cart is empty</p>
-            <small>Add some delicious pizzas!</small>
-        </div>
-    </div>
-    <div class="cart-footer" id="cartFooter" style="display:none">
-        <div class="cart-total">
-            <span>Total:</span>
-            <span id="cartTotal">$0.00</span>
-        </div>
-        <input type="text"
-               placeholder="Enter Coupon Code"
-               class="coupon-input"
-               id="couponInput">
-        <button onclick="applyCoupon()" class="apply-coupon">
-            Apply Coupon
-        </button>
-        <button class="checkout-btn" onclick="checkout()">
-            <i class="fas fa-rocket"></i>
-            Proceed to Checkout
-        </button>
-    </div>
-</div>
-
-<!-- ========== FLOAT BUTTONS ========== -->
-<div class="cart-float" onclick="toggleCart()">
-    <i class="fas fa-shopping-cart"></i>
-    <span class="cart-count" id="cartCount">0</span>
-</div>
-
-<a href="https://wa.me/1234567890?text=Hi! I want to order from Martinoz Pizza"
+<!-- ========== WHATSAPP ========== -->
+<a href="https://wa.me/1234567890?text=Hi! I want to know about Martinoz Pizza menu"
    class="whatsapp-float"
    target="_blank"
-   aria-label="WhatsApp Order">
+   aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -1393,11 +1185,10 @@
 </div>
 
 <!-- ========== SCRIPTS ========== -->
-<script src="js/main.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/slider.js"></script>
 
-<!-- Inline Loader + Navbar CSS & JS -->
+<!-- Loader + Navbar + Styles -->
 <style>
 /* PAGE LOADER */
 #pageLoader {
@@ -1456,44 +1247,59 @@
     font-weight: 500;
 }
 
-/* TOAST */
-.toast {
-    position: fixed;
-    bottom: 170px; right: 25px;
-    background: #1A2E1A;
+/* ===== CONTACT ORDER BTN (Add ની જગ્યાએ) ===== */
+.contact-order-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #1B5E20, #43A047);
     color: white;
-    padding: 12px 20px;
-    border-radius: 12px;
+    padding: 8px 16px;
+    border-radius: 50px;
     font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 600;
-    z-index: 9999;
-    box-shadow: 0 8px 28px rgba(27,94,32,0.30);
-    animation: slideInR 0.3s ease;
-    max-width: 300px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(27,94,32,0.25);
+    white-space: nowrap;
 }
-@keyframes slideInR {
-    from { transform: translateX(100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
+
+.contact-order-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(27,94,32,0.40);
+    color: white;
+}
+
+/* ===== DRINK ITEM FOOTER - Price only ===== */
+.drink-item .item-footer {
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+}
+
+.drink-item .item-footer .curr-price {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #1B5E20;
 }
 </style>
 
 <script>
-// Page Loader
+/* Page Loader */
 window.addEventListener('load', () => {
     setTimeout(() => {
-        document.getElementById('pageLoader')
-                ?.classList.add('hidden');
+        document.getElementById('pageLoader')?.classList.add('hidden');
     }, 1800);
 });
 
-// Navbar Scroll
+/* Navbar Scroll */
 window.addEventListener('scroll', () => {
     document.getElementById('navbar')
             ?.classList.toggle('scrolled', window.scrollY > 50);
 }, { passive: true });
 
-// Hamburger
+/* Hamburger */
 document.addEventListener('DOMContentLoaded', () => {
     const ham = document.getElementById('hamburger');
     const nav = document.getElementById('navLinks');
@@ -1509,14 +1315,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Toast
-function showToast(msg) {
-    document.querySelector('.toast')?.remove();
-    const t = document.createElement('div');
-    t.className = 'toast';
-    t.textContent = msg;
-    document.body.appendChild(t);
-    setTimeout(() => t.remove(), 3000);
+/* Size Selector - Price update only */
+function selectSize(btn) {
+    const group = btn.closest('.size-btns');
+    if (!group) return;
+    group.querySelectorAll('.sz').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const price   = parseFloat(btn.getAttribute('data-price')) || 0;
+    const card    = btn.closest('.menu-item');
+    const priceEl = card?.querySelector('.curr-price');
+    if (priceEl) priceEl.textContent = `$${price.toFixed(2)}`;
 }
 </script>
 

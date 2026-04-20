@@ -91,12 +91,7 @@
             <li><a href="menu.html">Menu</a></li>
             <li><a href="branches.html">Branches</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li>
-                <a href="menu.html" class="btn-order">
-                    <i class="fas fa-shopping-cart"></i>
-                    Order Now
-                </a>
-            </li>
+            
         </ul>
 
         <!-- HAMBURGER -->
@@ -1169,44 +1164,7 @@
     </div>
 </footer>
 
-<!-- ========== CART SIDEBAR ========== -->
-<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
-<div class="cart-sidebar" id="cartSidebar">
-    <div class="cart-header">
-        <h3>🛒 Your Order</h3>
-        <button onclick="toggleCart()" class="cart-close">✕</button>
-    </div>
-    <div class="cart-items" id="cartItems">
-        <div class="empty-cart">
-            <span>🍕</span>
-            <p>Your cart is empty</p>
-            <small>Add some delicious pizzas!</small>
-        </div>
-    </div>
-    <div class="cart-footer" id="cartFooter" style="display:none">
-        <div class="cart-total">
-            <span>Total:</span>
-            <span id="cartTotal">$0.00</span>
-        </div>
-        <input type="text"
-               placeholder="Enter Coupon Code"
-               class="coupon-input"
-               id="couponInput">
-        <button onclick="applyCoupon()" class="apply-coupon">
-            Apply Coupon
-        </button>
-        <button class="checkout-btn" onclick="checkout()">
-            <i class="fas fa-rocket"></i>
-            Proceed to Checkout
-        </button>
-    </div>
-</div>
 
-<!-- ========== CART FLOAT BUTTON ========== -->
-<div class="cart-float" onclick="toggleCart()">
-    <i class="fas fa-shopping-cart"></i>
-    <span class="cart-count" id="cartCount">0</span>
-</div>
 
 <!-- ========== WHATSAPP BUTTON ========== -->
 <a href="https://wa.me/1234567890?text=Hi! I want to order from Martinoz Pizza"
@@ -1216,24 +1174,7 @@
     <i class="fab fa-whatsapp"></i>
 </a>
 
-<!-- ========== POPUP OFFER ========== -->
-<div class="popup-overlay" id="popupOverlay">
-    <div class="popup">
-        <button class="popup-close" onclick="closePopup()">✕</button>
-        <div class="popup-content">
-            <span class="popup-emoji">🍕</span>
-            <h2>Welcome to Martinoz Pizza!</h2>
-            <p>Get <strong>20% OFF</strong> on your first order!</p>
-            <div class="coupon-display">WELCOME20</div>
-            <a href="menu.html" class="btn-primary"
-               onclick="closePopup()"
-               style="width:100%; justify-content:center;">
-                <i class="fas fa-pizza-slice"></i>
-                Order Now & Save!
-            </a>
-        </div>
-    </div>
-</div>
+
 
 <!-- ========== SCRIPTS ========== -->
 <script src="js/main.js"></script>
