@@ -5,72 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Martinoz Pizza - Freshly Baked Happiness. Order online from multiple branches near you!">
     <title>Martinoz Pizza - Freshly Baked Happiness</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- FAVICON -->
-<link rel="icon" 
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
 
-<!-- OG META TAGS -->
-<meta property="og:title" content="Martinoz Pizza">
-<meta property="og:description" 
-      content="Freshly Baked Happiness - Order Online!">
-<meta property="og:image" 
-      content="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1200">
-<meta property="og:type" content="website">
+    <!-- OG META -->
+    <meta property="og:title" content="Martinoz Pizza">
+    <meta property="og:description" content="Freshly Baked Happiness - Order Online!">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:type" content="website">
 </head>
 <body>
 
-   <!-- ========== UNIVERSAL NAVBAR ========== -->
+<!-- ========== PAGE LOADER ========== -->
+<div id="pageLoader">
+    <div class="loader-content">
+        <div class="loader-logo">
+            <svg viewBox="0 0 80 80" width="72" height="72">
+                <circle cx="40" cy="40" r="35" fill="#1B5E20" opacity="0.15"/>
+                <circle cx="40" cy="40" r="28" fill="#2E7D32"/>
+                <line x1="40" y1="12" x2="40" y2="68" stroke="#F9A825" stroke-width="2"/>
+                <line x1="14" y1="30" x2="66" y2="50" stroke="#F9A825" stroke-width="2"/>
+                <line x1="14" y1="50" x2="66" y2="30" stroke="#F9A825" stroke-width="2"/>
+                <circle cx="33" cy="30" r="3" fill="#F9A825"/>
+                <circle cx="48" cy="35" r="2.5" fill="#F9A825"/>
+                <circle cx="36" cy="48" r="2.5" fill="#F9A825"/>
+                <circle cx="50" cy="50" r="3" fill="#F9A825"/>
+            </svg>
+        </div>
+        <div class="loader-text">Martinoz Pizza</div>
+        <div class="loader-bar">
+            <div class="loader-bar-fill"></div>
+        </div>
+        <div class="loader-sub">Freshly Baked Happiness 🌿</div>
+    </div>
+</div>
+
+<!-- ========== NAVBAR ========== -->
 <nav class="navbar" id="navbar">
     <div class="container">
 
         <!-- LOGO -->
         <a href="index.html" class="nav-brand">
-            <svg xmlns="http://www.w3.org/2000/svg" 
-                 viewBox="0 0 300 80" 
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 300 80"
                  class="nav-logo-svg">
-                <circle cx="40" cy="40" r="35" 
-                        fill="#E63946" opacity="0.15"/>
-                <circle cx="40" cy="40" r="28" fill="#E63946"/>
-                <line x1="40" y1="12" x2="40" y2="68" 
-                      stroke="#FFB703" stroke-width="2"/>
-                <line x1="14" y1="30" x2="66" y2="50" 
-                      stroke="#FFB703" stroke-width="2"/>
-                <line x1="14" y1="50" x2="66" y2="30" 
-                      stroke="#FFB703" stroke-width="2"/>
-                <circle cx="33" cy="30" r="3" fill="#FFB703"/>
-                <circle cx="48" cy="35" r="2.5" fill="#FFB703"/>
-                <circle cx="36" cy="48" r="2.5" fill="#FFB703"/>
-                <circle cx="50" cy="50" r="3" fill="#FFB703"/>
-                <circle cx="40" cy="40" r="28" fill="none" 
-                        stroke="#FFB703" stroke-width="2.5"/>
-                <text x="88" y="35" 
-                      font-family="Arial Black, sans-serif" 
-                      font-size="26" font-weight="900" 
-                      fill="#FFFFFF" letter-spacing="1">MARTINOZ</text>
-                <text x="90" y="58" 
-                      font-family="Arial Black, sans-serif" 
-                      font-size="18" font-weight="900" 
-                      fill="#E63946" letter-spacing="6">PIZZA</text>
-                <text x="90" y="72" 
-                      font-family="Arial, sans-serif" 
-                      font-size="9" fill="#FFB703" 
+                <circle cx="40" cy="40" r="35"
+                        fill="#1B5E20" opacity="0.15"/>
+                <circle cx="40" cy="40" r="28" fill="#2E7D32"/>
+                <line x1="40" y1="12" x2="40" y2="68"
+                      stroke="#F9A825" stroke-width="2"/>
+                <line x1="14" y1="30" x2="66" y2="50"
+                      stroke="#F9A825" stroke-width="2"/>
+                <line x1="14" y1="50" x2="66" y2="30"
+                      stroke="#F9A825" stroke-width="2"/>
+                <circle cx="33" cy="30" r="3" fill="#F9A825"/>
+                <circle cx="48" cy="35" r="2.5" fill="#F9A825"/>
+                <circle cx="36" cy="48" r="2.5" fill="#F9A825"/>
+                <circle cx="50" cy="50" r="3" fill="#F9A825"/>
+                <circle cx="40" cy="40" r="28" fill="none"
+                        stroke="#F9A825" stroke-width="2.5"/>
+                <text x="88" y="35"
+                      font-family="Arial Black, sans-serif"
+                      font-size="26" font-weight="900"
+                      fill="#1A2E1A" letter-spacing="1">MARTINOZ</text>
+                <text x="90" y="58"
+                      font-family="Arial Black, sans-serif"
+                      font-size="18" font-weight="900"
+                      fill="#2E7D32" letter-spacing="6">PIZZA</text>
+                <text x="90" y="72"
+                      font-family="Arial, sans-serif"
+                      font-size="9" fill="#F9A825"
                       letter-spacing="2">FRESHLY BAKED HAPPINESS</text>
             </svg>
         </a>
 
         <!-- NAV LINKS -->
         <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="branches.html">Branches</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li>
                 <a href="menu.html" class="btn-order">
-                    Order Now 🛒
+                    <i class="fas fa-shopping-cart"></i>
+                    Order Now
                 </a>
             </li>
         </ul>
@@ -84,32 +108,39 @@
     </div>
 </nav>
 
-    <!-- ========== HERO SECTION ========== -->
+<!-- ========== HERO SECTION ========== -->
 <section class="hero" id="home">
-    <div class="hero-overlay"></div>
     <div class="container">
         <div class="hero-content">
-            <div class="hero-badge">🔥 New Arrivals Available!</div>
+
+            <div class="hero-badge">
+                <i class="fas fa-fire"></i>
+                🔥 New Arrivals Available!
+            </div>
+
             <h1 class="hero-title">
                 Freshly Baked
                 <span class="highlight">Happiness</span>
                 Delivered To You!
             </h1>
+
             <p class="hero-subtitle">
-                Authentic Italian-style pizzas made with 
-                fresh ingredients. Order now and get 
+                Authentic Italian-style pizzas made with
+                fresh ingredients. Order now and get
                 delivery in 30 minutes!
             </p>
+
             <div class="hero-buttons">
                 <a href="menu.html" class="btn-primary">
-                    <i class="fas fa-pizza-slice"></i> 
+                    <i class="fas fa-pizza-slice"></i>
                     Order Now
                 </a>
                 <a href="menu.html" class="btn-secondary">
-                    <i class="fas fa-book-open"></i> 
+                    <i class="fas fa-book-open"></i>
                     View Menu
                 </a>
             </div>
+
             <div class="hero-stats">
                 <div class="stat">
                     <h3>50+</h3>
@@ -133,13 +164,12 @@
         <!-- HERO IMAGE -->
         <div class="hero-image">
             <div class="pizza-circle">
-                <!-- TEMPORARY IMAGE from Unsplash -->
-                <img 
-                    src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=600&fit=crop&crop=center" 
+                <img
+                    src="images/logo.png"
                     alt="Martinoz Pizza - Freshly Baked"
                     class="pizza-img"
                     loading="eager"
-                    onerror="this.src='https://via.placeholder.com/500x500/E63946/FFFFFF?text=🍕+Martinoz+Pizza'"
+                    onerror="this.src='https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=600&fit=crop'"
                 >
             </div>
             <div class="floating-card card1">
@@ -154,11 +184,11 @@
     </div>
 </section>
 
-    <!-- ========== FRANCHISE COUNTER SECTION ========== -->
+<!-- ========== FRANCHISE COUNTER SECTION ========== -->
 <section class="franchise-section">
     <div class="container">
 
-        <!-- TOP STATS -->
+        <!-- STATS -->
         <div class="franchise-stats">
             <div class="fstat-card">
                 <div class="fstat-number" data-target="80">0</div>
@@ -183,9 +213,11 @@
         </div>
 
         <!-- SECTION HEADER -->
-        <div class="section-header" style="margin-top: 60px;">
+        <div class="section-header" style="margin-top: 70px;">
             <span class="section-tag">📍 Our Presence</span>
-            <h2>80+ Franchises Across <span class="highlight">India & World</span></h2>
+            <h2>80+ Franchises Across
+                <span class="highlight">India & World</span>
+            </h2>
             <p>Find your nearest Martinoz Pizza - We are always close to you!</p>
         </div>
 
@@ -231,7 +263,7 @@
                         <a href="tel:+911234567890" class="loc-btn call">
                             <i class="fas fa-phone"></i> Call
                         </a>
-                        <a href="https://maps.google.com" 
+                        <a href="https://maps.google.com"
                            target="_blank" class="loc-btn direction">
                             <i class="fas fa-directions"></i> Direction
                         </a>
@@ -258,7 +290,7 @@
                         <a href="tel:+911234567891" class="loc-btn call">
                             <i class="fas fa-phone"></i> Call
                         </a>
-                        <a href="https://maps.google.com" 
+                        <a href="https://maps.google.com"
                            target="_blank" class="loc-btn direction">
                             <i class="fas fa-directions"></i> Direction
                         </a>
@@ -285,7 +317,7 @@
                         <a href="tel:+911234567892" class="loc-btn call">
                             <i class="fas fa-phone"></i> Call
                         </a>
-                        <a href="https://maps.google.com" 
+                        <a href="https://maps.google.com"
                            target="_blank" class="loc-btn direction">
                             <i class="fas fa-directions"></i> Direction
                         </a>
@@ -312,7 +344,7 @@
                         <a href="tel:+911234567893" class="loc-btn call">
                             <i class="fas fa-phone"></i> Call
                         </a>
-                        <a href="https://maps.google.com" 
+                        <a href="https://maps.google.com"
                            target="_blank" class="loc-btn direction">
                             <i class="fas fa-directions"></i> Direction
                         </a>
@@ -340,7 +372,7 @@
                         <a href="tel:+911234567894" class="loc-btn call">
                             <i class="fas fa-phone"></i> Call
                         </a>
-                        <a href="https://maps.google.com" 
+                        <a href="https://maps.google.com"
                            target="_blank" class="loc-btn direction">
                             <i class="fas fa-directions"></i> Direction
                         </a>
@@ -367,7 +399,7 @@
                         <a href="tel:+911234567895" class="loc-btn call">
                             <i class="fas fa-phone"></i> Call
                         </a>
-                        <a href="https://maps.google.com" 
+                        <a href="https://maps.google.com"
                            target="_blank" class="loc-btn direction">
                             <i class="fas fa-directions"></i> Direction
                         </a>
@@ -394,7 +426,7 @@
                         <a href="tel:+911234567896" class="loc-btn call">
                             <i class="fas fa-phone"></i> Call
                         </a>
-                        <a href="https://maps.google.com" 
+                        <a href="https://maps.google.com"
                            target="_blank" class="loc-btn direction">
                             <i class="fas fa-directions"></i> Direction
                         </a>
@@ -422,7 +454,7 @@
                         <a href="tel:+911234567897" class="loc-btn call">
                             <i class="fas fa-phone"></i> Call
                         </a>
-                        <a href="https://maps.google.com" 
+                        <a href="https://maps.google.com"
                            target="_blank" class="loc-btn direction">
                             <i class="fas fa-directions"></i> Direction
                         </a>
@@ -449,7 +481,7 @@
                         <a href="tel:+911234567898" class="loc-btn call">
                             <i class="fas fa-phone"></i> Call
                         </a>
-                        <a href="https://maps.google.com" 
+                        <a href="https://maps.google.com"
                            target="_blank" class="loc-btn direction">
                             <i class="fas fa-directions"></i> Direction
                         </a>
@@ -476,7 +508,7 @@
                         <a href="tel:+911234567899" class="loc-btn call">
                             <i class="fas fa-phone"></i> Call
                         </a>
-                        <a href="https://maps.google.com" 
+                        <a href="https://maps.google.com"
                            target="_blank" class="loc-btn direction">
                             <i class="fas fa-directions"></i> Direction
                         </a>
@@ -504,7 +536,7 @@
                         <a href="tel:+6491234567" class="loc-btn call">
                             <i class="fas fa-phone"></i> Call
                         </a>
-                        <a href="https://maps.google.com" 
+                        <a href="https://maps.google.com"
                            target="_blank" class="loc-btn direction">
                             <i class="fas fa-directions"></i> Direction
                         </a>
@@ -531,7 +563,7 @@
                         <a href="tel:+6441234567" class="loc-btn call">
                             <i class="fas fa-phone"></i> Call
                         </a>
-                        <a href="https://maps.google.com" 
+                        <a href="https://maps.google.com"
                            target="_blank" class="loc-btn direction">
                             <i class="fas fa-directions"></i> Direction
                         </a>
@@ -558,7 +590,7 @@
                         <a href="tel:+6431234567" class="loc-btn call">
                             <i class="fas fa-phone"></i> Call
                         </a>
-                        <a href="https://maps.google.com" 
+                        <a href="https://maps.google.com"
                            target="_blank" class="loc-btn direction">
                             <i class="fas fa-directions"></i> Direction
                         </a>
@@ -568,8 +600,8 @@
 
         </div>
 
-        <!-- VIEW ALL BUTTON -->
-        <div class="center" style="margin-top: 40px;">
+        <!-- VIEW ALL -->
+        <div class="center" style="margin-top: 48px;">
             <a href="branches.html" class="btn-primary">
                 <i class="fas fa-map-marked-alt"></i>
                 View All 80+ Franchises
@@ -579,412 +611,492 @@
     </div>
 </section>
 
-    <!-- ========== OFFER BANNER ========== -->
-    <section class="offer-banner">
-        <div class="container">
-            <div class="offer-grid">
-                <div class="offer-card">
-                    <span class="offer-icon">🎉</span>
-                    <h3>First Order</h3>
-                    <p>20% OFF - Use: <strong>WELCOME20</strong></p>
+<!-- ========== OFFER BANNER ========== -->
+<section class="offer-banner">
+    <div class="container">
+        <div class="offer-grid">
+            <div class="offer-card">
+                <span class="offer-icon">🎉</span>
+                <h3>First Order</h3>
+                <p>20% OFF - Use: <strong>WELCOME20</strong></p>
+            </div>
+            <div class="offer-card">
+                <span class="offer-icon">🍕</span>
+                <h3>Buy 2 Get 1</h3>
+                <p>On all medium pizzas today!</p>
+            </div>
+            <div class="offer-card">
+                <span class="offer-icon">🚀</span>
+                <h3>Free Delivery</h3>
+                <p>On orders above ₹499</p>
+            </div>
+            <div class="offer-card">
+                <span class="offer-icon">⭐</span>
+                <h3>Loyalty Points</h3>
+                <p>Earn points on every order!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FEATURED MENU ========== -->
+<section class="featured" id="featured">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">🍕 Our Specials</span>
+            <h2>Most <span class="highlight">Loved</span> Pizzas</h2>
+            <p>Handcrafted with love using the finest ingredients</p>
+        </div>
+
+        <div class="menu-filter">
+            <button class="filter-btn active" data-filter="all">
+                🍕 All
+            </button>
+            <button class="filter-btn" data-filter="veg">
+                🟢 Veg
+            </button>
+            <button class="filter-btn" data-filter="nonveg">
+                🔴 Non-Veg
+            </button>
+            <button class="filter-btn" data-filter="special">
+                ⭐ Special
+            </button>
+        </div>
+
+        <div class="pizza-grid" id="pizzaGrid">
+
+            <div class="pizza-card" data-category="special">
+                <div class="pizza-img-wrap">
+                    <img src="images/logo.png"
+                         alt="Martinoz Special"
+                         onerror="this.src='https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400'">
+                    <span class="badge">⭐ Best Seller</span>
+                    <div class="pizza-overlay">
+                        <button class="quick-add"
+                                onclick="addToCart('Martinoz Special', 14.99)">
+                            Quick Add +
+                        </button>
+                    </div>
                 </div>
-                <div class="offer-card">
-                    <span class="offer-icon">🍕</span>
-                    <h3>Buy 2 Get 1</h3>
-                    <p>On all medium pizzas today!</p>
+                <div class="pizza-info">
+                    <div class="pizza-header">
+                        <h3>Martinoz Special</h3>
+                        <span class="veg-icon">🔴</span>
+                    </div>
+                    <p>Loaded with pepperoni, cheese & secret sauce</p>
+                    <div class="size-options">
+                        <button class="size active">S</button>
+                        <button class="size">M</button>
+                        <button class="size">L</button>
+                    </div>
+                    <div class="pizza-footer">
+                        <div class="price">
+                            <span class="old-price">$18</span>
+                            <span class="new-price">$14.99</span>
+                        </div>
+                        <button class="add-cart"
+                                onclick="addToCart('Martinoz Special', 14.99)">
+                            <i class="fas fa-cart-plus"></i> Add
+                        </button>
+                    </div>
                 </div>
-                <div class="offer-card">
-                    <span class="offer-icon">🚀</span>
-                    <h3>Free Delivery</h3>
-                    <p>On orders above $25</p>
+            </div>
+
+            <div class="pizza-card" data-category="veg">
+                <div class="pizza-img-wrap">
+                    <img src="images/logo.png"
+                         alt="Garden Fresh"
+                         onerror="this.src='https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=400'">
+                    <span class="badge green">🌿 Veg</span>
+                    <div class="pizza-overlay">
+                        <button class="quick-add"
+                                onclick="addToCart('Garden Fresh', 11.99)">
+                            Quick Add +
+                        </button>
+                    </div>
                 </div>
-                <div class="offer-card">
-                    <span class="offer-icon">⭐</span>
-                    <h3>Loyalty Points</h3>
-                    <p>Earn points on every order!</p>
+                <div class="pizza-info">
+                    <div class="pizza-header">
+                        <h3>Garden Fresh</h3>
+                        <span class="veg-icon">🟢</span>
+                    </div>
+                    <p>Fresh veggies, olives, bell peppers & mozzarella</p>
+                    <div class="size-options">
+                        <button class="size active">S</button>
+                        <button class="size">M</button>
+                        <button class="size">L</button>
+                    </div>
+                    <div class="pizza-footer">
+                        <div class="price">
+                            <span class="old-price">$15</span>
+                            <span class="new-price">$11.99</span>
+                        </div>
+                        <button class="add-cart"
+                                onclick="addToCart('Garden Fresh', 11.99)">
+                            <i class="fas fa-cart-plus"></i> Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pizza-card" data-category="nonveg">
+                <div class="pizza-img-wrap">
+                    <img src="images/logo.png"
+                         alt="BBQ Chicken"
+                         onerror="this.src='https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400'">
+                    <span class="badge orange">🔥 Hot</span>
+                    <div class="pizza-overlay">
+                        <button class="quick-add"
+                                onclick="addToCart('BBQ Chicken', 16.99)">
+                            Quick Add +
+                        </button>
+                    </div>
+                </div>
+                <div class="pizza-info">
+                    <div class="pizza-header">
+                        <h3>BBQ Chicken</h3>
+                        <span class="veg-icon">🔴</span>
+                    </div>
+                    <p>Smoky BBQ sauce, grilled chicken & caramelized onions</p>
+                    <div class="size-options">
+                        <button class="size active">S</button>
+                        <button class="size">M</button>
+                        <button class="size">L</button>
+                    </div>
+                    <div class="pizza-footer">
+                        <div class="price">
+                            <span class="old-price">$20</span>
+                            <span class="new-price">$16.99</span>
+                        </div>
+                        <button class="add-cart"
+                                onclick="addToCart('BBQ Chicken', 16.99)">
+                            <i class="fas fa-cart-plus"></i> Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pizza-card" data-category="special">
+                <div class="pizza-img-wrap">
+                    <img src="images/logo.png"
+                         alt="Cheese Burst"
+                         onerror="this.src='https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=400'">
+                    <span class="badge purple">💜 New</span>
+                    <div class="pizza-overlay">
+                        <button class="quick-add"
+                                onclick="addToCart('Cheese Burst', 18.99)">
+                            Quick Add +
+                        </button>
+                    </div>
+                </div>
+                <div class="pizza-info">
+                    <div class="pizza-header">
+                        <h3>Cheese Burst</h3>
+                        <span class="veg-icon">🟢</span>
+                    </div>
+                    <p>Extra cheese stuffed crust with triple cheese topping</p>
+                    <div class="size-options">
+                        <button class="size active">S</button>
+                        <button class="size">M</button>
+                        <button class="size">L</button>
+                    </div>
+                    <div class="pizza-footer">
+                        <div class="price">
+                            <span class="old-price">$22</span>
+                            <span class="new-price">$18.99</span>
+                        </div>
+                        <button class="add-cart"
+                                onclick="addToCart('Cheese Burst', 18.99)">
+                            <i class="fas fa-cart-plus"></i> Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pizza-card" data-category="nonveg">
+                <div class="pizza-img-wrap">
+                    <img src="images/logo.png"
+                         alt="Pepperoni Feast"
+                         onerror="this.src='https://images.unsplash.com/photo-1548369937-47519962c11a?w=400'">
+                    <span class="badge">⭐ Popular</span>
+                    <div class="pizza-overlay">
+                        <button class="quick-add"
+                                onclick="addToCart('Pepperoni Feast', 15.99)">
+                            Quick Add +
+                        </button>
+                    </div>
+                </div>
+                <div class="pizza-info">
+                    <div class="pizza-header">
+                        <h3>Pepperoni Feast</h3>
+                        <span class="veg-icon">🔴</span>
+                    </div>
+                    <p>Loaded with double pepperoni & rich tomato sauce</p>
+                    <div class="size-options">
+                        <button class="size active">S</button>
+                        <button class="size">M</button>
+                        <button class="size">L</button>
+                    </div>
+                    <div class="pizza-footer">
+                        <div class="price">
+                            <span class="old-price">$19</span>
+                            <span class="new-price">$15.99</span>
+                        </div>
+                        <button class="add-cart"
+                                onclick="addToCart('Pepperoni Feast', 15.99)">
+                            <i class="fas fa-cart-plus"></i> Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pizza-card" data-category="veg">
+                <div class="pizza-img-wrap">
+                    <img src="images/logo.png"
+                         alt="Margherita Classic"
+                         onerror="this.src='https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=400'">
+                    <span class="badge green">🌿 Classic</span>
+                    <div class="pizza-overlay">
+                        <button class="quick-add"
+                                onclick="addToCart('Margherita Classic', 9.99)">
+                            Quick Add +
+                        </button>
+                    </div>
+                </div>
+                <div class="pizza-info">
+                    <div class="pizza-header">
+                        <h3>Margherita Classic</h3>
+                        <span class="veg-icon">🟢</span>
+                    </div>
+                    <p>Traditional tomato sauce, fresh basil & mozzarella</p>
+                    <div class="size-options">
+                        <button class="size active">S</button>
+                        <button class="size">M</button>
+                        <button class="size">L</button>
+                    </div>
+                    <div class="pizza-footer">
+                        <div class="price">
+                            <span class="old-price">$13</span>
+                            <span class="new-price">$9.99</span>
+                        </div>
+                        <button class="add-cart"
+                                onclick="addToCart('Margherita Classic', 9.99)">
+                            <i class="fas fa-cart-plus"></i> Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="center">
+            <a href="menu.html" class="btn-primary">
+                <i class="fas fa-utensils"></i>
+                View Full Menu
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ========== WHY CHOOSE US ========== -->
+<section class="why-us">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">💪 Our Promise</span>
+            <h2>Why Choose <span class="highlight">Martinoz?</span></h2>
+            <p>We are committed to quality, freshness and fast service</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon">🌿</div>
+                <h3>Fresh Ingredients</h3>
+                <p>We use only the freshest locally sourced ingredients in every pizza we make.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">⚡</div>
+                <h3>30 Min Delivery</h3>
+                <p>Hot and fresh pizza delivered to your door in 30 minutes guaranteed.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">👨‍🍳</div>
+                <h3>Expert Chefs</h3>
+                <p>Our Italian-trained chefs bring authentic flavors to every bite.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">💰</div>
+                <h3>Best Value</h3>
+                <p>Premium quality pizzas at prices that won't break the bank.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">🏪</div>
+                <h3>Multiple Branches</h3>
+                <p>Find us at 80+ locations across India & New Zealand. Always nearby!</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">💯</div>
+                <h3>Satisfaction Guaranteed</h3>
+                <p>Not happy? We'll remake your order or give you a full refund.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">❤️ Reviews</span>
+            <h2>What Our <span class="highlight">Customers</span> Say</h2>
+            <p>Real reviews from our happy customers</p>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Best pizza I've ever had! The cheese burst is absolutely amazing. Fast delivery too!"</p>
+                <div class="reviewer">
+                    <div class="avatar">JD</div>
+                    <div>
+                        <h4>John Davis</h4>
+                        <span>Verified Customer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Martinoz Pizza is our family's favorite! We order every Friday night. Never disappointed!"</p>
+                <div class="reviewer">
+                    <div class="avatar">SM</div>
+                    <div>
+                        <h4>Sarah Miller</h4>
+                        <span>Verified Customer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"The BBQ Chicken pizza is out of this world! Crispy crust, fresh toppings. Highly recommend!"</p>
+                <div class="reviewer">
+                    <div class="avatar">RK</div>
+                    <div>
+                        <h4>Raj Kumar</h4>
+                        <span>Verified Customer</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ========== FEATURED MENU ========== -->
-    <section class="featured" id="featured">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">🍕 Our Specials</span>
-                <h2>Most <span class="highlight">Loved</span> Pizzas</h2>
-                <p>Handcrafted with love using the finest ingredients</p>
+<!-- ========== BRANCHES PREVIEW ========== -->
+<section class="branches-preview">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">📍 Locations</span>
+            <h2>Find Us <span class="highlight">Near You</span></h2>
+            <p>80+ branches across India & New Zealand</p>
+        </div>
+        <div class="branches-grid">
+            <div class="branch-card">
+                <div class="branch-icon">🏪</div>
+                <h3>Downtown Branch</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, Downtown</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 8901</p>
+                <p><i class="fas fa-clock"></i> 10:00 AM - 11:00 PM</p>
+                <a href="branches.html" class="branch-btn">
+                    <i class="fas fa-directions"></i> Get Direction
+                </a>
             </div>
-            <div class="menu-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="veg">🟢 Veg</button>
-                <button class="filter-btn" data-filter="nonveg">🔴 Non-Veg</button>
-                <button class="filter-btn" data-filter="special">⭐ Special</button>
+            <div class="branch-card">
+                <div class="branch-icon">🏪</div>
+                <h3>Uptown Branch</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 456 Oak Avenue, Uptown</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 8902</p>
+                <p><i class="fas fa-clock"></i> 10:00 AM - 11:00 PM</p>
+                <a href="branches.html" class="branch-btn">
+                    <i class="fas fa-directions"></i> Get Direction
+                </a>
             </div>
-            <div class="pizza-grid" id="pizzaGrid">
-
-                <div class="pizza-card" data-category="special">
-                    <div class="pizza-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400" alt="Martinoz Special">
-                        <span class="badge">⭐ Best Seller</span>
-                        <div class="pizza-overlay">
-                            <button class="quick-add">Quick Add +</button>
-                        </div>
-                    </div>
-                    <div class="pizza-info">
-                        <div class="pizza-header">
-                            <h3>Martinoz Special</h3>
-                            <span class="veg-icon">🔴</span>
-                        </div>
-                        <p>Loaded with pepperoni, cheese & secret sauce</p>
-                        <div class="size-options">
-                            <button class="size active">S</button>
-                            <button class="size">M</button>
-                            <button class="size">L</button>
-                        </div>
-                        <div class="pizza-footer">
-                            <div class="price">
-                                <span class="old-price">$18</span>
-                                <span class="new-price">$14.99</span>
-                            </div>
-                            <button class="add-cart" onclick="addToCart('Martinoz Special', 14.99)">
-                                <i class="fas fa-cart-plus"></i> Add
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pizza-card" data-category="veg">
-                    <div class="pizza-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=400" alt="Garden Fresh">
-                        <span class="badge green">🌿 Veg</span>
-                        <div class="pizza-overlay">
-                            <button class="quick-add">Quick Add +</button>
-                        </div>
-                    </div>
-                    <div class="pizza-info">
-                        <div class="pizza-header">
-                            <h3>Garden Fresh</h3>
-                            <span class="veg-icon">🟢</span>
-                        </div>
-                        <p>Fresh veggies, olives, bell peppers & mozzarella</p>
-                        <div class="size-options">
-                            <button class="size active">S</button>
-                            <button class="size">M</button>
-                            <button class="size">L</button>
-                        </div>
-                        <div class="pizza-footer">
-                            <div class="price">
-                                <span class="old-price">$15</span>
-                                <span class="new-price">$11.99</span>
-                            </div>
-                            <button class="add-cart" onclick="addToCart('Garden Fresh', 11.99)">
-                                <i class="fas fa-cart-plus"></i> Add
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pizza-card" data-category="nonveg">
-                    <div class="pizza-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400" alt="BBQ Chicken">
-                        <span class="badge orange">🔥 Hot</span>
-                        <div class="pizza-overlay">
-                            <button class="quick-add">Quick Add +</button>
-                        </div>
-                    </div>
-                    <div class="pizza-info">
-                        <div class="pizza-header">
-                            <h3>BBQ Chicken</h3>
-                            <span class="veg-icon">🔴</span>
-                        </div>
-                        <p>Smoky BBQ sauce, grilled chicken & caramelized onions</p>
-                        <div class="size-options">
-                            <button class="size active">S</button>
-                            <button class="size">M</button>
-                            <button class="size">L</button>
-                        </div>
-                        <div class="pizza-footer">
-                            <div class="price">
-                                <span class="old-price">$20</span>
-                                <span class="new-price">$16.99</span>
-                            </div>
-                            <button class="add-cart" onclick="addToCart('BBQ Chicken', 16.99)">
-                                <i class="fas fa-cart-plus"></i> Add
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pizza-card" data-category="special">
-                    <div class="pizza-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=400" alt="Cheese Burst">
-                        <span class="badge purple">💜 New</span>
-                        <div class="pizza-overlay">
-                            <button class="quick-add">Quick Add +</button>
-                        </div>
-                    </div>
-                    <div class="pizza-info">
-                        <div class="pizza-header">
-                            <h3>Cheese Burst</h3>
-                            <span class="veg-icon">🟢</span>
-                        </div>
-                        <p>Extra cheese stuffed crust with triple cheese topping</p>
-                        <div class="size-options">
-                            <button class="size active">S</button>
-                            <button class="size">M</button>
-                            <button class="size">L</button>
-                        </div>
-                        <div class="pizza-footer">
-                            <div class="price">
-                                <span class="old-price">$22</span>
-                                <span class="new-price">$18.99</span>
-                            </div>
-                            <button class="add-cart" onclick="addToCart('Cheese Burst', 18.99)">
-                                <i class="fas fa-cart-plus"></i> Add
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pizza-card" data-category="nonveg">
-                    <div class="pizza-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1548369937-47519962c11a?w=400" alt="Pepperoni Feast">
-                        <span class="badge">⭐ Popular</span>
-                        <div class="pizza-overlay">
-                            <button class="quick-add">Quick Add +</button>
-                        </div>
-                    </div>
-                    <div class="pizza-info">
-                        <div class="pizza-header">
-                            <h3>Pepperoni Feast</h3>
-                            <span class="veg-icon">🔴</span>
-                        </div>
-                        <p>Loaded with double pepperoni & rich tomato sauce</p>
-                        <div class="size-options">
-                            <button class="size active">S</button>
-                            <button class="size">M</button>
-                            <button class="size">L</button>
-                        </div>
-                        <div class="pizza-footer">
-                            <div class="price">
-                                <span class="old-price">$19</span>
-                                <span class="new-price">$15.99</span>
-                            </div>
-                            <button class="add-cart" onclick="addToCart('Pepperoni Feast', 15.99)">
-                                <i class="fas fa-cart-plus"></i> Add
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pizza-card" data-category="veg">
-                    <div class="pizza-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=400" alt="Margherita Classic">
-                        <span class="badge green">🌿 Classic</span>
-                        <div class="pizza-overlay">
-                            <button class="quick-add">Quick Add +</button>
-                        </div>
-                    </div>
-                    <div class="pizza-info">
-                        <div class="pizza-header">
-                            <h3>Margherita Classic</h3>
-                            <span class="veg-icon">🟢</span>
-                        </div>
-                        <p>Traditional tomato sauce, fresh basil & mozzarella</p>
-                        <div class="size-options">
-                            <button class="size active">S</button>
-                            <button class="size">M</button>
-                            <button class="size">L</button>
-                        </div>
-                        <div class="pizza-footer">
-                            <div class="price">
-                                <span class="old-price">$13</span>
-                                <span class="new-price">$9.99</span>
-                            </div>
-                            <button class="add-cart" onclick="addToCart('Margherita Classic', 9.99)">
-                                <i class="fas fa-cart-plus"></i> Add
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="center">
-                <a href="menu.html" class="btn-primary">View Full Menu 🍕</a>
+            <div class="branch-card">
+                <div class="branch-icon">🏪</div>
+                <h3>Westside Branch</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 789 West Blvd, Westside</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 8903</p>
+                <p><i class="fas fa-clock"></i> 10:00 AM - 11:00 PM</p>
+                <a href="branches.html" class="branch-btn">
+                    <i class="fas fa-directions"></i> Get Direction
+                </a>
             </div>
         </div>
-    </section>
-
-    <!-- ========== WHY CHOOSE US ========== -->
-    <section class="why-us">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">💪 Our Promise</span>
-                <h2>Why Choose <span class="highlight">Martinoz?</span></h2>
-            </div>
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-icon">🌿</div>
-                    <h3>Fresh Ingredients</h3>
-                    <p>We use only the freshest locally sourced ingredients in every pizza we make.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">⚡</div>
-                    <h3>30 Min Delivery</h3>
-                    <p>Hot and fresh pizza delivered to your door in 30 minutes guaranteed.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">👨‍🍳</div>
-                    <h3>Expert Chefs</h3>
-                    <p>Our Italian-trained chefs bring authentic flavors to every bite.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">💰</div>
-                    <h3>Best Value</h3>
-                    <p>Premium quality pizzas at prices that won't break the bank.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">🏪</div>
-                    <h3>Multiple Branches</h3>
-                    <p>Find us at 10+ locations across the city. Always nearby!</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">💯</div>
-                    <h3>Satisfaction Guaranteed</h3>
-                    <p>Not happy? We'll remake your order or give you a full refund.</p>
-                </div>
-            </div>
+        <div class="center">
+            <a href="branches.html" class="btn-primary">
+                <i class="fas fa-map-marked-alt"></i>
+                View All Branches
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ========== TESTIMONIALS ========== -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">❤️ Reviews</span>
-                <h2>What Our <span class="highlight">Customers</span> Say</h2>
-            </div>
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Best pizza I've ever had! The cheese burst is absolutely amazing. Fast delivery too!"</p>
-                    <div class="reviewer">
-                        <div class="avatar">JD</div>
-                        <div>
-                            <h4>John Davis</h4>
-                            <span>Verified Customer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Martinoz Pizza is our family's favorite! We order every Friday night. Never disappointed!"</p>
-                    <div class="reviewer">
-                        <div class="avatar">SM</div>
-                        <div>
-                            <h4>Sarah Miller</h4>
-                            <span>Verified Customer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"The BBQ Chicken pizza is out of this world! Crispy crust, fresh toppings. Highly recommend!"</p>
-                    <div class="reviewer">
-                        <div class="avatar">RK</div>
-                        <div>
-                            <h4>Raj Kumar</h4>
-                            <span>Verified Customer</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- ========== NEWSLETTER ========== -->
+<section class="newsletter">
+    <div class="container">
+        <div class="newsletter-content">
+            <h2>🍕 Get Exclusive Deals!</h2>
+            <p>Subscribe and get 15% OFF your next order!</p>
+            <form class="newsletter-form"
+                  onsubmit="subscribeNewsletter(event)">
+                <input type="email"
+                       placeholder="Enter your email address"
+                       required>
+                <button type="submit">
+                    Subscribe 🚀
+                </button>
+            </form>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ========== BRANCHES PREVIEW ========== -->
-    <section class="branches-preview">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">📍 Locations</span>
-                <h2>Find Us <span class="highlight">Near You</span></h2>
-            </div>
-            <div class="branches-grid">
-                <div class="branch-card">
-                    <div class="branch-icon">🏪</div>
-                    <h3>Downtown Branch</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, Downtown</p>
-                    <p><i class="fas fa-phone"></i> +1 234 567 8901</p>
-                    <p><i class="fas fa-clock"></i> 10:00 AM - 11:00 PM</p>
-                    <a href="branches.html" class="branch-btn">Get Direction</a>
-                </div>
-                <div class="branch-card">
-                    <div class="branch-icon">🏪</div>
-                    <h3>Uptown Branch</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 456 Oak Avenue, Uptown</p>
-                    <p><i class="fas fa-phone"></i> +1 234 567 8902</p>
-                    <p><i class="fas fa-clock"></i> 10:00 AM - 11:00 PM</p>
-                    <a href="branches.html" class="branch-btn">Get Direction</a>
-                </div>
-                <div class="branch-card">
-                    <div class="branch-icon">🏪</div>
-                    <h3>Westside Branch</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 789 West Blvd, Westside</p>
-                    <p><i class="fas fa-phone"></i> +1 234 567 8903</p>
-                    <p><i class="fas fa-clock"></i> 10:00 AM - 11:00 PM</p>
-                    <a href="branches.html" class="branch-btn">Get Direction</a>
-                </div>
-            </div>
-            <div class="center">
-                <a href="branches.html" class="btn-primary">View All Branches 📍</a>
-            </div>
-        </div>
-    </section>
-
- 
-
-    <!-- ========== UNIVERSAL FOOTER ========== -->
+<!-- ========== FOOTER ========== -->
 <footer class="footer">
     <div class="container">
         <div class="footer-grid">
+
+            <!-- Brand -->
             <div class="footer-col">
                 <a href="index.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" 
-                         viewBox="0 0 300 80" 
-                         class="footer-logo-svg"
-                         style="width:200px; height:55px;">
-                        <circle cx="40" cy="40" r="35" 
-                                fill="#E63946" opacity="0.15"/>
-                        <circle cx="40" cy="40" r="28" fill="#E63946"/>
-                        <line x1="40" y1="12" x2="40" y2="68" 
-                              stroke="#FFB703" stroke-width="2"/>
-                        <line x1="14" y1="30" x2="66" y2="50" 
-                              stroke="#FFB703" stroke-width="2"/>
-                        <line x1="14" y1="50" x2="66" y2="30" 
-                              stroke="#FFB703" stroke-width="2"/>
-                        <circle cx="33" cy="30" r="3" fill="#FFB703"/>
-                        <circle cx="48" cy="35" r="2.5" fill="#FFB703"/>
-                        <circle cx="36" cy="48" r="2.5" fill="#FFB703"/>
-                        <circle cx="50" cy="50" r="3" fill="#FFB703"/>
-                        <circle cx="40" cy="40" r="28" fill="none" 
-                                stroke="#FFB703" stroke-width="2.5"/>
-                        <text x="88" y="35" 
-                              font-family="Arial Black, sans-serif" 
-                              font-size="26" font-weight="900" 
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 300 80"
+                         class="footer-logo-svg">
+                        <circle cx="40" cy="40" r="35"
+                                fill="#2E7D32" opacity="0.20"/>
+                        <circle cx="40" cy="40" r="28" fill="#2E7D32"/>
+                        <line x1="40" y1="12" x2="40" y2="68"
+                              stroke="#F9A825" stroke-width="2"/>
+                        <line x1="14" y1="30" x2="66" y2="50"
+                              stroke="#F9A825" stroke-width="2"/>
+                        <line x1="14" y1="50" x2="66" y2="30"
+                              stroke="#F9A825" stroke-width="2"/>
+                        <circle cx="33" cy="30" r="3" fill="#F9A825"/>
+                        <circle cx="48" cy="35" r="2.5" fill="#F9A825"/>
+                        <circle cx="36" cy="48" r="2.5" fill="#F9A825"/>
+                        <circle cx="50" cy="50" r="3" fill="#F9A825"/>
+                        <circle cx="40" cy="40" r="28" fill="none"
+                                stroke="#F9A825" stroke-width="2.5"/>
+                        <text x="88" y="35"
+                              font-family="Arial Black, sans-serif"
+                              font-size="26" font-weight="900"
                               fill="#FFFFFF" letter-spacing="1">MARTINOZ</text>
-                        <text x="90" y="58" 
-                              font-family="Arial Black, sans-serif" 
-                              font-size="18" font-weight="900" 
-                              fill="#E63946" letter-spacing="6">PIZZA</text>
-                        <text x="90" y="72" 
-                              font-family="Arial, sans-serif" 
-                              font-size="9" fill="#FFB703" 
+                        <text x="90" y="58"
+                              font-family="Arial Black, sans-serif"
+                              font-size="18" font-weight="900"
+                              fill="#66BB6A" letter-spacing="6">PIZZA</text>
+                        <text x="90" y="72"
+                              font-family="Arial, sans-serif"
+                              font-size="9" fill="#F9A825"
                               letter-spacing="2">FRESHLY BAKED HAPPINESS</text>
                     </svg>
                 </a>
-                <p>Freshly Baked Happiness delivered 
-                to your door. Made with love and 
+                <p>Freshly Baked Happiness delivered
+                to your door. Made with love and
                 the finest ingredients.</p>
                 <div class="social-links">
                     <a href="#" aria-label="Facebook">
@@ -1001,6 +1113,8 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Quick Links -->
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul>
@@ -1010,6 +1124,8 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
+
+            <!-- Menu -->
             <div class="footer-col">
                 <h4>Our Menu</h4>
                 <ul>
@@ -1020,75 +1136,322 @@
                     <li><a href="menu.html">Drinks</a></li>
                 </ul>
             </div>
+
+            <!-- Contact -->
             <div class="footer-col">
                 <h4>Contact Us</h4>
                 <ul>
                     <li>
-                        <i class="fas fa-phone"></i> 
+                        <i class="fas fa-phone"></i>
                         +1 234 567 8900
                     </li>
                     <li>
-                        <i class="fas fa-envelope"></i> 
+                        <i class="fas fa-envelope"></i>
                         info@martinozpizza.com
                     </li>
                     <li>
-                        <i class="fab fa-whatsapp"></i> 
+                        <i class="fab fa-whatsapp"></i>
                         WhatsApp Order
                     </li>
                     <li>
-                        <i class="fas fa-clock"></i> 
+                        <i class="fas fa-clock"></i>
                         10:00 AM - 11:00 PM
                     </li>
                 </ul>
             </div>
+
         </div>
+
         <div class="footer-bottom">
-            <p>© 2024 Martinoz Pizza. All Rights Reserved. Made with ❤️</p>
+            <p>© 2024 Martinoz Pizza. All Rights Reserved.
+               Made with ❤️ & 🌿</p>
         </div>
     </div>
 </footer>
 
-    <!-- ========== CART SIDEBAR ========== -->
-    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
-    <div class="cart-sidebar" id="cartSidebar">
-        <div class="cart-header">
-            <h3>🛒 Your Order</h3>
-            <button onclick="toggleCart()" class="cart-close">✕</button>
-        </div>
-        <div class="cart-items" id="cartItems">
-            <div class="empty-cart">
-                <span>🍕</span>
-                <p>Your cart is empty</p>
-                <small>Add some pizzas!</small>
-            </div>
-        </div>
-        <div class="cart-footer" id="cartFooter" style="display:none">
-            <div class="cart-total">
-                <span>Total:</span>
-                <span id="cartTotal">$0.00</span>
-            </div>
-            <input type="text" placeholder="Coupon Code" class="coupon-input" id="couponInput">
-            <button onclick="applyCoupon()" class="apply-coupon">Apply Coupon</button>
-            <button class="checkout-btn" onclick="checkout()">
-                Proceed to Checkout 🚀
-            </button>
+<!-- ========== CART SIDEBAR ========== -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+        <h3>🛒 Your Order</h3>
+        <button onclick="toggleCart()" class="cart-close">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+        <div class="empty-cart">
+            <span>🍕</span>
+            <p>Your cart is empty</p>
+            <small>Add some delicious pizzas!</small>
         </div>
     </div>
-
-    <!-- ========== CART BUTTON ========== -->
-    <div class="cart-float" onclick="toggleCart()">
-        <i class="fas fa-shopping-cart"></i>
-        <span class="cart-count" id="cartCount">0</span>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cartTotal">$0.00</span>
+        </div>
+        <input type="text"
+               placeholder="Enter Coupon Code"
+               class="coupon-input"
+               id="couponInput">
+        <button onclick="applyCoupon()" class="apply-coupon">
+            Apply Coupon
+        </button>
+        <button class="checkout-btn" onclick="checkout()">
+            <i class="fas fa-rocket"></i>
+            Proceed to Checkout
+        </button>
     </div>
+</div>
 
-    <!-- ========== WHATSAPP BUTTON ========== -->
-    <a href="https://wa.me/1234567890?text=Hi! I want to order from Martinoz Pizza" 
-       class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+<!-- ========== CART FLOAT BUTTON ========== -->
+<div class="cart-float" onclick="toggleCart()">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="cart-count" id="cartCount">0</span>
+</div>
 
-   
+<!-- ========== WHATSAPP BUTTON ========== -->
+<a href="https://wa.me/1234567890?text=Hi! I want to order from Martinoz Pizza"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="WhatsApp Order">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
-    <script src="js/main.js"></script>
+<!-- ========== POPUP OFFER ========== -->
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup">
+        <button class="popup-close" onclick="closePopup()">✕</button>
+        <div class="popup-content">
+            <span class="popup-emoji">🍕</span>
+            <h2>Welcome to Martinoz Pizza!</h2>
+            <p>Get <strong>20% OFF</strong> on your first order!</p>
+            <div class="coupon-display">WELCOME20</div>
+            <a href="menu.html" class="btn-primary"
+               onclick="closePopup()"
+               style="width:100%; justify-content:center;">
+                <i class="fas fa-pizza-slice"></i>
+                Order Now & Save!
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ========== SCRIPTS ========== -->
+<script src="js/main.js"></script>
+<script src="js/slider.js"></script>
+
+<!-- Inline Page Loader CSS + JS -->
+<style>
+/* ===== PAGE LOADER ===== */
+#pageLoader {
+    position: fixed;
+    inset: 0;
+    background: #F1F8F1;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#pageLoader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-content { text-align: center; }
+
+.loader-logo {
+    margin-bottom: 18px;
+    animation: bounceLoader 1.2s ease infinite;
+}
+
+@keyframes bounceLoader {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-12px); }
+}
+
+.loader-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #1B5E20;
+    margin-bottom: 22px;
+    letter-spacing: -0.5px;
+}
+
+.loader-bar {
+    width: 200px;
+    height: 5px;
+    background: rgba(27, 94, 32, 0.12);
+    border-radius: 999px;
+    margin: 0 auto 14px;
+    overflow: hidden;
+}
+
+.loader-bar-fill {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #1B5E20, #43A047, #66BB6A);
+    border-radius: 999px;
+    animation: loadProgress 1.8s ease forwards;
+}
+
+@keyframes loadProgress {
+    0%   { width: 0%;   }
+    60%  { width: 75%;  }
+    100% { width: 100%; }
+}
+
+.loader-sub {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    color: #5A7A5A;
+    font-weight: 500;
+}
+
+/* ===== POPUP ===== */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 31, 10, 0.55);
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.35s ease;
+    padding: 20px;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup {
+    background: #FFFFFF;
+    border: 1px solid rgba(27, 94, 32, 0.12);
+    border-radius: 24px;
+    padding: 48px 42px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 24px 64px rgba(27, 94, 32, 0.22);
+}
+
+@keyframes popIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+
+.popup-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    background: #E8F5E9;
+    border: 1px solid rgba(27, 94, 32, 0.12);
+    color: #5A7A5A;
+    width: 33px; height: 33px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-weight: 700;
+}
+
+.popup-close:hover {
+    background: #1B5E20;
+    color: white;
+}
+
+.popup-emoji {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 16px;
+    animation: bounceLoader 1s ease infinite;
+}
+
+.popup h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.65rem;
+    margin-bottom: 10px;
+    color: #1A2E1A;
+    font-weight: 900;
+}
+
+.popup p {
+    font-family: 'Poppins', sans-serif;
+    color: #5A7A5A;
+    margin-bottom: 22px;
+    font-size: 0.96rem;
+    line-height: 1.65;
+}
+
+.coupon-display {
+    background: rgba(249, 168, 37, 0.10);
+    border: 2px dashed #F9A825;
+    color: #F57F17;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.45rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+/* ===== TOAST ===== */
+.toast {
+    position: fixed;
+    bottom: 170px;
+    right: 25px;
+    background: #1A2E1A;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 9999;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    box-shadow: 0 8px 28px rgba(27, 94, 32, 0.30);
+    animation: slideInRight 0.3s ease;
+    max-width: 300px;
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to   { transform: translateX(0);    opacity: 1; }
+}
+</style>
+
+<script>
+// ===== PAGE LOADER =====
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const loader = document.getElementById('pageLoader');
+        if (loader) loader.classList.add('hidden');
+    }, 1800);
+});
+
+// ===== POPUP =====
+function closePopup() {
+    document.getElementById('popupOverlay').classList.remove('active');
+}
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const popup = document.getElementById('popupOverlay');
+        if (popup) popup.classList.add('active');
+    }, 3500);
+});
+</script>
+
 </body>
 </html>

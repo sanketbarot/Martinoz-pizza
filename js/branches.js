@@ -1,165 +1,221 @@
-// ========== SEARCH BRANCHES ==========
-function searchBranches() {
-    const query = document.getElementById('branchSearch')
-                          .value.toLowerCase().trim();
+// ============================================
+// MARTINOZ PIZZA - Branches JS (Green Theme)
+// ============================================
 
-    const cards = document.querySelectorAll('.branch-card-full');
-    const sections = document.querySelectorAll('.state-section');
-    const noResults = document.getElementById('noBranchResults');
-    let found = 0;
-
-    cards.forEach(card => {
-        const name = card.getAttribute('data-name').toLowerCase();
-        const city = card.getAttribute('data-city').toLowerCase();
-        const address = card.querySelector('.bcf-address').textContent.toLowerCase();
-
-        if (
-            name.includes(query) || 
-            city.includes(query) || 
-            address.includes(query) || 
-            query === ''
-        ) {
-            card.style.display = '';
-            card.style.animation = 'fadeIn 0.3s ease';
-            found++;
-        } else {
-            card.style.display = 'none';
-        }
-    });
-
-    // Show/hide sections based on visible cards
-    sections.forEach(section => {
-        const visibleCards = section.querySelectorAll(
-            '.branch-card-full:not([style*="display: none"])'
-        );
-        section.style.display = visibleCards.length > 0 ? '' : 'none';
-    });
-
-    // Update count
-    document.getElementById('resultCount').innerHTML =
-        `Showing <strong>${found}</strong> branch${found !== 1 ? 'es' : ''}`;
-
-    noResults.style.display = found === 0 ? 'block' : 'none';
-}
-
-// ========== RESET SEARCH ==========
-function resetSearch() {
-    document.getElementById('branchSearch').value = '';
-    searchBranches();
-}
-
-// ========== FILTER BY REGION ==========
+// ========== FILTER REGION ==========
 function filterRegion(region, btn) {
-    // Update tab styles
-    document.querySelectorAll('.region-tab').forEach(t => {
-        t.classList.remove('active');
-    });
+    // Active tab
+    document.querySelectorAll('.region-tab')
+            .forEach(t => t.classList.remove('active'));
     btn.classList.add('active');
 
+    // Show/hide state sections
     const sections = document.querySelectorAll('.state-section');
-    const cards = document.querySelectorAll('.branch-card-full');
-    let found = 0;
+    let count = 0;
 
     sections.forEach(section => {
         const sectionRegion = section.getAttribute('data-region');
         if (region === 'all' || sectionRegion === region) {
-            section.style.display = '';
-            section.style.animation = 'fadeIn 0.4s ease';
+            section.style.display = 'block';
+            section.style.animation = 'fadeSlideUp 0.5s ease';
+            count += section.querySelectorAll('.branch-card-full').length;
         } else {
             section.style.display = 'none';
         }
     });
 
-    // Count visible cards
+    // Update count
+    const countEl = document.getElementById('resultCount');
+    if (countEl) {
+        countEl.innerHTML = `Showing <strong>${count}</strong> branches`;
+    }
+}
+
+// ========== SEARCH ==========
+function searchBranches() {
+    const input = document.getElementById('branchSearch');
+    if (!input) return;
+
+    const query = input.value.toLowerCase().trim();
+    const cards = document.querySelectorAll('.branch-card-full');
+    const noResult = document.getElementById('noBranchResults');
+    let visible = 0;
+
     cards.forEach(card => {
-        const cardRegion = card.getAttribute('data-region');
-        if (region === 'all' || cardRegion === region) {
-            found++;
-        }
+        const name   = card.getAttribute('data-name')?.toLowerCase() || '';
+        const city   = card.getAttribute('data-city')?.toLowerCase() || '';
+        const region = card.getAttribute('data-region')?.toLowerCase() || '';
+        const addr   = card.querySelector('.bcf-address')?.textContent?.toLowerCase() || '';
+
+        const match = !query ||
+            name.includes(query) ||
+            city.includes(query) ||
+            region.includes(query) ||
+            addr.includes(query);
+
+        card.style.display = match ? 'block' : 'none';
+        if (match) visible++;
     });
 
-    document.getElementById('resultCount').innerHTML =
-        `Showing <strong>${found}+</strong> branches`;
-    document.getElementById('noBranchResults').style.display = 'none';
+    // Show/hide sections based on visible cards
+    document.querySelectorAll('.state-section').forEach(section => {
+        const hasVisible = section.querySelectorAll(
+            '.branch-card-full[style="display: block;"]'
+        ).length > 0;
+        section.style.display = (!query || hasVisible) ? 'block' : 'none';
+    });
+
+    // No results
+    if (noResult) {
+        noResult.style.display = (visible === 0 && query) ? 'flex' : 'none';
+    }
+
+    // Update count
+    const countEl = document.getElementById('resultCount');
+    if (countEl) {
+        countEl.innerHTML = query
+            ? `Found <strong>${visible}</strong> branches for "${query}"`
+            : `Showing <strong>80+</strong> branches`;
+    }
+}
+
+// ========== RESET SEARCH ==========
+function resetSearch() {
+    const input = document.getElementById('branchSearch');
+    if (input) input.value = '';
+    searchBranches();
+
+    document.querySelectorAll('.state-section')
+            .forEach(s => s.style.display = 'block');
+
+    document.querySelectorAll('.branch-card-full')
+            .forEach(c => c.style.display = 'block');
+
+    const noResult = document.getElementById('noBranchResults');
+    if (noResult) noResult.style.display = 'none';
+
+    const countEl = document.getElementById('resultCount');
+    if (countEl) {
+        countEl.innerHTML = `Showing <strong>80+</strong> branches`;
+    }
 }
 
 // ========== DETECT LOCATION ==========
 function detectLocation() {
     const btn = document.querySelector('.detect-btn');
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Detecting...';
-    btn.disabled = true;
+    if (btn) {
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Detecting...';
+        btn.disabled = true;
+    }
 
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-            (position) => {
-                btn.innerHTML = '<i class="fas fa-check"></i> Location Found!';
-                btn.style.background = '#2ECC71';
+    if (!navigator.geolocation) {
+        showToast('❌ Geolocation not supported!');
+        resetDetectBtn(btn);
+        return;
+    }
 
-                // Show nearest branch toast
-                showToast('📍 Nearest branch: Martinoz Pizza - SG Highway, Ahmedabad');
+    navigator.geolocation.getCurrentPosition(
+        (pos) => {
+            showToast('✅ Location detected! Showing nearby branches.');
+            resetDetectBtn(btn);
+        },
+        (err) => {
+            showToast('❌ Could not detect location. Please search manually.');
+            resetDetectBtn(btn);
+        },
+        { timeout: 8000 }
+    );
+}
 
-                setTimeout(() => {
-                    btn.innerHTML = '<i class="fas fa-location-arrow"></i> Detect Location';
-                    btn.style.background = '';
-                    btn.disabled = false;
-                }, 3000);
-            },
-            (error) => {
-                btn.innerHTML = '<i class="fas fa-times"></i> Permission Denied';
-                btn.style.background = '#E63946';
-                setTimeout(() => {
-                    btn.innerHTML = '<i class="fas fa-location-arrow"></i> Detect Location';
-                    btn.style.background = '';
-                    btn.disabled = false;
-                }, 2000);
-                showToast('❌ Please allow location access');
-            }
-        );
-    } else {
-        showToast('❌ Geolocation not supported on this browser');
+function resetDetectBtn(btn) {
+    if (!btn) return;
+    setTimeout(() => {
         btn.innerHTML = '<i class="fas fa-location-arrow"></i> Detect Location';
         btn.disabled = false;
-    }
+    }, 1500);
 }
 
 // ========== SWITCH VIEW ==========
-function switchView(type) {
-    const grid = document.querySelectorAll('.branches-grid');
+function switchView(view) {
+    const grids = document.querySelectorAll('.branches-grid');
     const gridBtn = document.getElementById('gridViewBtn');
     const listBtn = document.getElementById('listViewBtn');
 
-    if (type === 'list') {
-        grid.forEach(g => g.classList.add('list-view'));
-        listBtn.classList.add('active');
-        gridBtn.classList.remove('active');
-    } else {
-        grid.forEach(g => g.classList.remove('list-view'));
-        gridBtn.classList.add('active');
-        listBtn.classList.remove('active');
-    }
-}
-
-// ========== HAMBURGER ==========
-const hamburger = document.getElementById('hamburger');
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        document.getElementById('navLinks').classList.toggle('active');
+    grids.forEach(grid => {
+        if (view === 'list') {
+            grid.classList.add('list-view');
+        } else {
+            grid.classList.remove('list-view');
+        }
     });
+
+    if (gridBtn) gridBtn.classList.toggle('active', view === 'grid');
+    if (listBtn) listBtn.classList.toggle('active', view === 'list');
 }
 
 // ========== SCROLL ANIMATIONS ==========
-const branchObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, { threshold: 0.05 });
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll(
+        '.branch-card-full, .fcta-stat, .hbs-item'
+    );
 
-document.querySelectorAll('.branch-card-full, .fcta-stat').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    branchObserver.observe(el);
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity   = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08 });
+
+    cards.forEach((el, i) => {
+        el.style.opacity   = '0';
+        el.style.transform = 'translateY(25px)';
+        el.style.transition = `opacity 0.5s ease ${i * 0.04}s,
+                               transform 0.5s ease ${i * 0.04}s`;
+        observer.observe(el);
+    });
 });
+
+// ========== ANIMATION CSS ==========
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeSlideUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* LIST VIEW */
+    .branches-grid.list-view {
+        grid-template-columns: 1fr !important;
+    }
+
+    .branches-grid.list-view .branch-card-full {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    .branches-grid.list-view .bcf-top {
+        grid-column: 1 / -1;
+    }
+
+    .branches-grid.list-view .bcf-details {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .branches-grid.list-view .bcf-actions {
+        grid-column: 1 / -1;
+    }
+
+    @media (max-width: 768px) {
+        .branches-grid.list-view .branch-card-full {
+            grid-template-columns: 1fr;
+        }
+        .branches-grid.list-view .bcf-details {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+`;
+document.head.appendChild(style);

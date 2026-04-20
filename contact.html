@@ -5,58 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact Martinoz Pizza - Get in touch with us for orders, franchise inquiries & feedback!">
     <title>Contact Us - Martinoz Pizza</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- FAVICON -->
-<link rel="icon" 
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
 
-<!-- OG META TAGS -->
-<meta property="og:title" content="Martinoz Pizza">
-<meta property="og:description" 
-      content="Freshly Baked Happiness - Order Online!">
-<meta property="og:image" 
-      content="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1200">
-<meta property="og:type" content="website">
+    <!-- FAVICON -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
+
+    <!-- OG META -->
+    <meta property="og:title" content="Contact - Martinoz Pizza">
+    <meta property="og:description" content="Get in touch with us for orders, franchise & feedback!">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:type" content="website">
 </head>
 <body>
 
-   <nav class="navbar" id="navbar">
+<!-- ========== PAGE LOADER ========== -->
+<div id="pageLoader">
+    <div class="loader-content">
+        <div class="loader-logo">
+            <svg viewBox="0 0 80 80" width="72" height="72">
+                <circle cx="40" cy="40" r="35" fill="#1B5E20" opacity="0.15"/>
+                <circle cx="40" cy="40" r="28" fill="#2E7D32"/>
+                <line x1="40" y1="12" x2="40" y2="68" stroke="#F9A825" stroke-width="2"/>
+                <line x1="14" y1="30" x2="66" y2="50" stroke="#F9A825" stroke-width="2"/>
+                <line x1="14" y1="50" x2="66" y2="30" stroke="#F9A825" stroke-width="2"/>
+                <circle cx="33" cy="30" r="3" fill="#F9A825"/>
+                <circle cx="48" cy="35" r="2.5" fill="#F9A825"/>
+                <circle cx="36" cy="48" r="2.5" fill="#F9A825"/>
+                <circle cx="50" cy="50" r="3" fill="#F9A825"/>
+            </svg>
+        </div>
+        <div class="loader-text">Contact Us</div>
+        <div class="loader-bar">
+            <div class="loader-bar-fill"></div>
+        </div>
+        <div class="loader-sub">📞 We're Here to Help 24/7</div>
+    </div>
+</div>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar" id="navbar">
     <div class="container">
 
         <!-- LOGO -->
         <a href="index.html" class="nav-brand">
-            <svg xmlns="http://www.w3.org/2000/svg" 
-                 viewBox="0 0 300 80" 
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 300 80"
                  class="nav-logo-svg">
-                <circle cx="40" cy="40" r="35" 
-                        fill="#E63946" opacity="0.15"/>
-                <circle cx="40" cy="40" r="28" fill="#E63946"/>
-                <line x1="40" y1="12" x2="40" y2="68" 
-                      stroke="#FFB703" stroke-width="2"/>
-                <line x1="14" y1="30" x2="66" y2="50" 
-                      stroke="#FFB703" stroke-width="2"/>
-                <line x1="14" y1="50" x2="66" y2="30" 
-                      stroke="#FFB703" stroke-width="2"/>
-                <circle cx="33" cy="30" r="3" fill="#FFB703"/>
-                <circle cx="48" cy="35" r="2.5" fill="#FFB703"/>
-                <circle cx="36" cy="48" r="2.5" fill="#FFB703"/>
-                <circle cx="50" cy="50" r="3" fill="#FFB703"/>
-                <circle cx="40" cy="40" r="28" fill="none" 
-                        stroke="#FFB703" stroke-width="2.5"/>
-                <text x="88" y="35" 
-                      font-family="Arial Black, sans-serif" 
-                      font-size="26" font-weight="900" 
-                      fill="#FFFFFF" letter-spacing="1">MARTINOZ</text>
-                <text x="90" y="58" 
-                      font-family="Arial Black, sans-serif" 
-                      font-size="18" font-weight="900" 
-                      fill="#E63946" letter-spacing="6">PIZZA</text>
-                <text x="90" y="72" 
-                      font-family="Arial, sans-serif" 
-                      font-size="9" fill="#FFB703" 
+                <circle cx="40" cy="40" r="35"
+                        fill="#1B5E20" opacity="0.15"/>
+                <circle cx="40" cy="40" r="28" fill="#2E7D32"/>
+                <line x1="40" y1="12" x2="40" y2="68"
+                      stroke="#F9A825" stroke-width="2"/>
+                <line x1="14" y1="30" x2="66" y2="50"
+                      stroke="#F9A825" stroke-width="2"/>
+                <line x1="14" y1="50" x2="66" y2="30"
+                      stroke="#F9A825" stroke-width="2"/>
+                <circle cx="33" cy="30" r="3" fill="#F9A825"/>
+                <circle cx="48" cy="35" r="2.5" fill="#F9A825"/>
+                <circle cx="36" cy="48" r="2.5" fill="#F9A825"/>
+                <circle cx="50" cy="50" r="3" fill="#F9A825"/>
+                <circle cx="40" cy="40" r="28" fill="none"
+                        stroke="#F9A825" stroke-width="2.5"/>
+                <text x="88" y="35"
+                      font-family="Arial Black, sans-serif"
+                      font-size="26" font-weight="900"
+                      fill="#1A2E1A" letter-spacing="1">MARTINOZ</text>
+                <text x="90" y="58"
+                      font-family="Arial Black, sans-serif"
+                      font-size="18" font-weight="900"
+                      fill="#2E7D32" letter-spacing="6">PIZZA</text>
+                <text x="90" y="72"
+                      font-family="Arial, sans-serif"
+                      font-size="9" fill="#F9A825"
                       letter-spacing="2">FRESHLY BAKED HAPPINESS</text>
             </svg>
         </a>
@@ -66,10 +91,11 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="branches.html">Branches</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
             <li>
                 <a href="menu.html" class="btn-order">
-                    Order Now 🛒
+                    <i class="fas fa-shopping-cart"></i>
+                    Order Now
                 </a>
             </li>
         </ul>
@@ -83,727 +109,866 @@
     </div>
 </nav>
 
-    <!-- ========== CONTACT HERO ========== -->
-    <section class="contact-hero">
-        <div class="contact-hero-overlay"></div>
-        <div class="container">
-            <div class="contact-hero-content">
-                <span class="section-tag">📞 Get In Touch</span>
-                <h1>We'd Love To <span class="highlight">Hear</span> From You!</h1>
-                <p>Have a question, feedback or want to open a franchise?
-                   We're here to help you 24/7!</p>
+<!-- ========== CONTACT HERO ========== -->
+<section class="contact-hero">
+    <div class="container">
+        <div class="contact-hero-content">
 
-                <!-- QUICK CONTACT PILLS -->
-                <div class="quick-contact-pills">
-                    <a href="tel:+911234567890" class="qcp">
+            <span class="section-tag">📞 Get In Touch</span>
+
+            <h1>We'd Love To
+                <span class="highlight">Hear</span>
+                From You!
+            </h1>
+
+            <p>Have a question, feedback or want to open a franchise?
+               We're here to help you 24/7!</p>
+
+            <!-- QUICK CONTACT PILLS -->
+            <div class="quick-contact-pills">
+                <a href="tel:+911234567890" class="qcp">
+                    <i class="fas fa-phone"></i>
+                    +91 123 456 7890
+                </a>
+                <a href="mailto:info@martinozpizza.com" class="qcp">
+                    <i class="fas fa-envelope"></i>
+                    info@martinozpizza.com
+                </a>
+                <a href="https://wa.me/911234567890"
+                   target="_blank" class="qcp whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CONTACT INFO CARDS ========== -->
+<section class="contact-info-section">
+    <div class="container">
+        <div class="contact-info-grid">
+
+            <div class="cinfo-card">
+                <div class="cinfo-icon phone">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3>Call Us</h3>
+                <p>Toll Free Number</p>
+                <a href="tel:+911234567890">+91 123 456 7890</a>
+                <a href="tel:+911234567891">+91 123 456 7891</a>
+                <span class="cinfo-hours">Mon - Sun: 9AM - 11PM</span>
+            </div>
+
+            <div class="cinfo-card">
+                <div class="cinfo-icon email">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email Us</h3>
+                <p>We reply within 24 hours</p>
+                <a href="mailto:info@martinozpizza.com">
+                    info@martinozpizza.com
+                </a>
+                <a href="mailto:franchise@martinozpizza.com">
+                    franchise@martinozpizza.com
+                </a>
+                <span class="cinfo-hours">24/7 Support</span>
+            </div>
+
+            <div class="cinfo-card">
+                <div class="cinfo-icon whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>WhatsApp</h3>
+                <p>Chat with us directly</p>
+                <a href="https://wa.me/911234567890" target="_blank">
+                    +91 123 456 7890
+                </a>
+                <a href="https://wa.me/911234567891" target="_blank">
+                    +91 123 456 7891
+                </a>
+                <span class="cinfo-hours">10AM - 11PM Daily</span>
+            </div>
+
+            <div class="cinfo-card">
+                <div class="cinfo-icon location">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Head Office</h3>
+                <p>Visit our main office</p>
+                <a href="https://maps.google.com" target="_blank">
+                    SG Highway, Ahmedabad,
+                </a>
+                <a href="https://maps.google.com" target="_blank">
+                    Gujarat - 380015, India
+                </a>
+                <span class="cinfo-hours">Mon - Sat: 10AM - 6PM</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========== MAIN CONTACT SECTION ========== -->
+<section class="contact-main">
+    <div class="container">
+        <div class="contact-layout">
+
+            <!-- ===== LEFT: FORM ===== -->
+            <div class="contact-form-wrap">
+                <div class="form-header">
+                    <span class="section-tag">✉️ Send Message</span>
+                    <h2>Send Us a
+                        <span class="highlight">Message</span>
+                    </h2>
+                    <p>Fill in the form below and we'll get back
+                       to you within 24 hours!</p>
+                </div>
+
+                <!-- FORM TABS -->
+                <div class="form-tabs">
+                    <button class="ftab active"
+                            onclick="switchFormTab('general', this)">
+                        💬 General Query
+                    </button>
+                    <button class="ftab"
+                            onclick="switchFormTab('order', this)">
+                        🛒 Order Issue
+                    </button>
+                    <button class="ftab"
+                            onclick="switchFormTab('franchise', this)">
+                        🤝 Franchise
+                    </button>
+                    <button class="ftab"
+                            onclick="switchFormTab('feedback', this)">
+                        ⭐ Feedback
+                    </button>
+                </div>
+
+                <!-- CONTACT FORM -->
+                <form class="contact-form"
+                      id="contactForm"
+                      onsubmit="submitForm(event)">
+
+                    <input type="hidden" id="formType" value="general">
+
+                    <!-- ROW 1 - NAME -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">
+                                <i class="fas fa-user"></i>
+                                First Name *
+                            </label>
+                            <input type="text"
+                                   id="firstName"
+                                   placeholder="Enter first name"
+                                   required>
+                            <span class="error-msg" id="firstNameErr"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">
+                                <i class="fas fa-user"></i>
+                                Last Name *
+                            </label>
+                            <input type="text"
+                                   id="lastName"
+                                   placeholder="Enter last name"
+                                   required>
+                            <span class="error-msg" id="lastNameErr"></span>
+                        </div>
+                    </div>
+
+                    <!-- ROW 2 - EMAIL & PHONE -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i>
+                                Email Address *
+                            </label>
+                            <input type="email"
+                                   id="email"
+                                   placeholder="Enter your email"
+                                   required>
+                            <span class="error-msg" id="emailErr"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">
+                                <i class="fas fa-phone"></i>
+                                Phone Number *
+                            </label>
+                            <input type="tel"
+                                   id="phone"
+                                   placeholder="+91 XXXXX XXXXX"
+                                   required>
+                            <span class="error-msg" id="phoneErr"></span>
+                        </div>
+                    </div>
+
+                    <!-- ROW 3 - CITY & SUBJECT -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">
+                                <i class="fas fa-city"></i>
+                                Your City
+                            </label>
+                            <select id="city">
+                                <option value="">Select your city</option>
+                                <optgroup label="🏛️ Gujarat">
+                                    <option>Ahmedabad</option>
+                                    <option>Surat</option>
+                                    <option>Vadodara</option>
+                                    <option>Rajkot</option>
+                                    <option>Gandhinagar</option>
+                                </optgroup>
+                                <optgroup label="🌿 Madhya Pradesh">
+                                    <option>Indore</option>
+                                    <option>Bhopal</option>
+                                    <option>Jabalpur</option>
+                                    <option>Gwalior</option>
+                                </optgroup>
+                                <optgroup label="🏜️ Rajasthan">
+                                    <option>Jaipur</option>
+                                    <option>Udaipur</option>
+                                    <option>Jodhpur</option>
+                                    <option>Kota</option>
+                                </optgroup>
+                                <optgroup label="🇳🇿 New Zealand">
+                                    <option>Auckland</option>
+                                    <option>Wellington</option>
+                                    <option>Christchurch</option>
+                                    <option>Hamilton</option>
+                                </optgroup>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">
+                                <i class="fas fa-tag"></i>
+                                Subject *
+                            </label>
+                            <input type="text"
+                                   id="subject"
+                                   placeholder="What is this about?"
+                                   required>
+                        </div>
+                    </div>
+
+                    <!-- ORDER ID (order tab only) -->
+                    <div class="form-group order-field" style="display:none">
+                        <label for="orderId">
+                            <i class="fas fa-receipt"></i>
+                            Order ID
+                        </label>
+                        <input type="text"
+                               id="orderId"
+                               placeholder="Enter your order ID (e.g. MP-12345)">
+                    </div>
+
+                    <!-- FRANCHISE FIELDS (franchise tab only) -->
+                    <div class="franchise-fields" style="display:none">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="investment">
+                                    <i class="fas fa-rupee-sign"></i>
+                                    Investment Budget
+                                </label>
+                                <select id="investment">
+                                    <option value="">Select budget range</option>
+                                    <option>₹15L - ₹25L</option>
+                                    <option>₹25L - ₹50L</option>
+                                    <option>₹50L - ₹1Cr</option>
+                                    <option>Above ₹1Cr</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="experience">
+                                    <i class="fas fa-briefcase"></i>
+                                    Business Experience
+                                </label>
+                                <select id="experience">
+                                    <option value="">Select experience</option>
+                                    <option>No Experience</option>
+                                    <option>1-2 Years</option>
+                                    <option>3-5 Years</option>
+                                    <option>5+ Years</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STAR RATING (feedback tab only) -->
+                    <div class="form-group feedback-field" style="display:none">
+                        <label>
+                            <i class="fas fa-star"></i>
+                            Rate Your Experience
+                        </label>
+                        <div class="star-rating" id="starRating">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                        <input type="hidden" id="ratingValue" value="0">
+                    </div>
+
+                    <!-- MESSAGE -->
+                    <div class="form-group">
+                        <label for="message">
+                            <i class="fas fa-comment"></i>
+                            Message *
+                        </label>
+                        <textarea id="message"
+                                  rows="5"
+                                  placeholder="Write your message here..."
+                                  required
+                                  oninput="countChars(this)">
+                        </textarea>
+                        <div class="char-count">
+                            <span id="charCount">0</span>/500 characters
+                        </div>
+                        <span class="error-msg" id="messageErr"></span>
+                    </div>
+
+                    <!-- FILE UPLOAD -->
+                    <div class="form-group">
+                        <label for="attachment">
+                            <i class="fas fa-paperclip"></i>
+                            Attach File
+                            <small>(optional - max 5MB)</small>
+                        </label>
+                        <div class="file-upload"
+                             onclick="document.getElementById('attachment').click()">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <span id="fileLabel">
+                                Click to upload or drag & drop
+                            </span>
+                            <small>PNG, JPG, PDF up to 5MB</small>
+                        </div>
+                        <input type="file"
+                               id="attachment"
+                               style="display:none"
+                               accept=".png,.jpg,.jpeg,.pdf"
+                               onchange="handleFile(this)">
+                    </div>
+
+                    <!-- CHECKBOXES -->
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" checked>
+                            <span class="checkmark"></span>
+                            Subscribe to our newsletter for latest offers & updates
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terms" required>
+                            <span class="checkmark"></span>
+                            I agree to the
+                            <a href="#">Terms & Conditions</a> and
+                            <a href="#">Privacy Policy</a> *
+                        </label>
+                    </div>
+
+                    <!-- SUBMIT -->
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+
+                </form>
+
+                <!-- SUCCESS MESSAGE -->
+                <div class="form-success" id="formSuccess" style="display:none">
+                    <div class="success-icon">✅</div>
+                    <h3>Message Sent Successfully!</h3>
+                    <p>Thank you for contacting us! Our team will get
+                       back to you within 24 hours.</p>
+                    <button onclick="resetForm()" class="btn-primary">
+                        <i class="fas fa-redo"></i>
+                        Send Another Message
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- ===== RIGHT: MAP & INFO ===== -->
+            <div class="contact-right">
+
+                <!-- GOOGLE MAP -->
+                <div class="map-wrap">
+                    <div class="map-header">
+                        <h3>
+                            <i class="fas fa-map-marked-alt"></i>
+                            Find Us On Map
+                        </h3>
+                        <div class="map-branch-select">
+                            <select id="mapBranch" onchange="changeBranch(this)">
+                                <option value="ahmedabad">🏛️ Ahmedabad HQ</option>
+                                <option value="surat">🏛️ Surat Branch</option>
+                                <option value="indore">🌿 Indore Branch</option>
+                                <option value="jaipur">🏜️ Jaipur Branch</option>
+                                <option value="auckland">🇳🇿 Auckland Branch</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- MAP -->
+                    <div class="map-container" id="mapContainer">
+                        <iframe
+                            id="googleMap"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.9!2d72.5!3d23.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAwJzAwLjAiTiA3MsKwMzAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                            width="100%"
+                            height="300"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Martinoz Pizza Location">
+                        </iframe>
+                        <div class="map-loading" id="mapLoading">
+                            <div class="map-spinner"></div>
+                            <p>Loading map...</p>
+                        </div>
+                    </div>
+
+                    <!-- BRANCH INFO -->
+                    <div class="selected-branch-info" id="selectedBranchInfo">
+                        <div class="sbi-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Martinoz Pizza - Ahmedabad HQ</strong>
+                                <span>SG Highway, Prahlad Nagar,
+                                      Ahmedabad - 380015</span>
+                            </div>
+                        </div>
+                        <div class="sbi-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Opening Hours</strong>
+                                <span>Mon - Sun: 10:00 AM - 11:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="sbi-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <span>+91 79 2345 6789</span>
+                            </div>
+                        </div>
+                        <a href="https://maps.google.com"
+                           target="_blank"
+                           class="get-direction-btn">
+                            <i class="fas fa-directions"></i>
+                            Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SOCIAL MEDIA -->
+                <div class="social-contact">
+                    <h3>Follow Us & Stay Updated</h3>
+                    <div class="social-grid">
+                        <a href="#" class="social-card facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <div>
+                                <strong>Facebook</strong>
+                                <span>@martinozpizza</span>
+                            </div>
+                        </a>
+                        <a href="#" class="social-card instagram">
+                            <i class="fab fa-instagram"></i>
+                            <div>
+                                <strong>Instagram</strong>
+                                <span>@martinozpizza</span>
+                            </div>
+                        </a>
+                        <a href="#" class="social-card twitter">
+                            <i class="fab fa-twitter"></i>
+                            <div>
+                                <strong>Twitter</strong>
+                                <span>@martinozpizza</span>
+                            </div>
+                        </a>
+                        <a href="#" class="social-card youtube">
+                            <i class="fab fa-youtube"></i>
+                            <div>
+                                <strong>YouTube</strong>
+                                <span>Martinoz Pizza</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- WORKING HOURS -->
+                <div class="working-hours">
+                    <h3>
+                        <i class="fas fa-clock"></i>
+                        Working Hours
+                    </h3>
+                    <ul class="hours-list">
+                        <li>
+                            <span>Monday - Friday</span>
+                            <span class="hours open">10:00 AM - 11:00 PM</span>
+                        </li>
+                        <li>
+                            <span>Saturday</span>
+                            <span class="hours open">9:00 AM - 11:30 PM</span>
+                        </li>
+                        <li>
+                            <span>Sunday</span>
+                            <span class="hours open">9:00 AM - 12:00 AM</span>
+                        </li>
+                        <li class="today">
+                            <span>Today (Support)</span>
+                            <span class="hours open">🟢 Open Now</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FAQ SECTION ========== -->
+<section class="faq-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">❓ FAQs</span>
+            <h2>Frequently Asked
+                <span class="highlight">Questions</span>
+            </h2>
+            <p>Quick answers to common questions</p>
+        </div>
+
+        <div class="faq-grid">
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>🚀 How fast is your delivery?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>We guarantee delivery within 30 minutes for orders
+                       placed within 5km of our branches. For longer
+                       distances delivery may take up to 45-60 minutes.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>💳 What payment methods do you accept?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>We accept Cash on Delivery, Credit/Debit Cards,
+                       UPI (Google Pay, PhonePe, Paytm), Net Banking
+                       and all major digital wallets.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>🍕 Do you have pure veg options?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes! We have a wide range of pure vegetarian
+                       pizzas, sides and desserts. All veg items are
+                       prepared separately with dedicated equipment.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>🤝 How can I apply for a franchise?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Fill out the contact form above selecting
+                       "Franchise" tab, or email us at
+                       franchise@martinozpizza.com. Our team will
+                       contact you within 48 hours with full details.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>🎁 Do you offer bulk/party orders?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Absolutely! We offer special discounts for
+                       bulk orders above 10 pizzas. Contact us at
+                       least 2 hours in advance for party orders.
+                       Call or WhatsApp us for special pricing.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>🔄 What is your refund policy?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>If you are not satisfied with your order,
+                       we offer a full remake or refund within 30
+                       minutes of delivery. Contact our support
+                       team immediately with your order ID.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+
+            <!-- Brand -->
+            <div class="footer-col">
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 300 80"
+                         class="footer-logo-svg">
+                        <circle cx="40" cy="40" r="35"
+                                fill="#2E7D32" opacity="0.20"/>
+                        <circle cx="40" cy="40" r="28" fill="#2E7D32"/>
+                        <line x1="40" y1="12" x2="40" y2="68"
+                              stroke="#F9A825" stroke-width="2"/>
+                        <line x1="14" y1="30" x2="66" y2="50"
+                              stroke="#F9A825" stroke-width="2"/>
+                        <line x1="14" y1="50" x2="66" y2="30"
+                              stroke="#F9A825" stroke-width="2"/>
+                        <circle cx="33" cy="30" r="3" fill="#F9A825"/>
+                        <circle cx="48" cy="35" r="2.5" fill="#F9A825"/>
+                        <circle cx="36" cy="48" r="2.5" fill="#F9A825"/>
+                        <circle cx="50" cy="50" r="3" fill="#F9A825"/>
+                        <circle cx="40" cy="40" r="28" fill="none"
+                                stroke="#F9A825" stroke-width="2.5"/>
+                        <text x="88" y="35"
+                              font-family="Arial Black, sans-serif"
+                              font-size="26" font-weight="900"
+                              fill="#FFFFFF" letter-spacing="1">MARTINOZ</text>
+                        <text x="90" y="58"
+                              font-family="Arial Black, sans-serif"
+                              font-size="18" font-weight="900"
+                              fill="#66BB6A" letter-spacing="6">PIZZA</text>
+                        <text x="90" y="72"
+                              font-family="Arial, sans-serif"
+                              font-size="9" fill="#F9A825"
+                              letter-spacing="2">FRESHLY BAKED HAPPINESS</text>
+                    </svg>
+                </a>
+                <p>Freshly Baked Happiness delivered to your door.
+                   Made with love and the finest ingredients.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="branches.html">Branches</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Menu -->
+            <div class="footer-col">
+                <h4>Our Menu</h4>
+                <ul>
+                    <li><a href="menu.html">Veg Pizzas</a></li>
+                    <li><a href="menu.html">Non-Veg Pizzas</a></li>
+                    <li><a href="menu.html">Cheese Burst</a></li>
+                    <li><a href="menu.html">Combo Deals</a></li>
+                    <li><a href="menu.html">Drinks</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>
                         <i class="fas fa-phone"></i>
                         +91 123 456 7890
-                    </a>
-                    <a href="mailto:info@martinozpizza.com" class="qcp">
+                    </li>
+                    <li>
                         <i class="fas fa-envelope"></i>
                         info@martinozpizza.com
-                    </a>
-                    <a href="https://wa.me/911234567890" 
-                       target="_blank" class="qcp whatsapp">
+                    </li>
+                    <li>
                         <i class="fab fa-whatsapp"></i>
-                        WhatsApp Us
-                    </a>
-                </div>
+                        WhatsApp Order
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        10:00 AM - 11:00 PM
+                    </li>
+                </ul>
             </div>
+
         </div>
-    </section>
 
-    <!-- ========== CONTACT INFO CARDS ========== -->
-    <section class="contact-info-section">
-        <div class="container">
-            <div class="contact-info-grid">
-
-                <div class="cinfo-card">
-                    <div class="cinfo-icon phone">
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
-                    <h3>Call Us</h3>
-                    <p>Toll Free Number</p>
-                    <a href="tel:+911234567890">+91 123 456 7890</a>
-                    <a href="tel:+911234567891">+91 123 456 7891</a>
-                    <span class="cinfo-hours">Mon - Sun: 9AM - 11PM</span>
-                </div>
-
-                <div class="cinfo-card">
-                    <div class="cinfo-icon email">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email Us</h3>
-                    <p>We reply within 24 hours</p>
-                    <a href="mailto:info@martinozpizza.com">
-                        info@martinozpizza.com
-                    </a>
-                    <a href="mailto:franchise@martinozpizza.com">
-                        franchise@martinozpizza.com
-                    </a>
-                    <span class="cinfo-hours">24/7 Support</span>
-                </div>
-
-                <div class="cinfo-card">
-                    <div class="cinfo-icon whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <h3>WhatsApp</h3>
-                    <p>Chat with us directly</p>
-                    <a href="https://wa.me/911234567890" target="_blank">
-                        +91 123 456 7890
-                    </a>
-                    <a href="https://wa.me/911234567891" target="_blank">
-                        +91 123 456 7891
-                    </a>
-                    <span class="cinfo-hours">10AM - 11PM Daily</span>
-                </div>
-
-                <div class="cinfo-card">
-                    <div class="cinfo-icon location">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Head Office</h3>
-                    <p>Visit our main office</p>
-                    <a href="https://maps.google.com" target="_blank">
-                        SG Highway, Ahmedabad,
-                    </a>
-                    <a href="https://maps.google.com" target="_blank">
-                        Gujarat - 380015, India
-                    </a>
-                    <span class="cinfo-hours">Mon - Sat: 10AM - 6PM</span>
-                </div>
-
-            </div>
+        <div class="footer-bottom">
+            <p>© 2024 Martinoz Pizza. All Rights Reserved.
+               Made with ❤️ & 🌿</p>
         </div>
-    </section>
+    </div>
+</footer>
 
-    <!-- ========== MAIN CONTACT SECTION ========== -->
-    <section class="contact-main">
-        <div class="container">
-            <div class="contact-layout">
+<!-- ========== WHATSAPP ========== -->
+<a href="https://wa.me/911234567890?text=Hi! I want to contact Martinoz Pizza"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
-                <!-- ===== LEFT: CONTACT FORM ===== -->
-                <div class="contact-form-wrap">
-                    <div class="form-header">
-                        <span class="section-tag">✉️ Send Message</span>
-                        <h2>Send Us a <span class="highlight">Message</span></h2>
-                        <p>Fill in the form below and we'll get back to you within 24 hours!</p>
-                    </div>
+<!-- ========== SCRIPTS ========== -->
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/slider.js"></script>
 
-                    <!-- FORM TYPE TABS -->
-                    <div class="form-tabs">
-                        <button class="ftab active" 
-                                onclick="switchFormTab('general', this)">
-                            💬 General Query
-                        </button>
-                        <button class="ftab" 
-                                onclick="switchFormTab('order', this)">
-                            🛒 Order Issue
-                        </button>
-                        <button class="ftab" 
-                                onclick="switchFormTab('franchise', this)">
-                            🤝 Franchise
-                        </button>
-                        <button class="ftab" 
-                                onclick="switchFormTab('feedback', this)">
-                            ⭐ Feedback
-                        </button>
-                    </div>
+<!-- Inline Loader + Navbar CSS & JS -->
+<style>
+/* PAGE LOADER */
+#pageLoader {
+    position: fixed;
+    inset: 0;
+    background: #F1F8F1;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+#pageLoader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.loader-content { text-align: center; }
+.loader-logo {
+    margin-bottom: 18px;
+    animation: bounceL 1.2s ease infinite;
+}
+@keyframes bounceL {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+.loader-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #1B5E20;
+    margin-bottom: 20px;
+}
+.loader-bar {
+    width: 200px; height: 5px;
+    background: rgba(27,94,32,0.12);
+    border-radius: 999px;
+    margin: 0 auto 14px;
+    overflow: hidden;
+}
+.loader-bar-fill {
+    height: 100%; width: 0;
+    background: linear-gradient(90deg, #1B5E20, #43A047, #66BB6A);
+    border-radius: 999px;
+    animation: loadProg 1.8s ease forwards;
+}
+@keyframes loadProg {
+    0%   { width: 0%;   }
+    60%  { width: 75%;  }
+    100% { width: 100%; }
+}
+.loader-sub {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    color: #5A7A5A;
+    font-weight: 500;
+}
 
-                    <!-- CONTACT FORM -->
-                    <form class="contact-form" 
-                          id="contactForm" 
-                          onsubmit="submitForm(event)">
+/* TOAST */
+.toast {
+    position: fixed;
+    bottom: 100px; right: 25px;
+    background: #1A2E1A;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 9999;
+    box-shadow: 0 8px 28px rgba(27,94,32,0.30);
+    animation: slideInR 0.3s ease;
+    max-width: 300px;
+}
+@keyframes slideInR {
+    from { transform: translateX(100%); opacity: 0; }
+    to   { transform: translateX(0); opacity: 1; }
+}
+</style>
 
-                        <!-- HIDDEN FORM TYPE -->
-                        <input type="hidden" 
-                               id="formType" 
-                               value="general">
+<script>
+// Page Loader
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        document.getElementById('pageLoader')
+                ?.classList.add('hidden');
+    }, 1800);
+});
 
-                        <!-- ROW 1 -->
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">
-                                    <i class="fas fa-user"></i>
-                                    First Name *
-                                </label>
-                                <input 
-                                    type="text" 
-                                    id="firstName"
-                                    placeholder="Enter first name"
-                                    required
-                                >
-                                <span class="error-msg" id="firstNameErr"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">
-                                    <i class="fas fa-user"></i>
-                                    Last Name *
-                                </label>
-                                <input 
-                                    type="text" 
-                                    id="lastName"
-                                    placeholder="Enter last name"
-                                    required
-                                >
-                                <span class="error-msg" id="lastNameErr"></span>
-                            </div>
-                        </div>
+// Navbar Scroll
+window.addEventListener('scroll', () => {
+    document.getElementById('navbar')
+            ?.classList.toggle('scrolled', window.scrollY > 50);
+}, { passive: true });
 
-                        <!-- ROW 2 -->
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">
-                                    <i class="fas fa-envelope"></i>
-                                    Email Address *
-                                </label>
-                                <input 
-                                    type="email" 
-                                    id="email"
-                                    placeholder="Enter your email"
-                                    required
-                                >
-                                <span class="error-msg" id="emailErr"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">
-                                    <i class="fas fa-phone"></i>
-                                    Phone Number *
-                                </label>
-                                <input 
-                                    type="tel" 
-                                    id="phone"
-                                    placeholder="+91 XXXXX XXXXX"
-                                    required
-                                >
-                                <span class="error-msg" id="phoneErr"></span>
-                            </div>
-                        </div>
+// Hamburger
+document.addEventListener('DOMContentLoaded', () => {
+    const ham = document.getElementById('hamburger');
+    const nav = document.getElementById('navLinks');
+    ham?.addEventListener('click', () => {
+        ham.classList.toggle('active');
+        nav?.classList.toggle('active');
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+        a.addEventListener('click', () => {
+            ham?.classList.remove('active');
+            nav?.classList.remove('active');
+        });
+    });
+});
 
-                        <!-- ROW 3 - CITY & BRANCH -->
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="city">
-                                    <i class="fas fa-city"></i>
-                                    Your City
-                                </label>
-                                <select id="city">
-                                    <option value="">Select your city</option>
-                                    <optgroup label="🏛️ Gujarat">
-                                        <option>Ahmedabad</option>
-                                        <option>Surat</option>
-                                        <option>Vadodara</option>
-                                        <option>Rajkot</option>
-                                        <option>Gandhinagar</option>
-                                    </optgroup>
-                                    <optgroup label="🌿 Madhya Pradesh">
-                                        <option>Indore</option>
-                                        <option>Bhopal</option>
-                                        <option>Jabalpur</option>
-                                        <option>Gwalior</option>
-                                    </optgroup>
-                                    <optgroup label="🏜️ Rajasthan">
-                                        <option>Jaipur</option>
-                                        <option>Udaipur</option>
-                                        <option>Jodhpur</option>
-                                        <option>Kota</option>
-                                    </optgroup>
-                                    <optgroup label="🇳🇿 New Zealand">
-                                        <option>Auckland</option>
-                                        <option>Wellington</option>
-                                        <option>Christchurch</option>
-                                        <option>Hamilton</option>
-                                    </optgroup>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">
-                                    <i class="fas fa-tag"></i>
-                                    Subject *
-                                </label>
-                                <input 
-                                    type="text" 
-                                    id="subject"
-                                    placeholder="What is this about?"
-                                    required
-                                >
-                            </div>
-                        </div>
+// Toast
+function showToast(msg) {
+    document.querySelector('.toast')?.remove();
+    const t = document.createElement('div');
+    t.className = 'toast';
+    t.textContent = msg;
+    document.body.appendChild(t);
+    setTimeout(() => t.remove(), 3000);
+}
+</script>
 
-                        <!-- ORDER ID (shown only for order tab) -->
-                        <div class="form-group order-field" 
-                             style="display:none">
-                            <label for="orderId">
-                                <i class="fas fa-receipt"></i>
-                                Order ID
-                            </label>
-                            <input 
-                                type="text" 
-                                id="orderId"
-                                placeholder="Enter your order ID (e.g. MP-12345)"
-                            >
-                        </div>
-
-                        <!-- FRANCHISE FIELDS (shown only for franchise tab) -->
-                        <div class="franchise-fields" style="display:none">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="investment">
-                                        <i class="fas fa-rupee-sign"></i>
-                                        Investment Budget
-                                    </label>
-                                    <select id="investment">
-                                        <option value="">Select budget range</option>
-                                        <option>₹15L - ₹25L</option>
-                                        <option>₹25L - ₹50L</option>
-                                        <option>₹50L - ₹1Cr</option>
-                                        <option>Above ₹1Cr</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="experience">
-                                        <i class="fas fa-briefcase"></i>
-                                        Business Experience
-                                    </label>
-                                    <select id="experience">
-                                        <option value="">Select experience</option>
-                                        <option>No Experience</option>
-                                        <option>1-2 Years</option>
-                                        <option>3-5 Years</option>
-                                        <option>5+ Years</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- RATING (shown only for feedback tab) -->
-                        <div class="form-group feedback-field" 
-                             style="display:none">
-                            <label>
-                                <i class="fas fa-star"></i>
-                                Rate Your Experience
-                            </label>
-                            <div class="star-rating" id="starRating">
-                                <span class="star" data-value="1">★</span>
-                                <span class="star" data-value="2">★</span>
-                                <span class="star" data-value="3">★</span>
-                                <span class="star" data-value="4">★</span>
-                                <span class="star" data-value="5">★</span>
-                            </div>
-                            <input type="hidden" id="ratingValue" value="0">
-                        </div>
-
-                        <!-- MESSAGE -->
-                        <div class="form-group">
-                            <label for="message">
-                                <i class="fas fa-comment"></i>
-                                Message *
-                            </label>
-                            <textarea 
-                                id="message"
-                                rows="5"
-                                placeholder="Write your message here..."
-                                required
-                                oninput="countChars(this)"
-                            ></textarea>
-                            <div class="char-count">
-                                <span id="charCount">0</span>/500 characters
-                            </div>
-                            <span class="error-msg" id="messageErr"></span>
-                        </div>
-
-                        <!-- ATTACHMENT -->
-                        <div class="form-group">
-                            <label for="attachment">
-                                <i class="fas fa-paperclip"></i>
-                                Attach File 
-                                <small>(optional - max 5MB)</small>
-                            </label>
-                            <div class="file-upload" 
-                                 onclick="document.getElementById('attachment').click()">
-                                <i class="fas fa-cloud-upload-alt"></i>
-                                <span id="fileLabel">
-                                    Click to upload or drag & drop
-                                </span>
-                                <small>PNG, JPG, PDF up to 5MB</small>
-                            </div>
-                            <input 
-                                type="file" 
-                                id="attachment"
-                                style="display:none"
-                                accept=".png,.jpg,.jpeg,.pdf"
-                                onchange="handleFile(this)"
-                            >
-                        </div>
-
-                        <!-- CHECKBOX -->
-                        <div class="form-group checkbox-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" 
-                                       id="newsletter" 
-                                       checked>
-                                <span class="checkmark"></span>
-                                Subscribe to our newsletter for latest offers & updates
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" 
-                                       id="terms" 
-                                       required>
-                                <span class="checkmark"></span>
-                                I agree to the 
-                                <a href="#">Terms & Conditions</a> and 
-                                <a href="#">Privacy Policy</a> *
-                            </label>
-                        </div>
-
-                        <!-- SUBMIT -->
-                        <button type="submit" 
-                                class="submit-btn" 
-                                id="submitBtn">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
-                        </button>
-
-                    </form>
-
-                    <!-- SUCCESS MESSAGE -->
-                    <div class="form-success" 
-                         id="formSuccess" 
-                         style="display:none">
-                        <div class="success-icon">✅</div>
-                        <h3>Message Sent Successfully!</h3>
-                        <p>Thank you for contacting us! Our team will 
-                           get back to you within 24 hours.</p>
-                        <button onclick="resetForm()" class="btn-primary">
-                            Send Another Message
-                        </button>
-                    </div>
-
-                </div>
-
-                <!-- ===== RIGHT: MAP & DETAILS ===== -->
-                <div class="contact-right">
-
-                    <!-- GOOGLE MAP -->
-                    <div class="map-wrap">
-                        <div class="map-header">
-                            <h3>
-                                <i class="fas fa-map-marked-alt"></i>
-                                Find Us On Map
-                            </h3>
-                            <div class="map-branch-select">
-                                <select id="mapBranch" 
-                                        onchange="changeBranch(this)">
-                                    <option value="ahmedabad">
-                                        🏛️ Ahmedabad HQ
-                                    </option>
-                                    <option value="surat">
-                                        🏛️ Surat Branch
-                                    </option>
-                                    <option value="indore">
-                                        🌿 Indore Branch
-                                    </option>
-                                    <option value="jaipur">
-                                        🏜️ Jaipur Branch
-                                    </option>
-                                    <option value="auckland">
-                                        🇳🇿 Auckland Branch
-                                    </option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- MAP IFRAME -->
-                        <div class="map-container" id="mapContainer">
-                            <iframe
-                                id="googleMap"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.9!2d72.5!3d23.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAwJzAwLjAiTiA3MsKwMzAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
-                                width="100%"
-                                height="350"
-                                style="border:0;"
-                                allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                                title="Martinoz Pizza Location">
-                            </iframe>
-                            <div class="map-loading" id="mapLoading">
-                                <div class="map-spinner"></div>
-                                <p>Loading map...</p>
-                            </div>
-                        </div>
-
-                        <!-- BRANCH INFO BELOW MAP -->
-                        <div class="selected-branch-info" id="selectedBranchInfo">
-                            <div class="sbi-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <strong>Martinoz Pizza - Ahmedabad HQ</strong>
-                                    <span>SG Highway, Prahlad Nagar, Ahmedabad - 380015</span>
-                                </div>
-                            </div>
-                            <div class="sbi-item">
-                                <i class="fas fa-clock"></i>
-                                <div>
-                                    <strong>Opening Hours</strong>
-                                    <span>Mon - Sun: 10:00 AM - 11:00 PM</span>
-                                </div>
-                            </div>
-                            <div class="sbi-item">
-                                <i class="fas fa-phone"></i>
-                                <div>
-                                    <strong>Phone</strong>
-                                    <span>+91 79 2345 6789</span>
-                                </div>
-                            </div>
-                            <a href="https://maps.google.com" 
-                               target="_blank" 
-                               class="get-direction-btn">
-                                <i class="fas fa-directions"></i>
-                                Get Directions
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- SOCIAL MEDIA -->
-                    <div class="social-contact">
-                        <h3>Follow Us & Stay Updated</h3>
-                        <div class="social-grid">
-                            <a href="#" class="social-card facebook">
-                                <i class="fab fa-facebook-f"></i>
-                                <div>
-                                    <strong>Facebook</strong>
-                                    <span>@martinozpizza</span>
-                                </div>
-                            </a>
-                            <a href="#" class="social-card instagram">
-                                <i class="fab fa-instagram"></i>
-                                <div>
-                                    <strong>Instagram</strong>
-                                    <span>@martinozpizza</span>
-                                </div>
-                            </a>
-                            <a href="#" class="social-card twitter">
-                                <i class="fab fa-twitter"></i>
-                                <div>
-                                    <strong>Twitter</strong>
-                                    <span>@martinozpizza</span>
-                                </div>
-                            </a>
-                            <a href="#" class="social-card youtube">
-                                <i class="fab fa-youtube"></i>
-                                <div>
-                                    <strong>YouTube</strong>
-                                    <span>Martinoz Pizza</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- WORKING HOURS -->
-                    <div class="working-hours">
-                        <h3>
-                            <i class="fas fa-clock"></i>
-                            Working Hours
-                        </h3>
-                        <ul class="hours-list">
-                            <li>
-                                <span>Monday - Friday</span>
-                                <span class="hours open">10:00 AM - 11:00 PM</span>
-                            </li>
-                            <li>
-                                <span>Saturday</span>
-                                <span class="hours open">9:00 AM - 11:30 PM</span>
-                            </li>
-                            <li>
-                                <span>Sunday</span>
-                                <span class="hours open">9:00 AM - 12:00 AM</span>
-                            </li>
-                            <li class="today">
-                                <span>Today (Support)</span>
-                                <span class="hours open">🟢 Open Now</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== FAQ SECTION ========== -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">❓ FAQs</span>
-                <h2>Frequently Asked <span class="highlight">Questions</span></h2>
-                <p>Quick answers to common questions</p>
-            </div>
-            <div class="faq-grid">
-
-                <div class="faq-item">
-                    <button class="faq-question" 
-                            onclick="toggleFaq(this)">
-                        <span>🚀 How fast is your delivery?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We guarantee delivery within 30 minutes for orders 
-                           placed within 5km of our branches. For longer 
-                           distances delivery may take up to 45-60 minutes.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question" 
-                            onclick="toggleFaq(this)">
-                        <span>💳 What payment methods do you accept?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We accept Cash on Delivery, Credit/Debit Cards, 
-                           UPI (Google Pay, PhonePe, Paytm), Net Banking 
-                           and all major digital wallets.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question" 
-                            onclick="toggleFaq(this)">
-                        <span>🍕 Do you have pure veg options?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes! We have a wide range of pure vegetarian 
-                           pizzas, sides and desserts. All veg items are 
-                           prepared separately with dedicated equipment.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question" 
-                            onclick="toggleFaq(this)">
-                        <span>🤝 How can I apply for a franchise?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Fill out the contact form above selecting 
-                           "Franchise" tab, or email us at 
-                           franchise@martinozpizza.com. Our team will 
-                           contact you within 48 hours with full details.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question" 
-                            onclick="toggleFaq(this)">
-                        <span>🎁 Do you offer bulk/party orders?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Absolutely! We offer special discounts for 
-                           bulk orders above 10 pizzas. Contact us at 
-                           least 2 hours in advance for party orders. 
-                           Call or WhatsApp us for special pricing.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question" 
-                            onclick="toggleFaq(this)">
-                        <span>🔄 What is your refund policy?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>If you are not satisfied with your order, 
-                           we offer a full remake or refund within 30 
-                           minutes of delivery. Contact our support 
-                           team immediately with your order ID.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-     <!-- ========== FOOTER ========== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <!-- FOOTER LOGO UPDATE -->
-                <div class="footer-col">
-                    <a href="index.html">
-                        <img 
-                            src="images/logo.svg" 
-                            alt="Martinoz Pizza" 
-                            class="footer-logo-img"
-                            onerror="this.style.display='none'"
-                        >
-                    </a>
-                    <p>Freshly Baked Happiness delivered 
-                    to your door. Made with love and 
-                    the finest ingredients.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" aria-label="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="menu.html">Menu</a></li>
-                        <li><a href="branches.html">Branches</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Our Menu</h4>
-                    <ul>
-                        <li><a href="menu.html">Veg Pizzas</a></li>
-                        <li><a href="menu.html">Non-Veg Pizzas</a></li>
-                        <li><a href="menu.html">Cheese Burst</a></li>
-                        <li><a href="menu.html">Combo Deals</a></li>
-                        <li><a href="menu.html">Drinks</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
-                        <li><i class="fas fa-envelope"></i> info@martinozpizza.com</li>
-                        <li><i class="fab fa-whatsapp"></i> WhatsApp Order</li>
-                        <li><i class="fas fa-clock"></i> 10:00 AM - 11:00 PM</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2024 Martinoz Pizza. All Rights Reserved. Made with ❤️</p>
-            </div>
-        </div>
-    </footer>
-
-    
-    <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/911234567890" 
-       class="whatsapp-float" 
-       target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <script src="js/main.js"></script>
-    <script src="js/contact.js"></script>
 </body>
 </html>
