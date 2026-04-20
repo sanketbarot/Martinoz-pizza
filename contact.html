@@ -9,30 +9,79 @@
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FAVICON -->
+<link rel="icon" 
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
+
+<!-- OG META TAGS -->
+<meta property="og:title" content="Martinoz Pizza">
+<meta property="og:description" 
+      content="Freshly Baked Happiness - Order Online!">
+<meta property="og:image" 
+      content="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1200">
+<meta property="og:type" content="website">
 </head>
 <body>
 
-    <!-- ========== NAVBAR ========== -->
-    <nav class="navbar scrolled" id="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <span class="logo-icon">🍕</span>
-                <span class="logo-text">Martinoz <span class="highlight">Pizza</span></span>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="branches.html">Branches</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-                <li><a href="menu.html" class="btn-order">Order Now 🛒</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+   <nav class="navbar" id="navbar">
+    <div class="container">
+
+        <!-- LOGO -->
+        <a href="index.html" class="nav-brand">
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                 viewBox="0 0 300 80" 
+                 class="nav-logo-svg">
+                <circle cx="40" cy="40" r="35" 
+                        fill="#E63946" opacity="0.15"/>
+                <circle cx="40" cy="40" r="28" fill="#E63946"/>
+                <line x1="40" y1="12" x2="40" y2="68" 
+                      stroke="#FFB703" stroke-width="2"/>
+                <line x1="14" y1="30" x2="66" y2="50" 
+                      stroke="#FFB703" stroke-width="2"/>
+                <line x1="14" y1="50" x2="66" y2="30" 
+                      stroke="#FFB703" stroke-width="2"/>
+                <circle cx="33" cy="30" r="3" fill="#FFB703"/>
+                <circle cx="48" cy="35" r="2.5" fill="#FFB703"/>
+                <circle cx="36" cy="48" r="2.5" fill="#FFB703"/>
+                <circle cx="50" cy="50" r="3" fill="#FFB703"/>
+                <circle cx="40" cy="40" r="28" fill="none" 
+                        stroke="#FFB703" stroke-width="2.5"/>
+                <text x="88" y="35" 
+                      font-family="Arial Black, sans-serif" 
+                      font-size="26" font-weight="900" 
+                      fill="#FFFFFF" letter-spacing="1">MARTINOZ</text>
+                <text x="90" y="58" 
+                      font-family="Arial Black, sans-serif" 
+                      font-size="18" font-weight="900" 
+                      fill="#E63946" letter-spacing="6">PIZZA</text>
+                <text x="90" y="72" 
+                      font-family="Arial, sans-serif" 
+                      font-size="9" fill="#FFB703" 
+                      letter-spacing="2">FRESHLY BAKED HAPPINESS</text>
+            </svg>
+        </a>
+
+        <!-- NAV LINKS -->
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="branches.html">Branches</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <a href="menu.html" class="btn-order">
+                    Order Now 🛒
+                </a>
+            </li>
+        </ul>
+
+        <!-- HAMBURGER -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- ========== CONTACT HERO ========== -->
     <section class="contact-hero">
@@ -679,21 +728,36 @@
         </div>
     </section>
 
-    <!-- ========== FOOTER ========== -->
+     <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
+                <!-- FOOTER LOGO UPDATE -->
                 <div class="footer-col">
-                    <div class="footer-logo">
-                        <span>🍕</span> Martinoz Pizza
-                    </div>
-                    <p>Freshly Baked Happiness delivered to your door.
-                       Made with love and finest ingredients.</p>
+                    <a href="index.html">
+                        <img 
+                            src="images/logo.svg" 
+                            alt="Martinoz Pizza" 
+                            class="footer-logo-img"
+                            onerror="this.style.display='none'"
+                        >
+                    </a>
+                    <p>Freshly Baked Happiness delivered 
+                    to your door. Made with love and 
+                    the finest ingredients.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -712,37 +776,26 @@
                         <li><a href="menu.html">Non-Veg Pizzas</a></li>
                         <li><a href="menu.html">Cheese Burst</a></li>
                         <li><a href="menu.html">Combo Deals</a></li>
+                        <li><a href="menu.html">Drinks</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Contact Us</h4>
                     <ul>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            +91 123 456 7890
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            info@martinozpizza.com
-                        </li>
-                        <li>
-                            <i class="fab fa-whatsapp"></i>
-                            WhatsApp Order
-                        </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            10:00 AM - 11:00 PM
-                        </li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> info@martinozpizza.com</li>
+                        <li><i class="fab fa-whatsapp"></i> WhatsApp Order</li>
+                        <li><i class="fas fa-clock"></i> 10:00 AM - 11:00 PM</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 Martinoz Pizza. All Rights Reserved. 
-                   Made with ❤️</p>
+                <p>© 2024 Martinoz Pizza. All Rights Reserved. Made with ❤️</p>
             </div>
         </div>
     </footer>
 
+    
     <!-- WHATSAPP FLOAT -->
     <a href="https://wa.me/911234567890" 
        class="whatsapp-float" 

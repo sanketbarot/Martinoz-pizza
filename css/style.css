@@ -1653,3 +1653,136 @@ img {
         font-size: 0.8rem;
     }
 }
+
+/* ========== LOGO STYLES ========== */
+.nav-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 50px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-fallback {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+}
+
+/* ========== IMAGE LAZY LOADING ========== */
+img {
+    transition: opacity 0.3s ease;
+}
+
+img.loading {
+    opacity: 0;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* ========== IMAGE PLACEHOLDER ========== */
+.img-placeholder {
+    background: linear-gradient(
+        90deg,
+        rgba(255,255,255,0.05) 25%,
+        rgba(255,255,255,0.1) 50%,
+        rgba(255,255,255,0.05) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* ========== FOOTER LOGO ========== */
+.footer-logo-img {
+    height: 45px;
+    width: auto;
+    margin-bottom: 15px;
+    filter: brightness(1.1);
+}
+
+/* ========== SVG LOGO ========== */
+.nav-logo-svg {
+    height: 48px;
+    width: auto;
+    max-width: 220px;
+    transition: var(--transition);
+}
+
+.nav-logo-svg:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Logo */
+@media (max-width: 768px) {
+    .nav-logo-svg {
+        height: 38px;
+        max-width: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-logo-svg {
+        height: 32px;
+        max-width: 140px;
+    }
+}
+
+/* ========== HERO IMAGE ========== */
+.pizza-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ========== MENU ITEM IMAGES ========== */
+.item-img-wrap img,
+.pizza-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+/* ========== IMAGE LOADING SHIMMER ========== */
+.img-shimmer {
+    background: linear-gradient(
+        90deg,
+        rgba(255,255,255,0.04) 25%,
+        rgba(255,255,255,0.08) 50%,
+        rgba(255,255,255,0.04) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}

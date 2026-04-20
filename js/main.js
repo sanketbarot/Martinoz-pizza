@@ -285,3 +285,142 @@ const statsSection = document.querySelector('.franchise-stats');
 if (statsSection) {
     counterObserver.observe(statsSection);
 }
+
+// ========== images/temp-images.js ==========
+// Reference file - All temporary images for Martinoz Pizza
+
+const IMAGES = {
+
+    // LOGO
+    logo: 'images/logo.svg',
+    
+    // HERO
+    hero: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=600&fit=crop',
+    heroBg: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=1920&h=1080&fit=crop',
+    
+    // VEG PIZZAS
+    margherita: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=400&h=300&fit=crop',
+    gardenFresh: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=400&h=300&fit=crop',
+    paneerTikka: 'https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=400&h=300&fit=crop',
+    doubleCheese: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop',
+    
+    // NON-VEG PIZZAS
+    bbqChicken: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop',
+    pepperoni: 'https://images.unsplash.com/photo-1548369937-47519962c11a?w=400&h=300&fit=crop',
+    chickenTikka: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop',
+    martinozSpecial: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop',
+    
+    // CHEESE BURST
+    cheeseBurst: 'https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=400&h=300&fit=crop',
+    chickenCheeseBurst: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop',
+    
+    // SIDES
+    garlicBread: 'https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?w=400&h=300&fit=crop',
+    chickenWings: 'https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=400&h=300&fit=crop',
+    loadedFries: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&h=300&fit=crop',
+    
+    // DESSERTS
+    chocoLava: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&h=300&fit=crop',
+    tiramisu: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&h=300&fit=crop',
+    iceCream: 'https://images.unsplash.com/photo-1567206563114-c179706e8442?w=400&h=300&fit=crop',
+
+};
+
+// ============================================
+// MARTINOZ PIZZA - Universal Components Loader
+// ============================================
+
+// Active nav link set karva mate
+function setActiveNav() {
+    const currentPage = window.location.pathname
+        .split('/').pop() || 'index.html';
+    
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        if (href === currentPage) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Navbar load karva mate
+function loadNavbar() {
+    const navPlaceholder = document.getElementById('navbar-placeholder');
+    if (!navPlaceholder) return;
+
+    fetch('components/navbar.html')
+        .then(res => {
+            if (!res.ok) throw new Error('Navbar not found');
+            return res.text();
+        })
+        .then(html => {
+            navPlaceholder.innerHTML = html;
+            setActiveNav();
+            initHamburger();
+            initNavbarScroll();
+        })
+        .catch(err => {
+            console.error('Navbar load error:', err);
+        });
+}
+
+// Footer load karva mate
+function loadFooter() {
+    const footerPlaceholder = document.getElementById('footer-placeholder');
+    if (!footerPlaceholder) return;
+
+    fetch('components/footer.html')
+        .then(res => {
+            if (!res.ok) throw new Error('Footer not found');
+            return res.text();
+        })
+        .then(html => {
+            footerPlaceholder.innerHTML = html;
+        })
+        .catch(err => {
+            console.error('Footer load error:', err);
+        });
+}
+
+// Hamburger menu
+function initHamburger() {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    
+    if (!hamburger || !navLinks) return;
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Nav link click par close
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+}
+
+// Scroll par navbar style
+function initNavbarScroll() {
+    const navbar = document.getElementById('navbar');
+    if (!navbar) return;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+}
+
+// Page load thay tyare run karo
+document.addEventListener('DOMContentLoaded', () => {
+    loadNavbar();
+    loadFooter();
+});
