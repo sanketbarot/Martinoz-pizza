@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const show = filter === 'all' ||
                              card.dataset.category === filter;
                 card.style.display = show ? 'block' : 'none';
-                if (show) card.style.animation = 'fadeIn 0.4s ease';
+                if (show) card.style.animation = 'fadeIn 0.3s ease';
             });
         });
     });
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const show = selected === 'all' ||
                              card.dataset.location === selected;
                 card.style.display = show ? 'flex' : 'none';
-                if (show) card.style.animation = 'fadeIn 0.4s ease';
+                if (show) card.style.animation = 'fadeIn 0.3s ease';
             });
         });
     });
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ========== COUNTER ANIMATION ==========
 function animateCounter(el) {
     const target   = parseInt(el.getAttribute('data-target')) || 0;
-    const duration = 2200;
+    const duration = 1800;
     const step     = target / (duration / 16);
     let current    = 0;
 
@@ -214,36 +214,56 @@ const counterObserver = new IntersectionObserver((entries) => {
                     .forEach(animateCounter);
         counterObserver.unobserve(entry.target);
     });
-}, { threshold: 0.3 });
+}, { threshold: 0.2 });
 
 document.addEventListener('DOMContentLoaded', () => {
     const stats = document.querySelector('.franchise-stats');
     if (stats) counterObserver.observe(stats);
 });
 
-// ========== SCROLL ANIMATIONS ==========
+// ========== SCROLL ANIMATIONS - FIXED ✅ ==========
 document.addEventListener('DOMContentLoaded', () => {
     const targets = document.querySelectorAll(
         '.pizza-card, .why-card, .review-card, ' +
         '.branch-card, .offer-card, .fstat-card, ' +
-        '.location-card, .store-slide-card'
+        '.location-card, .store-slide-card, ' +
+        '.upcoming-card, .journey-card, .story-block,' +
+        '.founder-card, .story-stat, .cinfo-card'
     );
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                // ✅ No delay - immediately show
                 entry.target.style.opacity   = '1';
                 entry.target.style.transform = 'translateY(0)';
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.08 });
+    }, {
+        // ✅ trigger when even 1% visible
+        threshold: 0.01,
+        // ✅ trigger 50px before element enters viewport
+        rootMargin: '0px 0px -10px 0px'
+    });
 
     targets.forEach((el, i) => {
+        // ✅ Check if already visible (above fold)
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+            // Already visible - show immediately
+            el.style.opacity   = '1';
+            el.style.transform = 'translateY(0)';
+            return;
+        }
+
         el.style.opacity   = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = `opacity 0.5s ease ${i * 0.05}s,
-                               transform 0.5s ease ${i * 0.05}s`;
+        el.style.transform = 'translateY(20px)';
+
+        // ✅ Max delay cap at 0.12s
+        const delay = Math.min(i * 0.02, 0.12);
+        el.style.transition = `opacity 0.3s ease ${delay}s,
+                               transform 0.3s ease ${delay}s`;
         observer.observe(el);
     });
 });
@@ -252,8 +272,12 @@ document.addEventListener('DOMContentLoaded', () => {
 const animStyle = document.createElement('style');
 animStyle.textContent = `
     @keyframes fadeIn {
-        from { opacity: 0; transform: scale(0.96); }
+        from { opacity: 0; transform: scale(0.97); }
         to   { opacity: 1; transform: scale(1); }
+    }
+    @keyframes fadeSlideUp {
+        from { opacity: 0; transform: translateY(15px); }
+        to   { opacity: 1; transform: translateY(0); }
     }
 `;
 document.head.appendChild(animStyle);
@@ -322,7 +346,6 @@ function createUpcomingDots(total) {
     const dotsEl = document.getElementById('upcomingDots');
     if (!dotsEl) return;
 
-    // Recreate only if count changed
     if (upcomingTotalDots === total &&
         dotsEl.querySelectorAll('.upcoming-dot').length === total) {
         return;
@@ -382,7 +405,7 @@ function initUpcomingSwipe() {
 }
 
 // ============================================
-// NOTIFY POPUP - ✅ SINGLE VERSION ONLY
+// NOTIFY POPUP
 // ============================================
 function notifyMe(city) {
     const popup    = document.getElementById('notifyPopup');
@@ -427,7 +450,7 @@ function submitNotify(e) {
 }
 
 // ============================================
-// GLOBAL ESC KEY - ✅ SINGLE VERSION ONLY
+// GLOBAL ESC KEY
 // ============================================
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeNotifyPopup();
@@ -454,7 +477,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Resize
     window.addEventListener('resize', () => {
         if (document.getElementById('upcomingSliderTrack')) {
-            upcomingTotalDots = 0; // Force dot recreate
+            upcomingTotalDots = 0;
             initUpcomingSlider();
         }
     });

@@ -4,30 +4,28 @@
 
 // ========== FILTER REGION ==========
 function filterRegion(region, btn) {
-    // Active tab
     document.querySelectorAll('.region-tab')
             .forEach(t => t.classList.remove('active'));
     btn.classList.add('active');
 
-    // Show/hide state sections
     const sections = document.querySelectorAll('.state-section');
     let count = 0;
 
     sections.forEach(section => {
         const sectionRegion = section.getAttribute('data-region');
-        if (region === 'all' || sectionRegion === region) {
-            section.style.display = 'block';
-            section.style.animation = 'fadeSlideUp 0.5s ease';
+        const show = region === 'all' || sectionRegion === region;
+
+        section.style.display = show ? 'block' : 'none';
+        if (show) {
             count += section.querySelectorAll('.branch-card-full').length;
-        } else {
-            section.style.display = 'none';
+            section.style.animation = 'fadeSlideUp 0.3s ease';
         }
     });
 
-    // Update count
     const countEl = document.getElementById('resultCount');
     if (countEl) {
-        countEl.innerHTML = `Showing <strong>${count}</strong> branches`;
+        const label = region === 'all' ? '65+' : count;
+        countEl.innerHTML = `Showing <strong>${label}</strong> branches`;
     }
 }
 
@@ -36,20 +34,21 @@ function searchBranches() {
     const input = document.getElementById('branchSearch');
     if (!input) return;
 
-    const query = input.value.toLowerCase().trim();
-    const cards = document.querySelectorAll('.branch-card-full');
+    const query   = input.value.toLowerCase().trim();
+    const cards   = document.querySelectorAll('.branch-card-full');
     const noResult = document.getElementById('noBranchResults');
-    let visible = 0;
+    let visible   = 0;
 
     cards.forEach(card => {
-        const name   = card.getAttribute('data-name')?.toLowerCase() || '';
-        const city   = card.getAttribute('data-city')?.toLowerCase() || '';
-        const region = card.getAttribute('data-region')?.toLowerCase() || '';
-        const addr   = card.querySelector('.bcf-address')?.textContent?.toLowerCase() || '';
+        const name   = (card.getAttribute('data-name')   || '').toLowerCase();
+        const city   = (card.getAttribute('data-city')   || '').toLowerCase();
+        const region = (card.getAttribute('data-region') || '').toLowerCase();
+        const addr   = card.querySelector('.bcf-address')
+                          ?.textContent?.toLowerCase() || '';
 
         const match = !query ||
-            name.includes(query) ||
-            city.includes(query) ||
+            name.includes(query)   ||
+            city.includes(query)   ||
             region.includes(query) ||
             addr.includes(query);
 
@@ -57,25 +56,24 @@ function searchBranches() {
         if (match) visible++;
     });
 
-    // Show/hide sections based on visible cards
+    // Show/hide sections
     document.querySelectorAll('.state-section').forEach(section => {
-        const hasVisible = section.querySelectorAll(
-            '.branch-card-full[style="display: block;"]'
-        ).length > 0;
+        const hasVisible = Array.from(
+            section.querySelectorAll('.branch-card-full')
+        ).some(c => c.style.display !== 'none');
+
         section.style.display = (!query || hasVisible) ? 'block' : 'none';
     });
 
-    // No results
     if (noResult) {
         noResult.style.display = (visible === 0 && query) ? 'flex' : 'none';
     }
 
-    // Update count
     const countEl = document.getElementById('resultCount');
     if (countEl) {
         countEl.innerHTML = query
             ? `Found <strong>${visible}</strong> branches for "${query}"`
-            : `Showing <strong>80+</strong> branches`;
+            : `Showing <strong>65+</strong> branches`;
     }
 }
 
@@ -83,11 +81,9 @@ function searchBranches() {
 function resetSearch() {
     const input = document.getElementById('branchSearch');
     if (input) input.value = '';
-    searchBranches();
 
     document.querySelectorAll('.state-section')
             .forEach(s => s.style.display = 'block');
-
     document.querySelectorAll('.branch-card-full')
             .forEach(c => c.style.display = 'block');
 
@@ -96,7 +92,7 @@ function resetSearch() {
 
     const countEl = document.getElementById('resultCount');
     if (countEl) {
-        countEl.innerHTML = `Showing <strong>80+</strong> branches`;
+        countEl.innerHTML = `Showing <strong>65+</strong> branches`;
     }
 }
 
@@ -105,7 +101,7 @@ function detectLocation() {
     const btn = document.querySelector('.detect-btn');
     if (btn) {
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Detecting...';
-        btn.disabled = true;
+        btn.disabled  = true;
     }
 
     if (!navigator.geolocation) {
@@ -115,11 +111,11 @@ function detectLocation() {
     }
 
     navigator.geolocation.getCurrentPosition(
-        (pos) => {
+        () => {
             showToast('✅ Location detected! Showing nearby branches.');
             resetDetectBtn(btn);
         },
-        (err) => {
+        () => {
             showToast('❌ Could not detect location. Please search manually.');
             resetDetectBtn(btn);
         },
@@ -131,62 +127,114 @@ function resetDetectBtn(btn) {
     if (!btn) return;
     setTimeout(() => {
         btn.innerHTML = '<i class="fas fa-location-arrow"></i> Detect Location';
-        btn.disabled = false;
+        btn.disabled  = false;
     }, 1500);
 }
 
 // ========== SWITCH VIEW ==========
 function switchView(view) {
-    const grids = document.querySelectorAll('.branches-grid');
+    const grids  = document.querySelectorAll('.branches-grid');
     const gridBtn = document.getElementById('gridViewBtn');
     const listBtn = document.getElementById('listViewBtn');
 
     grids.forEach(grid => {
-        if (view === 'list') {
-            grid.classList.add('list-view');
-        } else {
-            grid.classList.remove('list-view');
+        grid.classList.toggle('list-view', view === 'list');
+    });
+
+    gridBtn?.classList.toggle('active', view === 'grid');
+    listBtn?.classList.toggle('active', view === 'list');
+}
+
+// ========== YEAR FILTER (Growth Journey) ==========
+function filterYear(year, btn) {
+    document.querySelectorAll('.year-btn')
+            .forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const cards = document.querySelectorAll('.journey-card');
+    let count   = 0;
+
+    cards.forEach(card => {
+        const cardYear = card.getAttribute('data-year');
+        const show     = year === 'all' || cardYear === year;
+
+        card.style.display = show ? 'block' : 'none';
+        if (show) {
+            count++;
+            card.style.animation = 'fadeIn 0.3s ease';
         }
     });
 
-    if (gridBtn) gridBtn.classList.toggle('active', view === 'grid');
-    if (listBtn) listBtn.classList.toggle('active', view === 'list');
+    const countEl = document.getElementById('storeCount');
+    if (countEl) {
+        countEl.innerHTML = year === 'all'
+            ? `Showing <strong>65+</strong> stores`
+            : `Showing <strong>${count}</strong> stores from ${year}`;
+    }
 }
 
-// ========== SCROLL ANIMATIONS ==========
+// ========== SCROLL ANIMATIONS - FIXED ✅ ==========
 document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll(
-        '.branch-card-full, .fcta-stat, .hbs-item'
+
+    // ✅ Branch cards + story + journey cards
+    const allCards = document.querySelectorAll(
+        '.branch-card-full, .fcta-stat, .hbs-item, ' +
+        '.journey-card, .story-block, .founder-card, ' +
+        '.story-stat, .fcta-stat'
     );
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                // ✅ Immediately show - no staggered delay on trigger
                 entry.target.style.opacity   = '1';
                 entry.target.style.transform = 'translateY(0)';
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.08 });
+    }, {
+        // ✅ Trigger when 1% visible - very early
+        threshold: 0.01,
+        // ✅ Trigger 30px before element enters screen
+        rootMargin: '0px 0px -10px 0px'
+    });
 
-    cards.forEach((el, i) => {
+    allCards.forEach((el, i) => {
+        // ✅ If already in viewport (above fold) - show immediately
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+            el.style.opacity   = '1';
+            el.style.transform = 'translateY(0)';
+            return;
+        }
+
         el.style.opacity   = '0';
-        el.style.transform = 'translateY(25px)';
-        el.style.transition = `opacity 0.5s ease ${i * 0.04}s,
-                               transform 0.5s ease ${i * 0.04}s`;
+        el.style.transform = 'translateY(18px)';
+
+        // ✅ Cap delay at 0.10s max
+        const delay = Math.min(i * 0.02, 0.10);
+        el.style.transition = `opacity 0.3s ease ${delay}s,
+                               transform 0.3s ease ${delay}s`;
         observer.observe(el);
     });
 });
 
 // ========== ANIMATION CSS ==========
-const style = document.createElement('style');
-style.textContent = `
+const branchStyle = document.createElement('style');
+branchStyle.textContent = `
+
+    /* ===== ANIMATIONS ===== */
     @keyframes fadeSlideUp {
-        from { opacity: 0; transform: translateY(20px); }
+        from { opacity: 0; transform: translateY(15px); }
         to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* LIST VIEW */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.97); }
+        to   { opacity: 1; transform: scale(1); }
+    }
+
+    /* ===== LIST VIEW ===== */
     .branches-grid.list-view {
         grid-template-columns: 1fr !important;
     }
@@ -194,7 +242,6 @@ style.textContent = `
     .branches-grid.list-view .branch-card-full {
         display: grid;
         grid-template-columns: 1fr auto;
-        grid-template-rows: auto auto auto;
     }
 
     .branches-grid.list-view .bcf-top {
@@ -218,4 +265,4 @@ style.textContent = `
         }
     }
 `;
-document.head.appendChild(style);
+document.head.appendChild(branchStyle);

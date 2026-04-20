@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find Martinoz Pizza near you - 80+ branches across Gujarat, MP, Rajasthan & New Zealand">
-    <title>Our Branches - Martinoz Pizza</title>
+    <meta name="description" content="Find Martino'z Pizza near you - 80+ branches across Gujarat, MP, Rajasthan & New Zealand">
+    <title>Our Branches - Martino'z Pizza</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -16,8 +16,8 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
 
     <!-- OG META -->
-    <meta property="og:title" content="Martinoz Pizza - Our Branches">
-    <meta property="og:description" content="Find 80+ Martinoz Pizza branches near you!">
+    <meta property="og:title" content="Martino'z Pizza - Our Branches">
+    <meta property="og:description" content="Find 80+ Martino'z Pizza branches near you!">
     <meta property="og:image" content="images/logo.png">
     <meta property="og:type" content="website">
 </head>
@@ -74,7 +74,7 @@
                 <text x="88" y="35"
                       font-family="Arial Black, sans-serif"
                       font-size="26" font-weight="900"
-                      fill="#1A2E1A" letter-spacing="1">MARTINOZ</text>
+                      fill="#1A2E1A" letter-spacing="1">Martino'z</text>
                 <text x="90" y="58"
                       font-family="Arial Black, sans-serif"
                       font-size="18" font-weight="900"
@@ -110,7 +110,7 @@
 
             <span class="section-tag">📍 Our Locations</span>
 
-            <h1>Find <span class="highlight">Martinoz Pizza</span>
+            <h1>Find <span class="highlight">Martino'z Pizza</span>
                 <br>Near You</h1>
 
             <p>80+ franchises across India & New Zealand.
@@ -168,35 +168,49 @@
                     onclick="filterRegion('all', this)">
                 <span class="rtab-icon">🌍</span>
                 <span class="rtab-text">All Locations</span>
-                <span class="rtab-count">80+</span>
+                <span class="rtab-count">65+</span>
             </button>
             <button class="region-tab"
-                    data-region="gujarat"
-                    onclick="filterRegion('gujarat', this)">
+                    data-region="ahmedabad"
+                    onclick="filterRegion('ahmedabad', this)">
                 <span class="rtab-icon">🏛️</span>
-                <span class="rtab-text">Gujarat</span>
-                <span class="rtab-count">35</span>
-            </button>
-            <button class="region-tab"
-                    data-region="mp"
-                    onclick="filterRegion('mp', this)">
-                <span class="rtab-icon">🌿</span>
-                <span class="rtab-text">Madhya Pradesh</span>
+                <span class="rtab-text">Ahmedabad</span>
                 <span class="rtab-count">20</span>
             </button>
             <button class="region-tab"
-                    data-region="rajasthan"
-                    onclick="filterRegion('rajasthan', this)">
-                <span class="rtab-icon">🏜️</span>
-                <span class="rtab-text">Rajasthan</span>
-                <span class="rtab-count">18</span>
+                    data-region="surat"
+                    onclick="filterRegion('surat', this)">
+                <span class="rtab-icon">🌊</span>
+                <span class="rtab-text">Surat</span>
+                <span class="rtab-count">13</span>
             </button>
             <button class="region-tab"
-                    data-region="nz"
-                    onclick="filterRegion('nz', this)">
-                <span class="rtab-icon">🇳🇿</span>
-                <span class="rtab-text">New Zealand</span>
-                <span class="rtab-count">7</span>
+                    data-region="vadodara"
+                    onclick="filterRegion('vadodara', this)">
+                <span class="rtab-icon">🏰</span>
+                <span class="rtab-text">Vadodara</span>
+                <span class="rtab-count">4</span>
+            </button>
+            <button class="region-tab"
+                    data-region="rajkot"
+                    onclick="filterRegion('rajkot', this)">
+                <span class="rtab-icon">🦁</span>
+                <span class="rtab-text">Rajkot</span>
+                <span class="rtab-count">4</span>
+            </button>
+            <button class="region-tab"
+                    data-region="other-gujarat"
+                    onclick="filterRegion('other-gujarat', this)">
+                <span class="rtab-icon">🏛️</span>
+                <span class="rtab-text">Other Gujarat</span>
+                <span class="rtab-count">16</span>
+            </button>
+            <button class="region-tab"
+                    data-region="other"
+                    onclick="filterRegion('other', this)">
+                <span class="rtab-icon">🌍</span>
+                <span class="rtab-text">Other States</span>
+                <span class="rtab-count">8</span>
             </button>
         </div>
     </div>
@@ -209,7 +223,7 @@
         <!-- RESULT BAR -->
         <div class="result-bar">
             <p id="resultCount">
-                Showing <strong>80+</strong> branches
+                Showing <strong>65+</strong> branches
             </p>
             <div class="view-toggle">
                 <button class="vt-btn active"
@@ -225,40 +239,38 @@
             </div>
         </div>
 
-        <!-- ===== GUJARAT ===== -->
-        <div class="state-section" id="section-gujarat" data-region="gujarat">
+        <!-- ===== AHMEDABAD ===== -->
+        <div class="state-section" id="section-ahmedabad" data-region="ahmedabad">
             <div class="state-header">
                 <div class="state-title">
                     <span class="state-flag">🏛️</span>
                     <div>
-                        <h2>Gujarat</h2>
-                        <p>35 Branches across major cities</p>
+                        <h2>Ahmedabad</h2>
+                        <p>20 Branches across Ahmedabad</p>
                     </div>
                 </div>
                 <div class="state-cities">
-                    <span>Ahmedabad</span>
-                    <span>Surat</span>
-                    <span>Vadodara</span>
-                    <span>Rajkot</span>
+                    <span>South Bopal</span>
+                    <span>Maninagar</span>
+                    <span>Gota</span>
+                    <span>Nikol</span>
                     <span>+more</span>
                 </div>
             </div>
+            <div class="branches-grid">
 
-            <div class="branches-grid" id="gujarat-grid">
-
-                <!-- Ahmedabad 1 -->
+                <!-- 1. South Bopal -->
                 <div class="branch-card-full"
-                     data-region="gujarat"
+                     data-region="ahmedabad"
                      data-city="ahmedabad"
-                     data-name="Martinoz Pizza Ahmedabad SG Highway">
+                     data-name="Martinoz Pizza South Bopal Ahmedabad">
                     <div class="bcf-top">
                         <div class="bcf-info">
                             <div class="bcf-city-tag">Ahmedabad</div>
-                            <h3>SG Highway Branch</h3>
+                            <h3>South Bopal</h3>
                             <p class="bcf-address">
                                 <i class="fas fa-map-marker-alt"></i>
-                                Shop 12, Iscon Mega Mall, SG Highway,
-                                Prahlad Nagar, Ahmedabad - 380015
+                                South Bopal, Ahmedabad
                             </p>
                         </div>
                         <div class="bcf-status open">
@@ -269,50 +281,48 @@
                     <div class="bcf-details">
                         <div class="bcf-detail-item">
                             <i class="fas fa-phone"></i>
-                            <span>+91 79 2345 6789</span>
+                            <span>Coming Soon</span>
                         </div>
                         <div class="bcf-detail-item">
                             <i class="fas fa-clock"></i>
-                            <span>10:00 AM - 11:00 PM</span>
+                            <span>10:00 AM - 10:00 PM</span>
                         </div>
                         <div class="bcf-detail-item">
                             <i class="fas fa-motorcycle"></i>
                             <span>Delivery + Dine-in</span>
                         </div>
                         <div class="bcf-detail-item">
-                            <i class="fas fa-parking"></i>
-                            <span>Free Parking</span>
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Aug 2021</span>
                         </div>
                     </div>
                     <div class="bcf-actions">
-                        <a href="tel:+917923456789" class="bcf-btn call">
+                        <a href="tel:#" class="bcf-btn call">
                             <i class="fas fa-phone"></i> Call Now
                         </a>
-                        <a href="https://wa.me/917923456789"
+                        <a href="https://wa.me/#"
                            target="_blank" class="bcf-btn whatsapp">
                             <i class="fab fa-whatsapp"></i> WhatsApp
                         </a>
-                        <a href="https://maps.google.com/?q=SG+Highway+Ahmedabad"
+                        <a href="https://maps.google.com/?q=South+Bopal+Ahmedabad"
                            target="_blank" class="bcf-btn direction">
                             <i class="fas fa-directions"></i> Direction
                         </a>
-                          
                     </div>
                 </div>
 
-                <!-- Ahmedabad 2 -->
+                <!-- 2. Maninagar -->
                 <div class="branch-card-full"
-                     data-region="gujarat"
+                     data-region="ahmedabad"
                      data-city="ahmedabad"
-                     data-name="Martinoz Pizza CG Road Ahmedabad">
+                     data-name="Martinoz Pizza Maninagar Ahmedabad">
                     <div class="bcf-top">
                         <div class="bcf-info">
                             <div class="bcf-city-tag">Ahmedabad</div>
-                            <h3>CG Road Branch</h3>
+                            <h3>Maninagar</h3>
                             <p class="bcf-address">
                                 <i class="fas fa-map-marker-alt"></i>
-                                45, CG Road, Navrangpura,
-                                Ahmedabad - 380009
+                                Maninagar, Ahmedabad
                             </p>
                         </div>
                         <div class="bcf-status open">
@@ -323,50 +333,48 @@
                     <div class="bcf-details">
                         <div class="bcf-detail-item">
                             <i class="fas fa-phone"></i>
-                            <span>+91 79 2345 6790</span>
+                            <span>Coming Soon</span>
                         </div>
                         <div class="bcf-detail-item">
                             <i class="fas fa-clock"></i>
-                            <span>10:00 AM - 11:00 PM</span>
+                            <span>10:00 AM - 10:00 PM</span>
                         </div>
                         <div class="bcf-detail-item">
                             <i class="fas fa-motorcycle"></i>
                             <span>Delivery + Dine-in</span>
                         </div>
                         <div class="bcf-detail-item">
-                            <i class="fas fa-wifi"></i>
-                            <span>Free WiFi</span>
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Apr 2022</span>
                         </div>
                     </div>
                     <div class="bcf-actions">
-                        <a href="tel:+917923456790" class="bcf-btn call">
+                        <a href="tel:#" class="bcf-btn call">
                             <i class="fas fa-phone"></i> Call Now
                         </a>
-                        <a href="https://wa.me/917923456790"
+                        <a href="https://wa.me/#"
                            target="_blank" class="bcf-btn whatsapp">
                             <i class="fab fa-whatsapp"></i> WhatsApp
                         </a>
-                        <a href="https://maps.google.com/?q=CG+Road+Ahmedabad"
+                        <a href="https://maps.google.com/?q=Maninagar+Ahmedabad"
                            target="_blank" class="bcf-btn direction">
                             <i class="fas fa-directions"></i> Direction
                         </a>
-                          
                     </div>
                 </div>
 
-                <!-- Surat -->
+                <!-- 3. Gota -->
                 <div class="branch-card-full"
-                     data-region="gujarat"
-                     data-city="surat"
-                     data-name="Martinoz Pizza Surat VR Mall">
+                     data-region="ahmedabad"
+                     data-city="ahmedabad"
+                     data-name="Martinoz Pizza Gota Ahmedabad">
                     <div class="bcf-top">
                         <div class="bcf-info">
-                            <div class="bcf-city-tag">Surat</div>
-                            <h3>VR Mall Branch</h3>
+                            <div class="bcf-city-tag">Ahmedabad</div>
+                            <h3>Gota</h3>
                             <p class="bcf-address">
                                 <i class="fas fa-map-marker-alt"></i>
-                                VR Mall, Dumas Road,
-                                Surat - 395007
+                                Gota, Ahmedabad
                             </p>
                         </div>
                         <div class="bcf-status open">
@@ -377,104 +385,48 @@
                     <div class="bcf-details">
                         <div class="bcf-detail-item">
                             <i class="fas fa-phone"></i>
-                            <span>+91 261 345 6789</span>
+                            <span>Coming Soon</span>
                         </div>
                         <div class="bcf-detail-item">
                             <i class="fas fa-clock"></i>
-                            <span>10:00 AM - 11:00 PM</span>
+                            <span>10:00 AM - 10:00 PM</span>
                         </div>
                         <div class="bcf-detail-item">
                             <i class="fas fa-motorcycle"></i>
                             <span>Delivery + Dine-in</span>
                         </div>
                         <div class="bcf-detail-item">
-                            <i class="fas fa-parking"></i>
-                            <span>Mall Parking</span>
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Sep 2022</span>
                         </div>
                     </div>
                     <div class="bcf-actions">
-                        <a href="tel:+912613456789" class="bcf-btn call">
+                        <a href="tel:#" class="bcf-btn call">
                             <i class="fas fa-phone"></i> Call Now
                         </a>
-                        <a href="https://wa.me/912613456789"
+                        <a href="https://wa.me/#"
                            target="_blank" class="bcf-btn whatsapp">
                             <i class="fab fa-whatsapp"></i> WhatsApp
                         </a>
-                        <a href="https://maps.google.com/?q=VR+Mall+Surat"
+                        <a href="https://maps.google.com/?q=Gota+Ahmedabad"
                            target="_blank" class="bcf-btn direction">
                             <i class="fas fa-directions"></i> Direction
                         </a>
-                          
                     </div>
                 </div>
 
-                <!-- Vadodara -->
+                <!-- 4. University Road -->
                 <div class="branch-card-full"
-                     data-region="gujarat"
-                     data-city="vadodara"
-                     data-name="Martinoz Pizza Vadodara Alkapuri">
+                     data-region="ahmedabad"
+                     data-city="ahmedabad"
+                     data-name="Martinoz Pizza University Road Ahmedabad">
                     <div class="bcf-top">
                         <div class="bcf-info">
-                            <div class="bcf-city-tag">Vadodara</div>
-                            <h3>Alkapuri Branch</h3>
+                            <div class="bcf-city-tag">Ahmedabad</div>
+                            <h3>University Road</h3>
                             <p class="bcf-address">
                                 <i class="fas fa-map-marker-alt"></i>
-                                Alkapuri, Race Course Road,
-                                Vadodara - 390007
-                            </p>
-                        </div>
-                        <div class="bcf-status closed">
-                            <span class="status-dot"></span>
-                            Closed
-                        </div>
-                    </div>
-                    <div class="bcf-details">
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 265 345 6789</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-clock"></i>
-                            <span>Opens at 10:00 AM</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-motorcycle"></i>
-                            <span>Delivery + Dine-in</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-wifi"></i>
-                            <span>Free WiFi</span>
-                        </div>
-                    </div>
-                    <div class="bcf-actions">
-                        <a href="tel:+912653456789" class="bcf-btn call">
-                            <i class="fas fa-phone"></i> Call Now
-                        </a>
-                        <a href="https://wa.me/912653456789"
-                           target="_blank" class="bcf-btn whatsapp">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
-                        <a href="https://maps.google.com/?q=Alkapuri+Vadodara"
-                           target="_blank" class="bcf-btn direction">
-                            <i class="fas fa-directions"></i> Direction
-                        </a>
-                          
-                    </div>
-                </div>
-
-                <!-- Rajkot -->
-                <div class="branch-card-full"
-                     data-region="gujarat"
-                     data-city="rajkot"
-                     data-name="Martinoz Pizza Rajkot Kalawad Road">
-                    <div class="bcf-top">
-                        <div class="bcf-info">
-                            <div class="bcf-city-tag">Rajkot</div>
-                            <h3>Kalawad Road Branch</h3>
-                            <p class="bcf-address">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Star Bazaar Complex, Kalawad Road,
-                                Rajkot - 360001
+                                University Road, Ahmedabad
                             </p>
                         </div>
                         <div class="bcf-status open">
@@ -485,50 +437,828 @@
                     <div class="bcf-details">
                         <div class="bcf-detail-item">
                             <i class="fas fa-phone"></i>
-                            <span>+91 281 345 6789</span>
+                            <span>Coming Soon</span>
                         </div>
                         <div class="bcf-detail-item">
                             <i class="fas fa-clock"></i>
-                            <span>10:00 AM - 11:00 PM</span>
+                            <span>10:00 AM - 10:00 PM</span>
                         </div>
                         <div class="bcf-detail-item">
                             <i class="fas fa-motorcycle"></i>
                             <span>Delivery + Dine-in</span>
                         </div>
                         <div class="bcf-detail-item">
-                            <i class="fas fa-parking"></i>
-                            <span>Free Parking</span>
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Dec 2022</span>
                         </div>
                     </div>
                     <div class="bcf-actions">
-                        <a href="tel:+912813456789" class="bcf-btn call">
+                        <a href="tel:#" class="bcf-btn call">
                             <i class="fas fa-phone"></i> Call Now
                         </a>
-                        <a href="https://wa.me/912813456789"
+                        <a href="https://wa.me/#"
                            target="_blank" class="bcf-btn whatsapp">
                             <i class="fab fa-whatsapp"></i> WhatsApp
                         </a>
-                        <a href="https://maps.google.com/?q=Kalawad+Road+Rajkot"
+                        <a href="https://maps.google.com/?q=University+Road+Ahmedabad"
                            target="_blank" class="bcf-btn direction">
                             <i class="fas fa-directions"></i> Direction
                         </a>
-                          
                     </div>
                 </div>
 
-                <!-- Gandhinagar -->
+                <!-- 5. Paldi -->
                 <div class="branch-card-full"
-                     data-region="gujarat"
+                     data-region="ahmedabad"
+                     data-city="ahmedabad"
+                     data-name="Martinoz Pizza Paldi Ahmedabad">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Ahmedabad</div>
+                            <h3>Paldi</h3>
+                            <p class="bcf-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Paldi, Ahmedabad
+                            </p>
+                        </div>
+                        <div class="bcf-status open">
+                            <span class="status-dot"></span>
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Delivery + Dine-in</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Mar 2023</span>
+                        </div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/#"
+                           target="_blank" class="bcf-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://maps.google.com/?q=Paldi+Ahmedabad"
+                           target="_blank" class="bcf-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. Nikol -->
+                <div class="branch-card-full"
+                     data-region="ahmedabad"
+                     data-city="ahmedabad"
+                     data-name="Martinoz Pizza Nikol Ahmedabad">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Ahmedabad</div>
+                            <h3>Nikol</h3>
+                            <p class="bcf-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Nikol, Ahmedabad
+                            </p>
+                        </div>
+                        <div class="bcf-status open">
+                            <span class="status-dot"></span>
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Delivery + Dine-in</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Nov 2023</span>
+                        </div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/#"
+                           target="_blank" class="bcf-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://maps.google.com/?q=Nikol+Ahmedabad"
+                           target="_blank" class="bcf-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 7. Vastrapur -->
+                <div class="branch-card-full"
+                     data-region="ahmedabad"
+                     data-city="ahmedabad"
+                     data-name="Martinoz Pizza Vastrapur Ahmedabad">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Ahmedabad</div>
+                            <h3>Vastrapur</h3>
+                            <p class="bcf-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Vastrapur, Ahmedabad
+                            </p>
+                        </div>
+                        <div class="bcf-status open">
+                            <span class="status-dot"></span>
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Delivery + Dine-in</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Nov 2023</span>
+                        </div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/#"
+                           target="_blank" class="bcf-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://maps.google.com/?q=Vastrapur+Ahmedabad"
+                           target="_blank" class="bcf-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 8. New Ranip -->
+                <div class="branch-card-full"
+                     data-region="ahmedabad"
+                     data-city="ahmedabad"
+                     data-name="Martinoz Pizza New Ranip Ahmedabad">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Ahmedabad</div>
+                            <h3>New Ranip</h3>
+                            <p class="bcf-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                New Ranip, Ahmedabad
+                            </p>
+                        </div>
+                        <div class="bcf-status open">
+                            <span class="status-dot"></span>
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Delivery + Dine-in</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Jul 2024</span>
+                        </div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/#"
+                           target="_blank" class="bcf-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://maps.google.com/?q=New+Ranip+Ahmedabad"
+                           target="_blank" class="bcf-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 9. CBD Mall -->
+                <div class="branch-card-full"
+                     data-region="ahmedabad"
+                     data-city="ahmedabad"
+                     data-name="Martinoz Pizza CBD Mall Ahmedabad">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Ahmedabad</div>
+                            <h3>CBD Mall</h3>
+                            <p class="bcf-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                CBD Mall, Ahmedabad
+                            </p>
+                        </div>
+                        <div class="bcf-status open">
+                            <span class="status-dot"></span>
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Delivery + Dine-in</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Feb 2025</span>
+                        </div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/#"
+                           target="_blank" class="bcf-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://maps.google.com/?q=CBD+Mall+Ahmedabad"
+                           target="_blank" class="bcf-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 10. Ashram Road -->
+                <div class="branch-card-full"
+                     data-region="ahmedabad"
+                     data-city="ahmedabad"
+                     data-name="Martinoz Pizza Ashram Road Ahmedabad">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Ahmedabad</div>
+                            <h3>Ashram Road</h3>
+                            <p class="bcf-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Ashram Road, Ahmedabad
+                            </p>
+                        </div>
+                        <div class="bcf-status open">
+                            <span class="status-dot"></span>
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Delivery + Dine-in</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Mar 2025</span>
+                        </div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/#"
+                           target="_blank" class="bcf-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://maps.google.com/?q=Ashram+Road+Ahmedabad"
+                           target="_blank" class="bcf-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 11. Prahlad Nagar -->
+                <div class="branch-card-full"
+                     data-region="ahmedabad"
+                     data-city="ahmedabad"
+                     data-name="Martinoz Pizza Prahlad Nagar Ahmedabad">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Ahmedabad</div>
+                            <h3>Prahlad Nagar</h3>
+                            <p class="bcf-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Prahlad Nagar, Ahmedabad
+                            </p>
+                        </div>
+                        <div class="bcf-status open">
+                            <span class="status-dot"></span>
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Delivery + Dine-in</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Oct 2025</span>
+                        </div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/#"
+                           target="_blank" class="bcf-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://maps.google.com/?q=Prahlad+Nagar+Ahmedabad"
+                           target="_blank" class="bcf-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 12. Amar Jawan Circle (Nikol) -->
+                <div class="branch-card-full"
+                     data-region="ahmedabad"
+                     data-city="ahmedabad"
+                     data-name="Martinoz Pizza Amar Jawan Circle Nikol Ahmedabad">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Ahmedabad</div>
+                            <h3>Amar Jawan Circle (Nikol)</h3>
+                            <p class="bcf-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Amar Jawan Circle, Nikol, Ahmedabad
+                            </p>
+                        </div>
+                        <div class="bcf-status open">
+                            <span class="status-dot"></span>
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Delivery + Dine-in</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Oct 2025</span>
+                        </div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/#"
+                           target="_blank" class="bcf-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://maps.google.com/?q=Amar+Jawan+Circle+Nikol+Ahmedabad"
+                           target="_blank" class="bcf-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 13. Science City -->
+                <div class="branch-card-full"
+                     data-region="ahmedabad"
+                     data-city="ahmedabad"
+                     data-name="Martinoz Pizza Science City Ahmedabad">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Ahmedabad</div>
+                            <h3>Science City</h3>
+                            <p class="bcf-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Science City, Ahmedabad
+                            </p>
+                        </div>
+                        <div class="bcf-status open">
+                            <span class="status-dot"></span>
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Delivery + Dine-in</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Oct 2025</span>
+                        </div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/#"
+                           target="_blank" class="bcf-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://maps.google.com/?q=Science+City+Ahmedabad"
+                           target="_blank" class="bcf-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 14. Ghatlodiya -->
+                <div class="branch-card-full"
+                     data-region="ahmedabad"
+                     data-city="ahmedabad"
+                     data-name="Martinoz Pizza Ghatlodiya Ahmedabad">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Ahmedabad</div>
+                            <h3>Ghatlodiya</h3>
+                            <p class="bcf-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Ghatlodiya, Ahmedabad
+                            </p>
+                        </div>
+                        <div class="bcf-status open">
+                            <span class="status-dot"></span>
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Delivery + Dine-in</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Dec 2025</span>
+                        </div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/#"
+                           target="_blank" class="bcf-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://maps.google.com/?q=Ghatlodiya+Ahmedabad"
+                           target="_blank" class="bcf-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 15. Shastri Nagar -->
+                <div class="branch-card-full"
+                     data-region="ahmedabad"
+                     data-city="ahmedabad"
+                     data-name="Martinoz Pizza Shastri Nagar Ahmedabad">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Ahmedabad</div>
+                            <h3>Shastri Nagar</h3>
+                            <p class="bcf-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Shastri Nagar, Ahmedabad
+                            </p>
+                        </div>
+                        <div class="bcf-status open">
+                            <span class="status-dot"></span>
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Delivery + Dine-in</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Dec 2025</span>
+                        </div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/#"
+                           target="_blank" class="bcf-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://maps.google.com/?q=Shastri+Nagar+Ahmedabad"
+                           target="_blank" class="bcf-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 16. Sindhu Bhavan Road -->
+                <div class="branch-card-full"
+                     data-region="ahmedabad"
+                     data-city="ahmedabad"
+                     data-name="Martinoz Pizza Sindhu Bhavan Road Ahmedabad">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Ahmedabad</div>
+                            <h3>Sindhu Bhavan Road</h3>
+                            <p class="bcf-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Sindhu Bhavan Road, Ahmedabad
+                            </p>
+                        </div>
+                        <div class="bcf-status open">
+                            <span class="status-dot"></span>
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Delivery + Dine-in</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Jan 2026</span>
+                        </div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/#"
+                           target="_blank" class="bcf-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://maps.google.com/?q=Sindhu+Bhavan+Road+Ahmedabad"
+                           target="_blank" class="bcf-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 17. Chandkheda -->
+                <div class="branch-card-full"
+                     data-region="ahmedabad"
+                     data-city="ahmedabad"
+                     data-name="Martinoz Pizza Chandkheda Ahmedabad">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Ahmedabad</div>
+                            <h3>Chandkheda</h3>
+                            <p class="bcf-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Chandkheda, Ahmedabad
+                            </p>
+                        </div>
+                        <div class="bcf-status open">
+                            <span class="status-dot"></span>
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Delivery + Dine-in</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Feb 2026</span>
+                        </div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/#"
+                           target="_blank" class="bcf-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://maps.google.com/?q=Chandkheda+Ahmedabad"
+                           target="_blank" class="bcf-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 18. Akhbar Nagar -->
+                <div class="branch-card-full"
+                     data-region="ahmedabad"
+                     data-city="ahmedabad"
+                     data-name="Martinoz Pizza Akhbar Nagar Ahmedabad">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Ahmedabad</div>
+                            <h3>Akhbar Nagar</h3>
+                            <p class="bcf-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Akhbar Nagar, Ahmedabad
+                            </p>
+                        </div>
+                        <div class="bcf-status open">
+                            <span class="status-dot"></span>
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Delivery + Dine-in</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Mar 2026</span>
+                        </div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/#"
+                           target="_blank" class="bcf-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://maps.google.com/?q=Akhbar+Nagar+Ahmedabad"
+                           target="_blank" class="bcf-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 19. Shyamal -->
+                <div class="branch-card-full"
+                     data-region="ahmedabad"
+                     data-city="ahmedabad"
+                     data-name="Martinoz Pizza Shyamal Ahmedabad">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Ahmedabad</div>
+                            <h3>Shyamal</h3>
+                            <p class="bcf-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Shyamal, Ahmedabad
+                            </p>
+                        </div>
+                        <div class="bcf-status open">
+                            <span class="status-dot"></span>
+                            Open Now
+                        </div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Delivery + Dine-in</span>
+                        </div>
+                        <div class="bcf-detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Mar 2026</span>
+                        </div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/#"
+                           target="_blank" class="bcf-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://maps.google.com/?q=Shyamal+Ahmedabad"
+                           target="_blank" class="bcf-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 20. Kudasan (Gandhinagar - nearby Ahmedabad) -->
+                <div class="branch-card-full"
+                     data-region="ahmedabad"
                      data-city="gandhinagar"
-                     data-name="Martinoz Pizza Gandhinagar Sector 21">
+                     data-name="Martinoz Pizza Kudasan Gandhinagar">
                     <div class="bcf-top">
                         <div class="bcf-info">
                             <div class="bcf-city-tag">Gandhinagar</div>
-                            <h3>Sector 21 Branch</h3>
+                            <h3>Kudasan</h3>
                             <p class="bcf-address">
                                 <i class="fas fa-map-marker-alt"></i>
-                                Plot 45, Sector 21,
-                                Gandhinagar - 382021
+                                Kudasan, Gandhinagar
                             </p>
                         </div>
                         <div class="bcf-status open">
@@ -539,753 +1269,1127 @@
                     <div class="bcf-details">
                         <div class="bcf-detail-item">
                             <i class="fas fa-phone"></i>
-                            <span>+91 79 2345 6800</span>
+                            <span>Coming Soon</span>
                         </div>
                         <div class="bcf-detail-item">
                             <i class="fas fa-clock"></i>
-                            <span>10:00 AM - 10:30 PM</span>
+                            <span>10:00 AM - 10:00 PM</span>
                         </div>
                         <div class="bcf-detail-item">
                             <i class="fas fa-motorcycle"></i>
                             <span>Delivery + Dine-in</span>
                         </div>
                         <div class="bcf-detail-item">
-                            <i class="fas fa-wifi"></i>
-                            <span>Free WiFi</span>
+                            <i class="fas fa-calendar"></i>
+                            <span>Since Dec 2023</span>
                         </div>
                     </div>
                     <div class="bcf-actions">
-                        <a href="tel:+917923456800" class="bcf-btn call">
+                        <a href="tel:#" class="bcf-btn call">
                             <i class="fas fa-phone"></i> Call Now
                         </a>
-                        <a href="https://wa.me/917923456800"
+                        <a href="https://wa.me/#"
                            target="_blank" class="bcf-btn whatsapp">
                             <i class="fab fa-whatsapp"></i> WhatsApp
                         </a>
-                        <a href="https://maps.google.com/?q=Sector+21+Gandhinagar"
+                        <a href="https://maps.google.com/?q=Kudasan+Gandhinagar"
                            target="_blank" class="bcf-btn direction">
                             <i class="fas fa-directions"></i> Direction
                         </a>
-                          
                     </div>
                 </div>
 
             </div>
         </div>
 
-        <!-- ===== MADHYA PRADESH ===== -->
-        <div class="state-section" id="section-mp" data-region="mp">
+        <!-- ===== SURAT ===== -->
+        <div class="state-section" id="section-surat" data-region="surat">
             <div class="state-header">
                 <div class="state-title">
-                    <span class="state-flag">🌿</span>
+                    <span class="state-flag">🌊</span>
                     <div>
-                        <h2>Madhya Pradesh</h2>
-                        <p>20 Branches across major cities</p>
+                        <h2>Surat</h2>
+                        <p>13 Branches across Surat</p>
+                    </div>
+                </div>
+                <div class="state-cities">
+                    <span>Adajan</span>
+                    <span>Kamrej</span>
+                    <span>Katargam</span>
+                    <span>Hira Baug</span>
+                    <span>+more</span>
+                </div>
+            </div>
+            <div class="branches-grid">
+
+                <!-- Adajan -->
+                <div class="branch-card-full" data-region="surat" data-city="surat" data-name="Martinoz Pizza Adajan Surat">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Surat</div>
+                            <h3>Adajan</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Adajan, Surat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Mar 2022</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Adajan+Surat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Kamrej -->
+                <div class="branch-card-full" data-region="surat" data-city="surat" data-name="Martinoz Pizza Kamrej Surat">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Surat</div>
+                            <h3>Kamrej</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Kamrej, Surat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Apr 2022</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Kamrej+Surat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Katargam -->
+                <div class="branch-card-full" data-region="surat" data-city="surat" data-name="Martinoz Pizza Katargam Surat">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Surat</div>
+                            <h3>Katargam</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Katargam, Surat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Jul 2022</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Katargam+Surat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Hira Baug -->
+                <div class="branch-card-full" data-region="surat" data-city="surat" data-name="Martinoz Pizza Hira Baug Surat">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Surat</div>
+                            <h3>Hira Baug</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Hira Baug, Surat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Aug 2022</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Hira+Baug+Surat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Yogi Chowk -->
+                <div class="branch-card-full" data-region="surat" data-city="surat" data-name="Martinoz Pizza Yogi Chowk Surat">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Surat</div>
+                            <h3>Yogi Chowk</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Yogi Chowk, Surat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Sep 2022</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Yogi+Chowk+Surat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Velanja -->
+                <div class="branch-card-full" data-region="surat" data-city="surat" data-name="Martinoz Pizza Velanja Surat">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Surat</div>
+                            <h3>Velanja</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Velanja, Surat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Jan 2023</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Velanja+Surat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Prime Shoppers -->
+                <div class="branch-card-full" data-region="surat" data-city="surat" data-name="Martinoz Pizza Prime Shoppers Surat">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Surat</div>
+                            <h3>Prime Shoppers</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Prime Shoppers, Surat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Apr 2023</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Prime+Shoppers+Surat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Mota Varachha -->
+                <div class="branch-card-full" data-region="surat" data-city="surat" data-name="Martinoz Pizza Mota Varachha Surat">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Surat</div>
+                            <h3>Mota Varachha</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Mota Varachha, Surat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Mar 2024</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Mota+Varachha+Surat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Gaurav Path -->
+                <div class="branch-card-full" data-region="surat" data-city="surat" data-name="Martinoz Pizza Gaurav Path Surat">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Surat</div>
+                            <h3>Gaurav Path</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Gaurav Path, Surat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Dec 2025</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Gaurav+Path+Surat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Amroli -->
+                <div class="branch-card-full" data-region="surat" data-city="surat" data-name="Martinoz Pizza Amroli Surat">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Surat</div>
+                            <h3>Amroli</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Amroli, Surat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Feb 2026</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Amroli+Surat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Dandi Road -->
+                <div class="branch-card-full" data-region="surat" data-city="surat" data-name="Martinoz Pizza Dandi Road Surat">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Surat</div>
+                            <h3>Dandi Road</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Dandi Road, Surat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Mar 2026</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Dandi+Road+Surat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Althan -->
+                <div class="branch-card-full" data-region="surat" data-city="surat" data-name="Martinoz Pizza Althan Surat">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Surat</div>
+                            <h3>Althan</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Althan, Surat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Apr 2026</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Althan+Surat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== VADODARA ===== -->
+        <div class="state-section" id="section-vadodara" data-region="vadodara">
+            <div class="state-header">
+                <div class="state-title">
+                    <span class="state-flag">🏰</span>
+                    <div>
+                        <h2>Vadodara</h2>
+                        <p>4 Branches across Vadodara</p>
+                    </div>
+                </div>
+                <div class="state-cities">
+                    <span>Manjalpur</span>
+                    <span>Bhayli</span>
+                    <span>Genda Circle</span>
+                    <span>Chhani Jakatnaka</span>
+                </div>
+            </div>
+            <div class="branches-grid">
+
+                <div class="branch-card-full" data-region="vadodara" data-city="vadodara" data-name="Martinoz Pizza Manjalpur Vadodara">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Vadodara</div>
+                            <h3>Manjalpur</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Manjalpur, Vadodara</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Feb 2022</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Manjalpur+Vadodara" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <div class="branch-card-full" data-region="vadodara" data-city="vadodara" data-name="Martinoz Pizza Bhayli Vadodara">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Vadodara</div>
+                            <h3>Bhayli</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Bhayli, Vadodara</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Oct 2022</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Bhayli+Vadodara" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <div class="branch-card-full" data-region="vadodara" data-city="vadodara" data-name="Martinoz Pizza Genda Circle Vadodara">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Vadodara</div>
+                            <h3>Genda Circle</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Genda Circle, Vadodara</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Dec 2024</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Genda+Circle+Vadodara" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <div class="branch-card-full" data-region="vadodara" data-city="vadodara" data-name="Martinoz Pizza Chhani Jakatnaka Vadodara">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Vadodara</div>
+                            <h3>Chhani Jakatnaka</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Chhani Jakatnaka, Vadodara</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Aug 2025</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Chhani+Jakatnaka+Vadodara" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== RAJKOT ===== -->
+        <div class="state-section" id="section-rajkot" data-region="rajkot">
+            <div class="state-header">
+                <div class="state-title">
+                    <span class="state-flag">🦁</span>
+                    <div>
+                        <h2>Rajkot</h2>
+                        <p>4 Branches across Rajkot</p>
+                    </div>
+                </div>
+                <div class="state-cities">
+                    <span>Nana Mauva</span>
+                    <span>Ayodhya Chowk</span>
+                    <span>Mavdi</span>
+                    <span>Sadhuvasvani</span>
+                </div>
+            </div>
+            <div class="branches-grid">
+
+                <div class="branch-card-full" data-region="rajkot" data-city="rajkot" data-name="Martinoz Pizza Nana Mauva Rajkot">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Rajkot</div>
+                            <h3>Nana Mauva</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Nana Mauva, Rajkot</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Apr 2022</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Nana+Mauva+Rajkot" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <div class="branch-card-full" data-region="rajkot" data-city="rajkot" data-name="Martinoz Pizza Ayodhya Chowk Rajkot">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Rajkot</div>
+                            <h3>Ayodhya Chowk</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Ayodhya Chowk, Rajkot</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Sep 2022</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Ayodhya+Chowk+Rajkot" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <div class="branch-card-full" data-region="rajkot" data-city="rajkot" data-name="Martinoz Pizza Mavdi Rajkot">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Rajkot</div>
+                            <h3>Mavdi</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Mavdi, Rajkot</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Jun 2024</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Mavdi+Rajkot" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <div class="branch-card-full" data-region="rajkot" data-city="rajkot" data-name="Martinoz Pizza Sadhuvasvani Rajkot">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Rajkot</div>
+                            <h3>Sadhuvasvani</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Sadhuvasvani, Rajkot</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Jul 2025</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Sadhuvasvani+Rajkot" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== OTHER GUJARAT ===== -->
+        <div class="state-section" id="section-other-gujarat" data-region="other-gujarat">
+            <div class="state-header">
+                <div class="state-title">
+                    <span class="state-flag">🏛️</span>
+                    <div>
+                        <h2>Other Gujarat Cities</h2>
+                        <p>16 Branches across Gujarat</p>
+                    </div>
+                </div>
+                <div class="state-cities">
+                    <span>Bardoli</span>
+                    <span>Navsari</span>
+                    <span>Jamnagar</span>
+                    <span>Anand</span>
+                    <span>+more</span>
+                </div>
+            </div>
+            <div class="branches-grid">
+
+                <!-- Bardoli -->
+                <div class="branch-card-full" data-region="other-gujarat" data-city="bardoli" data-name="Martinoz Pizza Bardoli">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Bardoli</div>
+                            <h3>Bardoli</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Bardoli, Gujarat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Jan 2022</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Bardoli+Gujarat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Vyara -->
+                <div class="branch-card-full" data-region="other-gujarat" data-city="vyara" data-name="Martinoz Pizza Vyara">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Vyara</div>
+                            <h3>Vyara</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Vyara, Gujarat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Jul 2022</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Vyara+Gujarat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Navsari -->
+                <div class="branch-card-full" data-region="other-gujarat" data-city="navsari" data-name="Martinoz Pizza Navsari">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Navsari</div>
+                            <h3>Navsari</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Navsari, Gujarat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Aug 2022</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Navsari+Gujarat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Bilimora -->
+                <div class="branch-card-full" data-region="other-gujarat" data-city="bilimora" data-name="Martinoz Pizza Bilimora">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Bilimora</div>
+                            <h3>Bilimora</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Bilimora, Gujarat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Jan 2023</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Bilimora+Gujarat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Junagadh -->
+                <div class="branch-card-full" data-region="other-gujarat" data-city="junagadh" data-name="Martinoz Pizza Junagadh">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Junagadh</div>
+                            <h3>Junagadh</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Junagadh, Gujarat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Jan 2023</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Junagadh+Gujarat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Ankleshwar -->
+                <div class="branch-card-full" data-region="other-gujarat" data-city="ankleshwar" data-name="Martinoz Pizza Ankleshwar">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Ankleshwar</div>
+                            <h3>Ankleshwar</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Ankleshwar, Gujarat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since May 2023</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Ankleshwar+Gujarat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Himatnagar -->
+                <div class="branch-card-full" data-region="other-gujarat" data-city="himatnagar" data-name="Martinoz Pizza Himatnagar">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Himatnagar</div>
+                            <h3>Himatnagar</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Himatnagar, Gujarat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Nov 2023</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Himatnagar+Gujarat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Jamnagar -->
+                <div class="branch-card-full" data-region="other-gujarat" data-city="jamnagar" data-name="Martinoz Pizza Jamnagar">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Jamnagar</div>
+                            <h3>Jamnagar</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Jamnagar, Gujarat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Dec 2023</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Jamnagar+Gujarat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Morbi -->
+                <div class="branch-card-full" data-region="other-gujarat" data-city="morbi" data-name="Martinoz Pizza Morbi">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Morbi</div>
+                            <h3>Morbi</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Morbi, Gujarat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Jul 2024</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Morbi+Gujarat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Reliance Greens Jamnagar -->
+                <div class="branch-card-full" data-region="other-gujarat" data-city="jamnagar" data-name="Martinoz Pizza Reliance Greens Jamnagar">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Jamnagar</div>
+                            <h3>Reliance Greens (Moti Khavdi)</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> The Mall, Reliance Greens, Jamnagar</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Jun 2025</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Reliance+Greens+Jamnagar" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Anand -->
+                <div class="branch-card-full" data-region="other-gujarat" data-city="anand" data-name="Martinoz Pizza Anand">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Anand</div>
+                            <h3>Anand</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Anand, Gujarat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Aug 2025</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Anand+Gujarat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Nadiad -->
+                <div class="branch-card-full" data-region="other-gujarat" data-city="nadiad" data-name="Martinoz Pizza Nadiad">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Nadiad</div>
+                            <h3>Nadiad</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Nadiad, Gujarat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Aug 2025</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Nadiad+Gujarat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Bharuch -->
+                <div class="branch-card-full" data-region="other-gujarat" data-city="bharuch" data-name="Martinoz Pizza Bharuch">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Bharuch</div>
+                            <h3>Bharuch</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Bharuch, Gujarat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Sep 2025</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Bharuch+Gujarat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Udvada -->
+                <div class="branch-card-full" data-region="other-gujarat" data-city="udvada" data-name="Martinoz Pizza Udvada Nani Daman">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Udvada</div>
+                            <h3>Udvada - Nani Daman</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Udvada, Gujarat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Nov 2025</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Udvada+Gujarat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Palanpur -->
+                <div class="branch-card-full" data-region="other-gujarat" data-city="palanpur" data-name="Martinoz Pizza Palanpur">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Palanpur</div>
+                            <h3>Palanpur</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Palanpur, Gujarat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Jan 2026</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Palanpur+Gujarat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+                <!-- Mehsana -->
+                <div class="branch-card-full" data-region="other-gujarat" data-city="mehsana" data-name="Martinoz Pizza Mehsana">
+                    <div class="bcf-top">
+                        <div class="bcf-info">
+                            <div class="bcf-city-tag">Mehsana</div>
+                            <h3>Mehsana</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Mehsana, Gujarat</p>
+                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
+                    </div>
+                    <div class="bcf-details">
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Jan 2026</span></div>
+                    </div>
+                    <div class="bcf-actions">
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Mehsana+Gujarat" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== OTHER STATES ===== -->
+        <div class="state-section" id="section-other" data-region="other">
+            <div class="state-header">
+                <div class="state-title">
+                    <span class="state-flag">🌍</span>
+                    <div>
+                        <h2>Other States</h2>
+                        <p>8 Branches - Indore, Valsad, Udaipur, Mumbai & Sagar</p>
                     </div>
                 </div>
                 <div class="state-cities">
                     <span>Indore</span>
-                    <span>Bhopal</span>
-                    <span>Jabalpur</span>
-                    <span>Gwalior</span>
-                    <span>+more</span>
+                    <span>Valsad</span>
+                    <span>Udaipur</span>
+                    <span>Mumbai</span>
+                    <span>Sagar</span>
                 </div>
             </div>
+            <div class="branches-grid">
 
-            <div class="branches-grid" id="mp-grid">
-
-                <!-- Indore -->
-                <div class="branch-card-full"
-                     data-region="mp"
-                     data-city="indore"
-                     data-name="Martinoz Pizza Indore Vijay Nagar">
+                <!-- Bhawarkua Indore -->
+                <div class="branch-card-full" data-region="other" data-city="indore" data-name="Martinoz Pizza Bhawarkua Indore">
                     <div class="bcf-top">
                         <div class="bcf-info">
                             <div class="bcf-city-tag mp">Indore</div>
-                            <h3>Vijay Nagar Branch</h3>
-                            <p class="bcf-address">
-                                <i class="fas fa-map-marker-alt"></i>
-                                12, Scheme 54, Vijay Nagar,
-                                Indore - 452010
-                            </p>
+                            <h3>Bhawarkua</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Bhawarkua, Indore, MP</p>
                         </div>
-                        <div class="bcf-status open">
-                            <span class="status-dot"></span>
-                            Open Now
-                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
                     </div>
                     <div class="bcf-details">
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 731 345 6789</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-clock"></i>
-                            <span>10:00 AM - 11:00 PM</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-motorcycle"></i>
-                            <span>Delivery + Dine-in</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-star"></i>
-                            <span>Flagship Store</span>
-                        </div>
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Jun 2023</span></div>
                     </div>
                     <div class="bcf-actions">
-                        <a href="tel:+917313456789" class="bcf-btn call">
-                            <i class="fas fa-phone"></i> Call Now
-                        </a>
-                        <a href="https://wa.me/917313456789"
-                           target="_blank" class="bcf-btn whatsapp">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
-                        <a href="https://maps.google.com/?q=Vijay+Nagar+Indore"
-                           target="_blank" class="bcf-btn direction">
-                            <i class="fas fa-directions"></i> Direction
-                        </a>
-                          
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Bhawarkua+Indore" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
                     </div>
                 </div>
 
-                <!-- Bhopal -->
-                <div class="branch-card-full"
-                     data-region="mp"
-                     data-city="bhopal"
-                     data-name="Martinoz Pizza Bhopal MP Nagar">
+                <!-- Geeta Bhawan Indore -->
+                <div class="branch-card-full" data-region="other" data-city="indore" data-name="Martinoz Pizza Geeta Bhawan Indore">
                     <div class="bcf-top">
                         <div class="bcf-info">
-                            <div class="bcf-city-tag mp">Bhopal</div>
-                            <h3>MP Nagar Branch</h3>
-                            <p class="bcf-address">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Zone 2, MP Nagar,
-                                Bhopal - 462011
-                            </p>
+                            <div class="bcf-city-tag mp">Indore</div>
+                            <h3>Geeta Bhawan</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Geeta Bhawan, Indore, MP</p>
                         </div>
-                        <div class="bcf-status open">
-                            <span class="status-dot"></span>
-                            Open Now
-                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
                     </div>
                     <div class="bcf-details">
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 755 345 6789</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-clock"></i>
-                            <span>10:00 AM - 11:00 PM</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-motorcycle"></i>
-                            <span>Delivery + Dine-in</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-parking"></i>
-                            <span>Free Parking</span>
-                        </div>
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Sep 2023</span></div>
                     </div>
                     <div class="bcf-actions">
-                        <a href="tel:+917553456789" class="bcf-btn call">
-                            <i class="fas fa-phone"></i> Call Now
-                        </a>
-                        <a href="https://wa.me/917553456789"
-                           target="_blank" class="bcf-btn whatsapp">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
-                        <a href="https://maps.google.com/?q=MP+Nagar+Bhopal"
-                           target="_blank" class="bcf-btn direction">
-                            <i class="fas fa-directions"></i> Direction
-                        </a>
-                          
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Geeta+Bhawan+Indore" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
                     </div>
                 </div>
 
-                <!-- Jabalpur -->
-                <div class="branch-card-full"
-                     data-region="mp"
-                     data-city="jabalpur"
-                     data-name="Martinoz Pizza Jabalpur Wright Town">
+                <!-- Tithal Road Valsad -->
+                <div class="branch-card-full" data-region="other" data-city="valsad" data-name="Martinoz Pizza Tithal Road Valsad">
                     <div class="bcf-top">
                         <div class="bcf-info">
-                            <div class="bcf-city-tag mp">Jabalpur</div>
-                            <h3>Wright Town Branch</h3>
-                            <p class="bcf-address">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Wright Town, Napier Town,
-                                Jabalpur - 482002
-                            </p>
+                            <div class="bcf-city-tag">Valsad</div>
+                            <h3>Tithal Road</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Tithal Road, Valsad</p>
                         </div>
-                        <div class="bcf-status closed">
-                            <span class="status-dot"></span>
-                            Closed
-                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
                     </div>
                     <div class="bcf-details">
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 761 345 6789</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-clock"></i>
-                            <span>Opens at 10:00 AM</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-motorcycle"></i>
-                            <span>Delivery + Dine-in</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-wifi"></i>
-                            <span>Free WiFi</span>
-                        </div>
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Aug 2023</span></div>
                     </div>
                     <div class="bcf-actions">
-                        <a href="tel:+917613456789" class="bcf-btn call">
-                            <i class="fas fa-phone"></i> Call Now
-                        </a>
-                        <a href="https://wa.me/917613456789"
-                           target="_blank" class="bcf-btn whatsapp">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
-                        <a href="https://maps.google.com/?q=Wright+Town+Jabalpur"
-                           target="_blank" class="bcf-btn direction">
-                            <i class="fas fa-directions"></i> Direction
-                        </a>
-                          
-                    </div>
-                </div>
-
-                <!-- Gwalior -->
-                <div class="branch-card-full"
-                     data-region="mp"
-                     data-city="gwalior"
-                     data-name="Martinoz Pizza Gwalior City Centre">
-                    <div class="bcf-top">
-                        <div class="bcf-info">
-                            <div class="bcf-city-tag mp">Gwalior</div>
-                            <h3>City Centre Branch</h3>
-                            <p class="bcf-address">
-                                <i class="fas fa-map-marker-alt"></i>
-                                City Centre Mall, Gwalior - 474001
-                            </p>
-                        </div>
-                        <div class="bcf-status open">
-                            <span class="status-dot"></span>
-                            Open Now
-                        </div>
-                    </div>
-                    <div class="bcf-details">
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 751 345 6789</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-clock"></i>
-                            <span>10:00 AM - 11:00 PM</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-motorcycle"></i>
-                            <span>Delivery + Dine-in</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-parking"></i>
-                            <span>Mall Parking</span>
-                        </div>
-                    </div>
-                    <div class="bcf-actions">
-                        <a href="tel:+917513456789" class="bcf-btn call">
-                            <i class="fas fa-phone"></i> Call Now
-                        </a>
-                        <a href="https://wa.me/917513456789"
-                           target="_blank" class="bcf-btn whatsapp">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
-                        <a href="https://maps.google.com/?q=City+Centre+Gwalior"
-                           target="_blank" class="bcf-btn direction">
-                            <i class="fas fa-directions"></i> Direction
-                        </a>
-                          
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- ===== RAJASTHAN ===== -->
-        <div class="state-section" id="section-rajasthan" data-region="rajasthan">
-            <div class="state-header">
-                <div class="state-title">
-                    <span class="state-flag">🏜️</span>
-                    <div>
-                        <h2>Rajasthan</h2>
-                        <p>18 Branches across major cities</p>
-                    </div>
-                </div>
-                <div class="state-cities">
-                    <span>Jaipur</span>
-                    <span>Udaipur</span>
-                    <span>Jodhpur</span>
-                    <span>Kota</span>
-                    <span>+more</span>
-                </div>
-            </div>
-
-            <div class="branches-grid" id="rajasthan-grid">
-
-                <!-- Jaipur -->
-                <div class="branch-card-full"
-                     data-region="rajasthan"
-                     data-city="jaipur"
-                     data-name="Martinoz Pizza Jaipur Malviya Nagar">
-                    <div class="bcf-top">
-                        <div class="bcf-info">
-                            <div class="bcf-city-tag raj">Jaipur</div>
-                            <h3>Malviya Nagar Branch</h3>
-                            <p class="bcf-address">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Plot 8, Malviya Nagar, Tonk Road,
-                                Jaipur - 302017
-                            </p>
-                        </div>
-                        <div class="bcf-status open">
-                            <span class="status-dot"></span>
-                            Open Now
-                        </div>
-                    </div>
-                    <div class="bcf-details">
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 141 345 6789</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-clock"></i>
-                            <span>10:00 AM - 11:00 PM</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-motorcycle"></i>
-                            <span>Delivery + Dine-in</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-star"></i>
-                            <span>Flagship Store</span>
-                        </div>
-                    </div>
-                    <div class="bcf-actions">
-                        <a href="tel:+911413456789" class="bcf-btn call">
-                            <i class="fas fa-phone"></i> Call Now
-                        </a>
-                        <a href="https://wa.me/911413456789"
-                           target="_blank" class="bcf-btn whatsapp">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
-                        <a href="https://maps.google.com/?q=Malviya+Nagar+Jaipur"
-                           target="_blank" class="bcf-btn direction">
-                            <i class="fas fa-directions"></i> Direction
-                        </a>
-                          
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Tithal+Road+Valsad" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
                     </div>
                 </div>
 
                 <!-- Udaipur -->
-                <div class="branch-card-full"
-                     data-region="rajasthan"
-                     data-city="udaipur"
-                     data-name="Martinoz Pizza Udaipur Madhuban">
+                <div class="branch-card-full" data-region="other" data-city="udaipur" data-name="Martinoz Pizza Udaipur">
                     <div class="bcf-top">
                         <div class="bcf-info">
                             <div class="bcf-city-tag raj">Udaipur</div>
-                            <h3>Madhuban Branch</h3>
-                            <p class="bcf-address">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Madhuban, Chetak Circle,
-                                Udaipur - 313001
-                            </p>
+                            <h3>Udaipur</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Udaipur, Rajasthan</p>
                         </div>
-                        <div class="bcf-status open">
-                            <span class="status-dot"></span>
-                            Open Now
-                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
                     </div>
                     <div class="bcf-details">
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 294 345 6789</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-clock"></i>
-                            <span>10:00 AM - 11:00 PM</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-motorcycle"></i>
-                            <span>Delivery + Dine-in</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-parking"></i>
-                            <span>Free Parking</span>
-                        </div>
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Jun 2024</span></div>
                     </div>
                     <div class="bcf-actions">
-                        <a href="tel:+912943456789" class="bcf-btn call">
-                            <i class="fas fa-phone"></i> Call Now
-                        </a>
-                        <a href="https://wa.me/912943456789"
-                           target="_blank" class="bcf-btn whatsapp">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
-                        <a href="https://maps.google.com/?q=Madhuban+Udaipur"
-                           target="_blank" class="bcf-btn direction">
-                            <i class="fas fa-directions"></i> Direction
-                        </a>
-                          
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Udaipur+Rajasthan" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
                     </div>
                 </div>
 
-                <!-- Jodhpur -->
-                <div class="branch-card-full"
-                     data-region="rajasthan"
-                     data-city="jodhpur"
-                     data-name="Martinoz Pizza Jodhpur Paota Circle">
+                <!-- RK Circle Udaipur -->
+                <div class="branch-card-full" data-region="other" data-city="udaipur" data-name="Martinoz Pizza RK Circle Udaipur">
                     <div class="bcf-top">
                         <div class="bcf-info">
-                            <div class="bcf-city-tag raj">Jodhpur</div>
-                            <h3>Paota Circle Branch</h3>
-                            <p class="bcf-address">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Near Paota Circle, Residency Road,
-                                Jodhpur - 342001
-                            </p>
+                            <div class="bcf-city-tag raj">Udaipur</div>
+                            <h3>RK Circle</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> RK Circle, Udaipur, Rajasthan</p>
                         </div>
-                        <div class="bcf-status open">
-                            <span class="status-dot"></span>
-                            Open Now
-                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
                     </div>
                     <div class="bcf-details">
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 291 345 6789</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-clock"></i>
-                            <span>10:00 AM - 11:00 PM</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-motorcycle"></i>
-                            <span>Delivery + Dine-in</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-wifi"></i>
-                            <span>Free WiFi</span>
-                        </div>
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Aug 2025</span></div>
                     </div>
                     <div class="bcf-actions">
-                        <a href="tel:+912913456789" class="bcf-btn call">
-                            <i class="fas fa-phone"></i> Call Now
-                        </a>
-                        <a href="https://wa.me/912913456789"
-                           target="_blank" class="bcf-btn whatsapp">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
-                        <a href="https://maps.google.com/?q=Paota+Circle+Jodhpur"
-                           target="_blank" class="bcf-btn direction">
-                            <i class="fas fa-directions"></i> Direction
-                        </a>
-                          
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=RK+Circle+Udaipur" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
                     </div>
                 </div>
 
-                <!-- Kota -->
-                <div class="branch-card-full"
-                     data-region="rajasthan"
-                     data-city="kota"
-                     data-name="Martinoz Pizza Kota Dadabari">
+                <!-- Kandivali Mumbai -->
+                <div class="branch-card-full" data-region="other" data-city="mumbai" data-name="Martinoz Pizza Kandivali Mumbai">
                     <div class="bcf-top">
                         <div class="bcf-info">
-                            <div class="bcf-city-tag raj">Kota</div>
-                            <h3>Dadabari Branch</h3>
-                            <p class="bcf-address">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Dadabari, Near DC Circuit,
-                                Kota - 324009
-                            </p>
+                            <div class="bcf-city-tag" style="background:rgba(2,119,189,0.10);color:#01579B;">Mumbai</div>
+                            <h3>Kandivali</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Kandivali, Mumbai, Maharashtra</p>
                         </div>
-                        <div class="bcf-status open">
-                            <span class="status-dot"></span>
-                            Open Now
-                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
                     </div>
                     <div class="bcf-details">
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 744 345 6789</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-clock"></i>
-                            <span>10:00 AM - 11:00 PM</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-motorcycle"></i>
-                            <span>Delivery + Dine-in</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-parking"></i>
-                            <span>Free Parking</span>
-                        </div>
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Jan 2026</span></div>
                     </div>
                     <div class="bcf-actions">
-                        <a href="tel:+917443456789" class="bcf-btn call">
-                            <i class="fas fa-phone"></i> Call Now
-                        </a>
-                        <a href="https://wa.me/917443456789"
-                           target="_blank" class="bcf-btn whatsapp">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
-                        <a href="https://maps.google.com/?q=Dadabari+Kota"
-                           target="_blank" class="bcf-btn direction">
-                            <i class="fas fa-directions"></i> Direction
-                        </a>
-                          
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Kandivali+Mumbai" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
                     </div>
                 </div>
 
-            </div>
-        </div>
-
-        <!-- ===== NEW ZEALAND ===== -->
-        <div class="state-section" id="section-nz" data-region="nz">
-            <div class="state-header">
-                <div class="state-title">
-                    <span class="state-flag">🇳🇿</span>
-                    <div>
-                        <h2>New Zealand</h2>
-                        <p>7 Branches across major cities</p>
-                    </div>
-                </div>
-                <div class="state-cities">
-                    <span>Auckland</span>
-                    <span>Wellington</span>
-                    <span>Christchurch</span>
-                    <span>Hamilton</span>
-                    <span>+more</span>
-                </div>
-            </div>
-
-            <div class="branches-grid" id="nz-grid">
-
-                <!-- Auckland -->
-                <div class="branch-card-full"
-                     data-region="nz"
-                     data-city="auckland"
-                     data-name="Martinoz Pizza Auckland Queen Street">
+                <!-- Sagar MP -->
+                <div class="branch-card-full" data-region="other" data-city="sagar" data-name="Martinoz Pizza Sagar">
                     <div class="bcf-top">
                         <div class="bcf-info">
-                            <div class="bcf-city-tag nz">Auckland</div>
-                            <h3>Queen Street Branch</h3>
-                            <p class="bcf-address">
-                                <i class="fas fa-map-marker-alt"></i>
-                                145 Queen Street, Auckland CBD,
-                                Auckland 1010, New Zealand
-                            </p>
+                            <div class="bcf-city-tag mp">Sagar</div>
+                            <h3>Sagar</h3>
+                            <p class="bcf-address"><i class="fas fa-map-marker-alt"></i> Sagar, Madhya Pradesh</p>
                         </div>
-                        <div class="bcf-status open">
-                            <span class="status-dot"></span>
-                            Open Now
-                        </div>
+                        <div class="bcf-status open"><span class="status-dot"></span>Open Now</div>
                     </div>
                     <div class="bcf-details">
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+64 9 123 4567</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-clock"></i>
-                            <span>10:00 AM - 10:00 PM</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-motorcycle"></i>
-                            <span>Delivery + Dine-in</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-star"></i>
-                            <span>International Flagship</span>
-                        </div>
+                        <div class="bcf-detail-item"><i class="fas fa-phone"></i><span>Coming Soon</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-clock"></i><span>10:00 AM - 10:00 PM</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-motorcycle"></i><span>Delivery + Dine-in</span></div>
+                        <div class="bcf-detail-item"><i class="fas fa-calendar"></i><span>Since Dec 2025</span></div>
                     </div>
                     <div class="bcf-actions">
-                        <a href="tel:+6491234567" class="bcf-btn call">
-                            <i class="fas fa-phone"></i> Call Now
-                        </a>
-                        <a href="https://wa.me/6491234567"
-                           target="_blank" class="bcf-btn whatsapp">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
-                        <a href="https://maps.google.com/?q=Queen+Street+Auckland"
-                           target="_blank" class="bcf-btn direction">
-                            <i class="fas fa-directions"></i> Direction
-                        </a>
-                          
-                    </div>
-                </div>
-
-                <!-- Wellington -->
-                <div class="branch-card-full"
-                     data-region="nz"
-                     data-city="wellington"
-                     data-name="Martinoz Pizza Wellington Lambton Quay">
-                    <div class="bcf-top">
-                        <div class="bcf-info">
-                            <div class="bcf-city-tag nz">Wellington</div>
-                            <h3>Lambton Quay Branch</h3>
-                            <p class="bcf-address">
-                                <i class="fas fa-map-marker-alt"></i>
-                                67 Lambton Quay, Wellington Central,
-                                Wellington 6011, New Zealand
-                            </p>
-                        </div>
-                        <div class="bcf-status open">
-                            <span class="status-dot"></span>
-                            Open Now
-                        </div>
-                    </div>
-                    <div class="bcf-details">
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+64 4 123 4567</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-clock"></i>
-                            <span>10:00 AM - 10:00 PM</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-motorcycle"></i>
-                            <span>Delivery + Dine-in</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-wifi"></i>
-                            <span>Free WiFi</span>
-                        </div>
-                    </div>
-                    <div class="bcf-actions">
-                        <a href="tel:+6441234567" class="bcf-btn call">
-                            <i class="fas fa-phone"></i> Call Now
-                        </a>
-                        <a href="https://wa.me/6441234567"
-                           target="_blank" class="bcf-btn whatsapp">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
-                        <a href="https://maps.google.com/?q=Lambton+Quay+Wellington"
-                           target="_blank" class="bcf-btn direction">
-                            <i class="fas fa-directions"></i> Direction
-                        </a>
-                          
-                    </div>
-                </div>
-
-                <!-- Christchurch -->
-                <div class="branch-card-full"
-                     data-region="nz"
-                     data-city="christchurch"
-                     data-name="Martinoz Pizza Christchurch Riccarton">
-                    <div class="bcf-top">
-                        <div class="bcf-info">
-                            <div class="bcf-city-tag nz">Christchurch</div>
-                            <h3>Riccarton Branch</h3>
-                            <p class="bcf-address">
-                                <i class="fas fa-map-marker-alt"></i>
-                                234 Riccarton Road, Riccarton,
-                                Christchurch 8011, New Zealand
-                            </p>
-                        </div>
-                        <div class="bcf-status closed">
-                            <span class="status-dot"></span>
-                            Closed
-                        </div>
-                    </div>
-                    <div class="bcf-details">
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+64 3 123 4567</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-clock"></i>
-                            <span>Opens at 10:00 AM</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-motorcycle"></i>
-                            <span>Delivery + Dine-in</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-parking"></i>
-                            <span>Free Parking</span>
-                        </div>
-                    </div>
-                    <div class="bcf-actions">
-                        <a href="tel:+6431234567" class="bcf-btn call">
-                            <i class="fas fa-phone"></i> Call Now
-                        </a>
-                        <a href="https://wa.me/6431234567"
-                           target="_blank" class="bcf-btn whatsapp">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
-                        <a href="https://maps.google.com/?q=Riccarton+Christchurch"
-                           target="_blank" class="bcf-btn direction">
-                            <i class="fas fa-directions"></i> Direction
-                        </a>
-                          
-                    </div>
-                </div>
-
-                <!-- Hamilton -->
-                <div class="branch-card-full"
-                     data-region="nz"
-                     data-city="hamilton"
-                     data-name="Martinoz Pizza Hamilton Victoria Street">
-                    <div class="bcf-top">
-                        <div class="bcf-info">
-                            <div class="bcf-city-tag nz">Hamilton</div>
-                            <h3>Victoria Street Branch</h3>
-                            <p class="bcf-address">
-                                <i class="fas fa-map-marker-alt"></i>
-                                89 Victoria Street, Hamilton Central,
-                                Hamilton 3204, New Zealand
-                            </p>
-                        </div>
-                        <div class="bcf-status open">
-                            <span class="status-dot"></span>
-                            Open Now
-                        </div>
-                    </div>
-                    <div class="bcf-details">
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+64 7 123 4567</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-clock"></i>
-                            <span>10:00 AM - 10:00 PM</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-motorcycle"></i>
-                            <span>Delivery + Dine-in</span>
-                        </div>
-                        <div class="bcf-detail-item">
-                            <i class="fas fa-wifi"></i>
-                            <span>Free WiFi</span>
-                        </div>
-                    </div>
-                    <div class="bcf-actions">
-                        <a href="tel:+6471234567" class="bcf-btn call">
-                            <i class="fas fa-phone"></i> Call Now
-                        </a>
-                        <a href="https://wa.me/6471234567"
-                           target="_blank" class="bcf-btn whatsapp">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
-                        <a href="https://maps.google.com/?q=Victoria+Street+Hamilton+NZ"
-                           target="_blank" class="bcf-btn direction">
-                            <i class="fas fa-directions"></i> Direction
-                        </a>
-                          
+                        <a href="tel:#" class="bcf-btn call"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/#" target="_blank" class="bcf-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://maps.google.com/?q=Sagar+Madhya+Pradesh" target="_blank" class="bcf-btn direction"><i class="fas fa-directions"></i> Direction</a>
                     </div>
                 </div>
 
@@ -1308,6 +2412,24 @@
     </div>
 </section>
 
+        <!-- NO RESULTS -->
+        <div class="no-branch-results"
+             id="noBranchResults"
+             style="display:none">
+            <span>📍</span>
+            <h3>No branches found!</h3>
+            <p>Try searching a different city or area</p>
+            <button onclick="resetSearch()" class="btn-primary">
+                <i class="fas fa-redo"></i>
+                Show All Branches
+            </button>
+        </div>
+
+    </div>
+</section>
+
+
+
 <!-- ========== FRANCHISE CTA ========== -->
 <section class="franchise-cta">
     <div class="container">
@@ -1317,7 +2439,7 @@
             <div class="fcta-text">
                 <span class="section-tag">🚀 Grow With Us</span>
                 <h2>Want to Open a
-                    <span class="highlight">Martinoz Pizza</span>
+                    <span class="highlight">Martino'z Pizza</span>
                     Franchise?
                 </h2>
                 <p>Join our growing family of 80+ franchises across
@@ -1376,7 +2498,7 @@
 </section>
 
 <!-- ========== WHATSAPP ========== -->
-<a href="https://wa.me/1234567890?text=Hi! I want to know about Martinoz Pizza branches"
+<a href="https://wa.me/1234567890?text=Hi! I want to know about Martino'z Pizza branches"
    class="whatsapp-float"
    target="_blank"
    aria-label="WhatsApp">
