@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Martinoz Pizza - Freshly Baked Happiness. Order online from multiple branches near you!">
+    <title>Martinoz Pizza - Freshly Baked Happiness</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo-icon">🍕</span>
+                <span class="logo-text">Martinoz <span class="highlight">Pizza</span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="branches.html">Branches</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#order" class="btn-order">Order Now 🛒</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">🔥 New Arrivals Available!</div>
+                <h1 class="hero-title">
+                    Freshly Baked
+                    <span class="highlight">Happiness</span>
+                    Delivered To You!
+                </h1>
+                <p class="hero-subtitle">
+                    Authentic Italian-style pizzas made with 
+                    fresh ingredients. Order now and get 
+                    delivery in 30 minutes!
+                </p>
+                <div class="hero-buttons">
+                    <a href="menu.html" class="btn-primary">
+                        <i class="fas fa-pizza-slice"></i> Order Now
+                    </a>
+                    <a href="menu.html" class="btn-secondary">
+                        <i class="fas fa-book-open"></i> View Menu
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Pizza Varieties</p>
+                    </div>
+                    <div class="stat">
+                        <h3>10+</h3>
+                        <p>Branches</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50K+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat">
+                        <h3>30 Min</h3>
+                        <p>Fast Delivery</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="pizza-circle">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500" 
+                         alt="Martinoz Pizza" class="pizza-img">
+                </div>
+                <div class="floating-card card1">
+                    <span>⭐ 4.9</span>
+                    <p>Rating</p>
+                </div>
+                <div class="floating-card card2">
+                    <span>🚀 30 min</span>
+                    <p>Delivery</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FRANCHISE COUNTER SECTION ========== -->
+<section class="franchise-section">
+    <div class="container">
+
+        <!-- TOP STATS -->
+        <div class="franchise-stats">
+            <div class="fstat-card">
+                <div class="fstat-number" data-target="80">0</div>
+                <div class="fstat-plus">+</div>
+                <div class="fstat-label">Total Franchises</div>
+            </div>
+            <div class="fstat-card">
+                <div class="fstat-number" data-target="4">0</div>
+                <div class="fstat-plus">+</div>
+                <div class="fstat-label">States & Countries</div>
+            </div>
+            <div class="fstat-card">
+                <div class="fstat-number" data-target="50000">0</div>
+                <div class="fstat-plus">+</div>
+                <div class="fstat-label">Happy Customers</div>
+            </div>
+            <div class="fstat-card">
+                <div class="fstat-number" data-target="5">0</div>
+                <div class="fstat-plus">+</div>
+                <div class="fstat-label">Years of Trust</div>
+            </div>
+        </div>
+
+        <!-- SECTION HEADER -->
+        <div class="section-header" style="margin-top: 60px;">
+            <span class="section-tag">📍 Our Presence</span>
+            <h2>80+ Franchises Across <span class="highlight">India & World</span></h2>
+            <p>Find your nearest Martinoz Pizza - We are always close to you!</p>
+        </div>
+
+        <!-- LOCATION TABS -->
+        <div class="location-tabs">
+            <button class="loc-tab active" data-loc="all">
+                🌍 All Locations
+            </button>
+            <button class="loc-tab" data-loc="gujarat">
+                🏛️ Gujarat
+            </button>
+            <button class="loc-tab" data-loc="mp">
+                🌿 Madhya Pradesh
+            </button>
+            <button class="loc-tab" data-loc="rajasthan">
+                🏜️ Rajasthan
+            </button>
+            <button class="loc-tab" data-loc="nz">
+                🇳🇿 New Zealand
+            </button>
+        </div>
+
+        <!-- LOCATION CARDS -->
+        <div class="location-grid" id="locationGrid">
+
+            <!-- GUJARAT -->
+            <div class="location-card" data-location="gujarat">
+                <div class="loc-flag">🏛️</div>
+                <div class="loc-info">
+                    <div class="loc-state">Gujarat, India</div>
+                    <h3 class="loc-city">Ahmedabad</h3>
+                    <p class="loc-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        SG Highway, Prahlad Nagar, Ahmedabad
+                    </p>
+                    <div class="loc-meta">
+                        <span class="loc-badge open">🟢 Open Now</span>
+                        <span class="loc-time">
+                            <i class="fas fa-clock"></i> 10AM - 11PM
+                        </span>
+                    </div>
+                    <div class="loc-actions">
+                        <a href="tel:+911234567890" class="loc-btn call">
+                            <i class="fas fa-phone"></i> Call
+                        </a>
+                        <a href="https://maps.google.com" 
+                           target="_blank" class="loc-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="location-card" data-location="gujarat">
+                <div class="loc-flag">🏛️</div>
+                <div class="loc-info">
+                    <div class="loc-state">Gujarat, India</div>
+                    <h3 class="loc-city">Surat</h3>
+                    <p class="loc-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        VR Mall, Dumas Road, Surat
+                    </p>
+                    <div class="loc-meta">
+                        <span class="loc-badge open">🟢 Open Now</span>
+                        <span class="loc-time">
+                            <i class="fas fa-clock"></i> 10AM - 11PM
+                        </span>
+                    </div>
+                    <div class="loc-actions">
+                        <a href="tel:+911234567891" class="loc-btn call">
+                            <i class="fas fa-phone"></i> Call
+                        </a>
+                        <a href="https://maps.google.com" 
+                           target="_blank" class="loc-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="location-card" data-location="gujarat">
+                <div class="loc-flag">🏛️</div>
+                <div class="loc-info">
+                    <div class="loc-state">Gujarat, India</div>
+                    <h3 class="loc-city">Vadodara</h3>
+                    <p class="loc-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Alkapuri, Race Course Road, Vadodara
+                    </p>
+                    <div class="loc-meta">
+                        <span class="loc-badge closed">🔴 Closed</span>
+                        <span class="loc-time">
+                            <i class="fas fa-clock"></i> Opens 10AM
+                        </span>
+                    </div>
+                    <div class="loc-actions">
+                        <a href="tel:+911234567892" class="loc-btn call">
+                            <i class="fas fa-phone"></i> Call
+                        </a>
+                        <a href="https://maps.google.com" 
+                           target="_blank" class="loc-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="location-card" data-location="gujarat">
+                <div class="loc-flag">🏛️</div>
+                <div class="loc-info">
+                    <div class="loc-state">Gujarat, India</div>
+                    <h3 class="loc-city">Rajkot</h3>
+                    <p class="loc-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Kalawad Road, Rajkot
+                    </p>
+                    <div class="loc-meta">
+                        <span class="loc-badge open">🟢 Open Now</span>
+                        <span class="loc-time">
+                            <i class="fas fa-clock"></i> 10AM - 11PM
+                        </span>
+                    </div>
+                    <div class="loc-actions">
+                        <a href="tel:+911234567893" class="loc-btn call">
+                            <i class="fas fa-phone"></i> Call
+                        </a>
+                        <a href="https://maps.google.com" 
+                           target="_blank" class="loc-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MADHYA PRADESH -->
+            <div class="location-card" data-location="mp">
+                <div class="loc-flag">🌿</div>
+                <div class="loc-info">
+                    <div class="loc-state">Madhya Pradesh, India</div>
+                    <h3 class="loc-city">Indore</h3>
+                    <p class="loc-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Vijay Nagar, AB Road, Indore
+                    </p>
+                    <div class="loc-meta">
+                        <span class="loc-badge open">🟢 Open Now</span>
+                        <span class="loc-time">
+                            <i class="fas fa-clock"></i> 10AM - 11PM
+                        </span>
+                    </div>
+                    <div class="loc-actions">
+                        <a href="tel:+911234567894" class="loc-btn call">
+                            <i class="fas fa-phone"></i> Call
+                        </a>
+                        <a href="https://maps.google.com" 
+                           target="_blank" class="loc-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="location-card" data-location="mp">
+                <div class="loc-flag">🌿</div>
+                <div class="loc-info">
+                    <div class="loc-state">Madhya Pradesh, India</div>
+                    <h3 class="loc-city">Bhopal</h3>
+                    <p class="loc-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        MP Nagar, Zone 2, Bhopal
+                    </p>
+                    <div class="loc-meta">
+                        <span class="loc-badge open">🟢 Open Now</span>
+                        <span class="loc-time">
+                            <i class="fas fa-clock"></i> 10AM - 11PM
+                        </span>
+                    </div>
+                    <div class="loc-actions">
+                        <a href="tel:+911234567895" class="loc-btn call">
+                            <i class="fas fa-phone"></i> Call
+                        </a>
+                        <a href="https://maps.google.com" 
+                           target="_blank" class="loc-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="location-card" data-location="mp">
+                <div class="loc-flag">🌿</div>
+                <div class="loc-info">
+                    <div class="loc-state">Madhya Pradesh, India</div>
+                    <h3 class="loc-city">Jabalpur</h3>
+                    <p class="loc-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Wright Town, Napier Town, Jabalpur
+                    </p>
+                    <div class="loc-meta">
+                        <span class="loc-badge closed">🔴 Closed</span>
+                        <span class="loc-time">
+                            <i class="fas fa-clock"></i> Opens 10AM
+                        </span>
+                    </div>
+                    <div class="loc-actions">
+                        <a href="tel:+911234567896" class="loc-btn call">
+                            <i class="fas fa-phone"></i> Call
+                        </a>
+                        <a href="https://maps.google.com" 
+                           target="_blank" class="loc-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RAJASTHAN -->
+            <div class="location-card" data-location="rajasthan">
+                <div class="loc-flag">🏜️</div>
+                <div class="loc-info">
+                    <div class="loc-state">Rajasthan, India</div>
+                    <h3 class="loc-city">Jaipur</h3>
+                    <p class="loc-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Malviya Nagar, Tonk Road, Jaipur
+                    </p>
+                    <div class="loc-meta">
+                        <span class="loc-badge open">🟢 Open Now</span>
+                        <span class="loc-time">
+                            <i class="fas fa-clock"></i> 10AM - 11PM
+                        </span>
+                    </div>
+                    <div class="loc-actions">
+                        <a href="tel:+911234567897" class="loc-btn call">
+                            <i class="fas fa-phone"></i> Call
+                        </a>
+                        <a href="https://maps.google.com" 
+                           target="_blank" class="loc-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="location-card" data-location="rajasthan">
+                <div class="loc-flag">🏜️</div>
+                <div class="loc-info">
+                    <div class="loc-state">Rajasthan, India</div>
+                    <h3 class="loc-city">Udaipur</h3>
+                    <p class="loc-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Madhuban, Udaipur
+                    </p>
+                    <div class="loc-meta">
+                        <span class="loc-badge open">🟢 Open Now</span>
+                        <span class="loc-time">
+                            <i class="fas fa-clock"></i> 10AM - 11PM
+                        </span>
+                    </div>
+                    <div class="loc-actions">
+                        <a href="tel:+911234567898" class="loc-btn call">
+                            <i class="fas fa-phone"></i> Call
+                        </a>
+                        <a href="https://maps.google.com" 
+                           target="_blank" class="loc-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="location-card" data-location="rajasthan">
+                <div class="loc-flag">🏜️</div>
+                <div class="loc-info">
+                    <div class="loc-state">Rajasthan, India</div>
+                    <h3 class="loc-city">Jodhpur</h3>
+                    <p class="loc-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Paota Circle, Jodhpur
+                    </p>
+                    <div class="loc-meta">
+                        <span class="loc-badge open">🟢 Open Now</span>
+                        <span class="loc-time">
+                            <i class="fas fa-clock"></i> 10AM - 11PM
+                        </span>
+                    </div>
+                    <div class="loc-actions">
+                        <a href="tel:+911234567899" class="loc-btn call">
+                            <i class="fas fa-phone"></i> Call
+                        </a>
+                        <a href="https://maps.google.com" 
+                           target="_blank" class="loc-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEW ZEALAND -->
+            <div class="location-card" data-location="nz">
+                <div class="loc-flag">🇳🇿</div>
+                <div class="loc-info">
+                    <div class="loc-state">New Zealand</div>
+                    <h3 class="loc-city">Auckland</h3>
+                    <p class="loc-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Queen Street, Auckland CBD, Auckland
+                    </p>
+                    <div class="loc-meta">
+                        <span class="loc-badge open">🟢 Open Now</span>
+                        <span class="loc-time">
+                            <i class="fas fa-clock"></i> 10AM - 10PM
+                        </span>
+                    </div>
+                    <div class="loc-actions">
+                        <a href="tel:+6491234567" class="loc-btn call">
+                            <i class="fas fa-phone"></i> Call
+                        </a>
+                        <a href="https://maps.google.com" 
+                           target="_blank" class="loc-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="location-card" data-location="nz">
+                <div class="loc-flag">🇳🇿</div>
+                <div class="loc-info">
+                    <div class="loc-state">New Zealand</div>
+                    <h3 class="loc-city">Wellington</h3>
+                    <p class="loc-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Lambton Quay, Wellington Central
+                    </p>
+                    <div class="loc-meta">
+                        <span class="loc-badge open">🟢 Open Now</span>
+                        <span class="loc-time">
+                            <i class="fas fa-clock"></i> 10AM - 10PM
+                        </span>
+                    </div>
+                    <div class="loc-actions">
+                        <a href="tel:+6441234567" class="loc-btn call">
+                            <i class="fas fa-phone"></i> Call
+                        </a>
+                        <a href="https://maps.google.com" 
+                           target="_blank" class="loc-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="location-card" data-location="nz">
+                <div class="loc-flag">🇳🇿</div>
+                <div class="loc-info">
+                    <div class="loc-state">New Zealand</div>
+                    <h3 class="loc-city">Christchurch</h3>
+                    <p class="loc-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Riccarton Road, Christchurch
+                    </p>
+                    <div class="loc-meta">
+                        <span class="loc-badge closed">🔴 Closed</span>
+                        <span class="loc-time">
+                            <i class="fas fa-clock"></i> Opens 10AM
+                        </span>
+                    </div>
+                    <div class="loc-actions">
+                        <a href="tel:+6431234567" class="loc-btn call">
+                            <i class="fas fa-phone"></i> Call
+                        </a>
+                        <a href="https://maps.google.com" 
+                           target="_blank" class="loc-btn direction">
+                            <i class="fas fa-directions"></i> Direction
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- VIEW ALL BUTTON -->
+        <div class="center" style="margin-top: 40px;">
+            <a href="branches.html" class="btn-primary">
+                <i class="fas fa-map-marked-alt"></i>
+                View All 80+ Franchises
+            </a>
+        </div>
+
+    </div>
+</section>
+
+    <!-- ========== OFFER BANNER ========== -->
+    <section class="offer-banner">
+        <div class="container">
+            <div class="offer-grid">
+                <div class="offer-card">
+                    <span class="offer-icon">🎉</span>
+                    <h3>First Order</h3>
+                    <p>20% OFF - Use: <strong>WELCOME20</strong></p>
+                </div>
+                <div class="offer-card">
+                    <span class="offer-icon">🍕</span>
+                    <h3>Buy 2 Get 1</h3>
+                    <p>On all medium pizzas today!</p>
+                </div>
+                <div class="offer-card">
+                    <span class="offer-icon">🚀</span>
+                    <h3>Free Delivery</h3>
+                    <p>On orders above $25</p>
+                </div>
+                <div class="offer-card">
+                    <span class="offer-icon">⭐</span>
+                    <h3>Loyalty Points</h3>
+                    <p>Earn points on every order!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FEATURED MENU ========== -->
+    <section class="featured" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">🍕 Our Specials</span>
+                <h2>Most <span class="highlight">Loved</span> Pizzas</h2>
+                <p>Handcrafted with love using the finest ingredients</p>
+            </div>
+            <div class="menu-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="veg">🟢 Veg</button>
+                <button class="filter-btn" data-filter="nonveg">🔴 Non-Veg</button>
+                <button class="filter-btn" data-filter="special">⭐ Special</button>
+            </div>
+            <div class="pizza-grid" id="pizzaGrid">
+
+                <div class="pizza-card" data-category="special">
+                    <div class="pizza-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400" alt="Martinoz Special">
+                        <span class="badge">⭐ Best Seller</span>
+                        <div class="pizza-overlay">
+                            <button class="quick-add">Quick Add +</button>
+                        </div>
+                    </div>
+                    <div class="pizza-info">
+                        <div class="pizza-header">
+                            <h3>Martinoz Special</h3>
+                            <span class="veg-icon">🔴</span>
+                        </div>
+                        <p>Loaded with pepperoni, cheese & secret sauce</p>
+                        <div class="size-options">
+                            <button class="size active">S</button>
+                            <button class="size">M</button>
+                            <button class="size">L</button>
+                        </div>
+                        <div class="pizza-footer">
+                            <div class="price">
+                                <span class="old-price">$18</span>
+                                <span class="new-price">$14.99</span>
+                            </div>
+                            <button class="add-cart" onclick="addToCart('Martinoz Special', 14.99)">
+                                <i class="fas fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" data-category="veg">
+                    <div class="pizza-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=400" alt="Garden Fresh">
+                        <span class="badge green">🌿 Veg</span>
+                        <div class="pizza-overlay">
+                            <button class="quick-add">Quick Add +</button>
+                        </div>
+                    </div>
+                    <div class="pizza-info">
+                        <div class="pizza-header">
+                            <h3>Garden Fresh</h3>
+                            <span class="veg-icon">🟢</span>
+                        </div>
+                        <p>Fresh veggies, olives, bell peppers & mozzarella</p>
+                        <div class="size-options">
+                            <button class="size active">S</button>
+                            <button class="size">M</button>
+                            <button class="size">L</button>
+                        </div>
+                        <div class="pizza-footer">
+                            <div class="price">
+                                <span class="old-price">$15</span>
+                                <span class="new-price">$11.99</span>
+                            </div>
+                            <button class="add-cart" onclick="addToCart('Garden Fresh', 11.99)">
+                                <i class="fas fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" data-category="nonveg">
+                    <div class="pizza-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400" alt="BBQ Chicken">
+                        <span class="badge orange">🔥 Hot</span>
+                        <div class="pizza-overlay">
+                            <button class="quick-add">Quick Add +</button>
+                        </div>
+                    </div>
+                    <div class="pizza-info">
+                        <div class="pizza-header">
+                            <h3>BBQ Chicken</h3>
+                            <span class="veg-icon">🔴</span>
+                        </div>
+                        <p>Smoky BBQ sauce, grilled chicken & caramelized onions</p>
+                        <div class="size-options">
+                            <button class="size active">S</button>
+                            <button class="size">M</button>
+                            <button class="size">L</button>
+                        </div>
+                        <div class="pizza-footer">
+                            <div class="price">
+                                <span class="old-price">$20</span>
+                                <span class="new-price">$16.99</span>
+                            </div>
+                            <button class="add-cart" onclick="addToCart('BBQ Chicken', 16.99)">
+                                <i class="fas fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" data-category="special">
+                    <div class="pizza-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=400" alt="Cheese Burst">
+                        <span class="badge purple">💜 New</span>
+                        <div class="pizza-overlay">
+                            <button class="quick-add">Quick Add +</button>
+                        </div>
+                    </div>
+                    <div class="pizza-info">
+                        <div class="pizza-header">
+                            <h3>Cheese Burst</h3>
+                            <span class="veg-icon">🟢</span>
+                        </div>
+                        <p>Extra cheese stuffed crust with triple cheese topping</p>
+                        <div class="size-options">
+                            <button class="size active">S</button>
+                            <button class="size">M</button>
+                            <button class="size">L</button>
+                        </div>
+                        <div class="pizza-footer">
+                            <div class="price">
+                                <span class="old-price">$22</span>
+                                <span class="new-price">$18.99</span>
+                            </div>
+                            <button class="add-cart" onclick="addToCart('Cheese Burst', 18.99)">
+                                <i class="fas fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" data-category="nonveg">
+                    <div class="pizza-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1548369937-47519962c11a?w=400" alt="Pepperoni Feast">
+                        <span class="badge">⭐ Popular</span>
+                        <div class="pizza-overlay">
+                            <button class="quick-add">Quick Add +</button>
+                        </div>
+                    </div>
+                    <div class="pizza-info">
+                        <div class="pizza-header">
+                            <h3>Pepperoni Feast</h3>
+                            <span class="veg-icon">🔴</span>
+                        </div>
+                        <p>Loaded with double pepperoni & rich tomato sauce</p>
+                        <div class="size-options">
+                            <button class="size active">S</button>
+                            <button class="size">M</button>
+                            <button class="size">L</button>
+                        </div>
+                        <div class="pizza-footer">
+                            <div class="price">
+                                <span class="old-price">$19</span>
+                                <span class="new-price">$15.99</span>
+                            </div>
+                            <button class="add-cart" onclick="addToCart('Pepperoni Feast', 15.99)">
+                                <i class="fas fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card" data-category="veg">
+                    <div class="pizza-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=400" alt="Margherita Classic">
+                        <span class="badge green">🌿 Classic</span>
+                        <div class="pizza-overlay">
+                            <button class="quick-add">Quick Add +</button>
+                        </div>
+                    </div>
+                    <div class="pizza-info">
+                        <div class="pizza-header">
+                            <h3>Margherita Classic</h3>
+                            <span class="veg-icon">🟢</span>
+                        </div>
+                        <p>Traditional tomato sauce, fresh basil & mozzarella</p>
+                        <div class="size-options">
+                            <button class="size active">S</button>
+                            <button class="size">M</button>
+                            <button class="size">L</button>
+                        </div>
+                        <div class="pizza-footer">
+                            <div class="price">
+                                <span class="old-price">$13</span>
+                                <span class="new-price">$9.99</span>
+                            </div>
+                            <button class="add-cart" onclick="addToCart('Margherita Classic', 9.99)">
+                                <i class="fas fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="center">
+                <a href="menu.html" class="btn-primary">View Full Menu 🍕</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHY CHOOSE US ========== -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">💪 Our Promise</span>
+                <h2>Why Choose <span class="highlight">Martinoz?</span></h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">🌿</div>
+                    <h3>Fresh Ingredients</h3>
+                    <p>We use only the freshest locally sourced ingredients in every pizza we make.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">⚡</div>
+                    <h3>30 Min Delivery</h3>
+                    <p>Hot and fresh pizza delivered to your door in 30 minutes guaranteed.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">👨‍🍳</div>
+                    <h3>Expert Chefs</h3>
+                    <p>Our Italian-trained chefs bring authentic flavors to every bite.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">💰</div>
+                    <h3>Best Value</h3>
+                    <p>Premium quality pizzas at prices that won't break the bank.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🏪</div>
+                    <h3>Multiple Branches</h3>
+                    <p>Find us at 10+ locations across the city. Always nearby!</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">💯</div>
+                    <h3>Satisfaction Guaranteed</h3>
+                    <p>Not happy? We'll remake your order or give you a full refund.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">❤️ Reviews</span>
+                <h2>What Our <span class="highlight">Customers</span> Say</h2>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Best pizza I've ever had! The cheese burst is absolutely amazing. Fast delivery too!"</p>
+                    <div class="reviewer">
+                        <div class="avatar">JD</div>
+                        <div>
+                            <h4>John Davis</h4>
+                            <span>Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Martinoz Pizza is our family's favorite! We order every Friday night. Never disappointed!"</p>
+                    <div class="reviewer">
+                        <div class="avatar">SM</div>
+                        <div>
+                            <h4>Sarah Miller</h4>
+                            <span>Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"The BBQ Chicken pizza is out of this world! Crispy crust, fresh toppings. Highly recommend!"</p>
+                    <div class="reviewer">
+                        <div class="avatar">RK</div>
+                        <div>
+                            <h4>Raj Kumar</h4>
+                            <span>Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BRANCHES PREVIEW ========== -->
+    <section class="branches-preview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">📍 Locations</span>
+                <h2>Find Us <span class="highlight">Near You</span></h2>
+            </div>
+            <div class="branches-grid">
+                <div class="branch-card">
+                    <div class="branch-icon">🏪</div>
+                    <h3>Downtown Branch</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, Downtown</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8901</p>
+                    <p><i class="fas fa-clock"></i> 10:00 AM - 11:00 PM</p>
+                    <a href="branches.html" class="branch-btn">Get Direction</a>
+                </div>
+                <div class="branch-card">
+                    <div class="branch-icon">🏪</div>
+                    <h3>Uptown Branch</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 456 Oak Avenue, Uptown</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8902</p>
+                    <p><i class="fas fa-clock"></i> 10:00 AM - 11:00 PM</p>
+                    <a href="branches.html" class="branch-btn">Get Direction</a>
+                </div>
+                <div class="branch-card">
+                    <div class="branch-icon">🏪</div>
+                    <h3>Westside Branch</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 789 West Blvd, Westside</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8903</p>
+                    <p><i class="fas fa-clock"></i> 10:00 AM - 11:00 PM</p>
+                    <a href="branches.html" class="branch-btn">Get Direction</a>
+                </div>
+            </div>
+            <div class="center">
+                <a href="branches.html" class="btn-primary">View All Branches 📍</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== NEWSLETTER ========== -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>🍕 Get Exclusive Deals!</h2>
+                <p>Subscribe and get 15% OFF your next order!</p>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe 🚀</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span>🍕</span> Martinoz Pizza
+                    </div>
+                    <p>Freshly Baked Happiness delivered to your door. Made with love and the finest ingredients.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="branches.html">Branches</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Menu</h4>
+                    <ul>
+                        <li><a href="menu.html">Veg Pizzas</a></li>
+                        <li><a href="menu.html">Non-Veg Pizzas</a></li>
+                        <li><a href="menu.html">Cheese Burst</a></li>
+                        <li><a href="menu.html">Combo Deals</a></li>
+                        <li><a href="menu.html">Drinks</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> info@martinozpizza.com</li>
+                        <li><i class="fab fa-whatsapp"></i> WhatsApp Order</li>
+                        <li><i class="fas fa-clock"></i> 10:00 AM - 11:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Martinoz Pizza. All Rights Reserved. Made with ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== CART SIDEBAR ========== -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>🛒 Your Order</h3>
+            <button onclick="toggleCart()" class="cart-close">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <span>🍕</span>
+                <p>Your cart is empty</p>
+                <small>Add some pizzas!</small>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <input type="text" placeholder="Coupon Code" class="coupon-input" id="couponInput">
+            <button onclick="applyCoupon()" class="apply-coupon">Apply Coupon</button>
+            <button class="checkout-btn" onclick="checkout()">
+                Proceed to Checkout 🚀
+            </button>
+        </div>
+    </div>
+
+    <!-- ========== CART BUTTON ========== -->
+    <div class="cart-float" onclick="toggleCart()">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cartCount">0</span>
+    </div>
+
+    <!-- ========== WHATSAPP BUTTON ========== -->
+    <a href="https://wa.me/1234567890?text=Hi! I want to order from Martinoz Pizza" 
+       class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ========== POPUP OFFER ========== -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <button class="popup-close" onclick="closePopup()">✕</button>
+            <div class="popup-content">
+                <span class="popup-emoji">🍕</span>
+                <h2>Welcome to Martinoz Pizza!</h2>
+                <p>Get <strong>20% OFF</strong> on your first order!</p>
+                <div class="coupon-display">WELCOME20</div>
+                <button onclick="closePopup()" class="btn-primary">
+                    Order Now & Save!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

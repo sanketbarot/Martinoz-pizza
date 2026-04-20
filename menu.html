@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Martinoz Pizza Menu - Explore our wide variety of pizzas, sides, drinks and desserts!">
+    <title>Menu - Martinoz Pizza</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo-icon">🍕</span>
+                <span class="logo-text">Martinoz <span class="highlight">Pizza</span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="branches.html">Branches</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" class="btn-order">Order Now 🛒</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== MENU HERO ========== -->
+    <section class="menu-hero">
+        <div class="menu-hero-overlay"></div>
+        <div class="container">
+            <div class="menu-hero-content">
+                <span class="section-tag">🍕 Our Menu</span>
+                <h1>Explore Our <span class="highlight">Delicious</span> Menu</h1>
+                <p>Handcrafted with love using the finest fresh ingredients</p>
+
+                <!-- SEARCH BAR -->
+                <div class="menu-search">
+                    <i class="fas fa-search"></i>
+                    <input 
+                        type="text" 
+                        id="menuSearch"
+                        placeholder="Search your favourite pizza..." 
+                        onkeyup="searchMenu()"
+                    >
+                    <button onclick="clearSearch()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <!-- QUICK FILTERS -->
+                <div class="quick-filters">
+                    <button class="qf-btn active" onclick="quickFilter('all', this)">
+                        🍕 All Items
+                    </button>
+                    <button class="qf-btn" onclick="quickFilter('veg', this)">
+                        🟢 Pure Veg
+                    </button>
+                    <button class="qf-btn" onclick="quickFilter('nonveg', this)">
+                        🔴 Non Veg
+                    </button>
+                    <button class="qf-btn" onclick="quickFilter('bestseller', this)">
+                        ⭐ Best Sellers
+                    </button>
+                    <button class="qf-btn" onclick="quickFilter('new', this)">
+                        🆕 New Arrivals
+                    </button>
+                    <button class="qf-btn" onclick="quickFilter('offer', this)">
+                        🔥 On Offer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MAIN MENU SECTION ========== -->
+    <section class="menu-main">
+        <div class="container">
+            <div class="menu-layout">
+
+                <!-- ===== LEFT SIDEBAR - CATEGORIES ===== -->
+                <aside class="menu-sidebar" id="menuSidebar">
+                    <div class="sidebar-sticky">
+                        <h3 class="sidebar-title">
+                            <i class="fas fa-list"></i> Categories
+                        </h3>
+                        <ul class="category-list">
+                            <li>
+                                <button class="cat-btn active" 
+                                        onclick="scrollToCategory('all', this)">
+                                    <span class="cat-icon">🍕</span>
+                                    <span class="cat-name">All Items</span>
+                                    <span class="cat-count">50+</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="cat-btn" 
+                                        onclick="scrollToCategory('veg-pizza', this)">
+                                    <span class="cat-icon">🌿</span>
+                                    <span class="cat-name">Veg Pizzas</span>
+                                    <span class="cat-count">12</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="cat-btn" 
+                                        onclick="scrollToCategory('nonveg-pizza', this)">
+                                    <span class="cat-icon">🍗</span>
+                                    <span class="cat-name">Non-Veg Pizzas</span>
+                                    <span class="cat-count">10</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="cat-btn" 
+                                        onclick="scrollToCategory('cheese-burst', this)">
+                                    <span class="cat-icon">🧀</span>
+                                    <span class="cat-name">Cheese Burst</span>
+                                    <span class="cat-count">6</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="cat-btn" 
+                                        onclick="scrollToCategory('combo', this)">
+                                    <span class="cat-icon">🎁</span>
+                                    <span class="cat-name">Combo Deals</span>
+                                    <span class="cat-count">8</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="cat-btn" 
+                                        onclick="scrollToCategory('sides', this)">
+                                    <span class="cat-icon">🍟</span>
+                                    <span class="cat-name">Sides & Starters</span>
+                                    <span class="cat-count">10</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="cat-btn" 
+                                        onclick="scrollToCategory('drinks', this)">
+                                    <span class="cat-icon">🥤</span>
+                                    <span class="cat-name">Drinks</span>
+                                    <span class="cat-count">8</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="cat-btn" 
+                                        onclick="scrollToCategory('desserts', this)">
+                                    <span class="cat-icon">🍰</span>
+                                    <span class="cat-name">Desserts</span>
+                                    <span class="cat-count">6</span>
+                                </button>
+                            </li>
+                        </ul>
+
+                        <!-- SIDEBAR OFFER BOX -->
+                        <div class="sidebar-offer">
+                            <span>🔥</span>
+                            <h4>Today's Special!</h4>
+                            <p>Use code <strong>MARTINOZ10</strong> for 10% OFF</p>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- ===== RIGHT CONTENT - MENU ITEMS ===== -->
+                <div class="menu-content" id="menuContent">
+
+                    <!-- ===== VEG PIZZAS ===== -->
+                    <div class="menu-category" id="veg-pizza">
+                        <div class="category-header">
+                            <div class="category-title">
+                                <span class="cat-emoji">🌿</span>
+                                <div>
+                                    <h2>Veg Pizzas</h2>
+                                    <p>Fresh vegetables, rich sauces & melted cheese</p>
+                                </div>
+                            </div>
+                            <span class="category-badge veg">Pure Veg</span>
+                        </div>
+
+                        <div class="items-grid">
+
+                            <div class="menu-item" 
+                                 data-type="veg" 
+                                 data-tags="bestseller"
+                                 data-name="Margherita Classic">
+                                <div class="item-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=400" 
+                                         alt="Margherita Classic">
+                                    <div class="item-badges">
+                                        <span class="ibadge bestseller">⭐ Best Seller</span>
+                                        <span class="veg-dot veg"></span>
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>Margherita Classic</h3>
+                                    <p>Traditional tomato sauce, fresh basil & mozzarella cheese on thin crust</p>
+                                    <div class="item-rating">
+                                        <span>⭐ 4.8</span>
+                                        <span class="review-count">(245 reviews)</span>
+                                    </div>
+                                    <div class="item-sizes">
+                                        <span class="size-label">Size:</span>
+                                        <div class="size-btns">
+                                            <button class="sz active" 
+                                                    data-price="9.99"
+                                                    onclick="selectSize(this, 'Margherita Classic')">
+                                                S<br><small>$9.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="13.99"
+                                                    onclick="selectSize(this, 'Margherita Classic')">
+                                                M<br><small>$13.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="17.99"
+                                                    onclick="selectSize(this, 'Margherita Classic')">
+                                                L<br><small>$17.99</small>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-price">
+                                            <span class="curr-price">$9.99</span>
+                                        </div>
+                                        <button class="add-btn" 
+                                                onclick="addToCart('Margherita Classic', 9.99)">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item" 
+                                 data-type="veg" 
+                                 data-tags="new"
+                                 data-name="Garden Delight">
+                                <div class="item-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=400" 
+                                         alt="Garden Delight">
+                                    <div class="item-badges">
+                                        <span class="ibadge new">🆕 New</span>
+                                        <span class="veg-dot veg"></span>
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>Garden Delight</h3>
+                                    <p>Capsicum, mushrooms, olives, onions & cherry tomatoes on herb base</p>
+                                    <div class="item-rating">
+                                        <span>⭐ 4.6</span>
+                                        <span class="review-count">(189 reviews)</span>
+                                    </div>
+                                    <div class="item-sizes">
+                                        <span class="size-label">Size:</span>
+                                        <div class="size-btns">
+                                            <button class="sz active" 
+                                                    data-price="10.99"
+                                                    onclick="selectSize(this, 'Garden Delight')">
+                                                S<br><small>$10.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="14.99"
+                                                    onclick="selectSize(this, 'Garden Delight')">
+                                                M<br><small>$14.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="18.99"
+                                                    onclick="selectSize(this, 'Garden Delight')">
+                                                L<br><small>$18.99</small>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-price">
+                                            <span class="curr-price">$10.99</span>
+                                        </div>
+                                        <button class="add-btn" 
+                                                onclick="addToCart('Garden Delight', 10.99)">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item" 
+                                 data-type="veg" 
+                                 data-tags="offer"
+                                 data-name="Paneer Tikka Pizza">
+                                <div class="item-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=400" 
+                                         alt="Paneer Tikka">
+                                    <div class="item-badges">
+                                        <span class="ibadge offer">🔥 20% OFF</span>
+                                        <span class="veg-dot veg"></span>
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>Paneer Tikka Pizza</h3>
+                                    <p>Spicy marinated paneer, bell peppers, onions & tandoori sauce</p>
+                                    <div class="item-rating">
+                                        <span>⭐ 4.9</span>
+                                        <span class="review-count">(312 reviews)</span>
+                                    </div>
+                                    <div class="item-sizes">
+                                        <span class="size-label">Size:</span>
+                                        <div class="size-btns">
+                                            <button class="sz active" 
+                                                    data-price="11.99"
+                                                    onclick="selectSize(this, 'Paneer Tikka Pizza')">
+                                                S<br><small>$11.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="15.99"
+                                                    onclick="selectSize(this, 'Paneer Tikka Pizza')">
+                                                M<br><small>$15.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="19.99"
+                                                    onclick="selectSize(this, 'Paneer Tikka Pizza')">
+                                                L<br><small>$19.99</small>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-price">
+                                            <span class="old-price">$14.99</span>
+                                            <span class="curr-price">$11.99</span>
+                                        </div>
+                                        <button class="add-btn" 
+                                                onclick="addToCart('Paneer Tikka Pizza', 11.99)">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item" 
+                                 data-type="veg" 
+                                 data-tags="bestseller"
+                                 data-name="Double Cheese Pizza">
+                                <div class="item-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400" 
+                                         alt="Double Cheese">
+                                    <div class="item-badges">
+                                        <span class="ibadge bestseller">⭐ Best Seller</span>
+                                        <span class="veg-dot veg"></span>
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>Double Cheese Pizza</h3>
+                                    <p>Double layer mozzarella, cheddar cheese & cream sauce base</p>
+                                    <div class="item-rating">
+                                        <span>⭐ 4.7</span>
+                                        <span class="review-count">(278 reviews)</span>
+                                    </div>
+                                    <div class="item-sizes">
+                                        <span class="size-label">Size:</span>
+                                        <div class="size-btns">
+                                            <button class="sz active" 
+                                                    data-price="12.99"
+                                                    onclick="selectSize(this, 'Double Cheese Pizza')">
+                                                S<br><small>$12.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="16.99"
+                                                    onclick="selectSize(this, 'Double Cheese Pizza')">
+                                                M<br><small>$16.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="20.99"
+                                                    onclick="selectSize(this, 'Double Cheese Pizza')">
+                                                L<br><small>$20.99</small>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-price">
+                                            <span class="curr-price">$12.99</span>
+                                        </div>
+                                        <button class="add-btn" 
+                                                onclick="addToCart('Double Cheese Pizza', 12.99)">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ===== NON-VEG PIZZAS ===== -->
+                    <div class="menu-category" id="nonveg-pizza">
+                        <div class="category-header">
+                            <div class="category-title">
+                                <span class="cat-emoji">🍗</span>
+                                <div>
+                                    <h2>Non-Veg Pizzas</h2>
+                                    <p>Premium meats, grilled chicken & rich sauces</p>
+                                </div>
+                            </div>
+                            <span class="category-badge nonveg">Non Veg</span>
+                        </div>
+
+                        <div class="items-grid">
+
+                            <div class="menu-item" 
+                                 data-type="nonveg" 
+                                 data-tags="bestseller"
+                                 data-name="BBQ Chicken Pizza">
+                                <div class="item-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400" 
+                                         alt="BBQ Chicken">
+                                    <div class="item-badges">
+                                        <span class="ibadge bestseller">⭐ Best Seller</span>
+                                        <span class="veg-dot nonveg"></span>
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>BBQ Chicken Pizza</h3>
+                                    <p>Smoky BBQ sauce, grilled chicken chunks, caramelized onions & mozzarella</p>
+                                    <div class="item-rating">
+                                        <span>⭐ 4.9</span>
+                                        <span class="review-count">(456 reviews)</span>
+                                    </div>
+                                    <div class="item-sizes">
+                                        <span class="size-label">Size:</span>
+                                        <div class="size-btns">
+                                            <button class="sz active" 
+                                                    data-price="13.99"
+                                                    onclick="selectSize(this, 'BBQ Chicken Pizza')">
+                                                S<br><small>$13.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="17.99"
+                                                    onclick="selectSize(this, 'BBQ Chicken Pizza')">
+                                                M<br><small>$17.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="21.99"
+                                                    onclick="selectSize(this, 'BBQ Chicken Pizza')">
+                                                L<br><small>$21.99</small>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-price">
+                                            <span class="curr-price">$13.99</span>
+                                        </div>
+                                        <button class="add-btn" 
+                                                onclick="addToCart('BBQ Chicken Pizza', 13.99)">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item" 
+                                 data-type="nonveg" 
+                                 data-tags="bestseller"
+                                 data-name="Pepperoni Feast">
+                                <div class="item-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1548369937-47519962c11a?w=400" 
+                                         alt="Pepperoni Feast">
+                                    <div class="item-badges">
+                                        <span class="ibadge hot">🌶️ Spicy</span>
+                                        <span class="veg-dot nonveg"></span>
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>Pepperoni Feast</h3>
+                                    <p>Double loaded pepperoni slices, rich tomato sauce & mozzarella</p>
+                                    <div class="item-rating">
+                                        <span>⭐ 4.8</span>
+                                        <span class="review-count">(389 reviews)</span>
+                                    </div>
+                                    <div class="item-sizes">
+                                        <span class="size-label">Size:</span>
+                                        <div class="size-btns">
+                                            <button class="sz active" 
+                                                    data-price="14.99"
+                                                    onclick="selectSize(this, 'Pepperoni Feast')">
+                                                S<br><small>$14.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="18.99"
+                                                    onclick="selectSize(this, 'Pepperoni Feast')">
+                                                M<br><small>$18.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="22.99"
+                                                    onclick="selectSize(this, 'Pepperoni Feast')">
+                                                L<br><small>$22.99</small>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-price">
+                                            <span class="curr-price">$14.99</span>
+                                        </div>
+                                        <button class="add-btn" 
+                                                onclick="addToCart('Pepperoni Feast', 14.99)">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item" 
+                                 data-type="nonveg" 
+                                 data-tags="new offer"
+                                 data-name="Chicken Tikka Pizza">
+                                <div class="item-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400" 
+                                         alt="Chicken Tikka">
+                                    <div class="item-badges">
+                                        <span class="ibadge new">🆕 New</span>
+                                        <span class="veg-dot nonveg"></span>
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>Chicken Tikka Pizza</h3>
+                                    <p>Indian spiced chicken tikka, mint chutney base & fresh coriander</p>
+                                    <div class="item-rating">
+                                        <span>⭐ 4.7</span>
+                                        <span class="review-count">(201 reviews)</span>
+                                    </div>
+                                    <div class="item-sizes">
+                                        <span class="size-label">Size:</span>
+                                        <div class="size-btns">
+                                            <button class="sz active" 
+                                                    data-price="13.99"
+                                                    onclick="selectSize(this, 'Chicken Tikka Pizza')">
+                                                S<br><small>$13.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="17.99"
+                                                    onclick="selectSize(this, 'Chicken Tikka Pizza')">
+                                                M<br><small>$17.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="21.99"
+                                                    onclick="selectSize(this, 'Chicken Tikka Pizza')">
+                                                L<br><small>$21.99</small>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-price">
+                                            <span class="curr-price">$13.99</span>
+                                        </div>
+                                        <button class="add-btn" 
+                                                onclick="addToCart('Chicken Tikka Pizza', 13.99)">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item" 
+                                 data-type="nonveg" 
+                                 data-tags="bestseller"
+                                 data-name="Martinoz Special">
+                                <div class="item-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400" 
+                                         alt="Martinoz Special">
+                                    <div class="item-badges">
+                                        <span class="ibadge special">👑 Signature</span>
+                                        <span class="veg-dot nonveg"></span>
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>Martinoz Special</h3>
+                                    <p>Our signature pizza with 5 toppings, secret sauce & extra cheese</p>
+                                    <div class="item-rating">
+                                        <span>⭐ 5.0</span>
+                                        <span class="review-count">(521 reviews)</span>
+                                    </div>
+                                    <div class="item-sizes">
+                                        <span class="size-label">Size:</span>
+                                        <div class="size-btns">
+                                            <button class="sz active" 
+                                                    data-price="15.99"
+                                                    onclick="selectSize(this, 'Martinoz Special')">
+                                                S<br><small>$15.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="19.99"
+                                                    onclick="selectSize(this, 'Martinoz Special')">
+                                                M<br><small>$19.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="24.99"
+                                                    onclick="selectSize(this, 'Martinoz Special')">
+                                                L<br><small>$24.99</small>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-price">
+                                            <span class="old-price">$19.99</span>
+                                            <span class="curr-price">$15.99</span>
+                                        </div>
+                                        <button class="add-btn" 
+                                                onclick="addToCart('Martinoz Special', 15.99)">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ===== CHEESE BURST ===== -->
+                    <div class="menu-category" id="cheese-burst">
+                        <div class="category-header">
+                            <div class="category-title">
+                                <span class="cat-emoji">🧀</span>
+                                <div>
+                                    <h2>Cheese Burst</h2>
+                                    <p>Extra cheese stuffed crust - ultimate cheese lovers!</p>
+                                </div>
+                            </div>
+                            <span class="category-badge cheese">⭐ Premium</span>
+                        </div>
+
+                        <div class="items-grid">
+
+                            <div class="menu-item" 
+                                 data-type="veg" 
+                                 data-tags="bestseller"
+                                 data-name="Classic Cheese Burst">
+                                <div class="item-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=400" 
+                                         alt="Classic Cheese Burst">
+                                    <div class="item-badges">
+                                        <span class="ibadge bestseller">⭐ Best Seller</span>
+                                        <span class="veg-dot veg"></span>
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>Classic Cheese Burst</h3>
+                                    <p>Triple cheese stuffed crust with mozzarella, cheddar & parmesan filling</p>
+                                    <div class="item-rating">
+                                        <span>⭐ 4.9</span>
+                                        <span class="review-count">(398 reviews)</span>
+                                    </div>
+                                    <div class="item-sizes">
+                                        <span class="size-label">Size:</span>
+                                        <div class="size-btns">
+                                            <button class="sz active" 
+                                                    data-price="16.99"
+                                                    onclick="selectSize(this, 'Classic Cheese Burst')">
+                                                M<br><small>$16.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="21.99"
+                                                    onclick="selectSize(this, 'Classic Cheese Burst')">
+                                                L<br><small>$21.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="27.99"
+                                                    onclick="selectSize(this, 'Classic Cheese Burst')">
+                                                XL<br><small>$27.99</small>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-price">
+                                            <span class="curr-price">$16.99</span>
+                                        </div>
+                                        <button class="add-btn" 
+                                                onclick="addToCart('Classic Cheese Burst', 16.99)">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item" 
+                                 data-type="nonveg" 
+                                 data-tags="new"
+                                 data-name="Chicken Cheese Burst">
+                                <div class="item-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400" 
+                                         alt="Chicken Cheese Burst">
+                                    <div class="item-badges">
+                                        <span class="ibadge new">🆕 New</span>
+                                        <span class="veg-dot nonveg"></span>
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>Chicken Cheese Burst</h3>
+                                    <p>Grilled chicken, cheese burst crust with jalapeños & smoky sauce</p>
+                                    <div class="item-rating">
+                                        <span>⭐ 4.8</span>
+                                        <span class="review-count">(167 reviews)</span>
+                                    </div>
+                                    <div class="item-sizes">
+                                        <span class="size-label">Size:</span>
+                                        <div class="size-btns">
+                                            <button class="sz active" 
+                                                    data-price="18.99"
+                                                    onclick="selectSize(this, 'Chicken Cheese Burst')">
+                                                M<br><small>$18.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="23.99"
+                                                    onclick="selectSize(this, 'Chicken Cheese Burst')">
+                                                L<br><small>$23.99</small>
+                                            </button>
+                                            <button class="sz" 
+                                                    data-price="29.99"
+                                                    onclick="selectSize(this, 'Chicken Cheese Burst')">
+                                                XL<br><small>$29.99</small>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-price">
+                                            <span class="curr-price">$18.99</span>
+                                        </div>
+                                        <button class="add-btn" 
+                                                onclick="addToCart('Chicken Cheese Burst', 18.99)">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ===== COMBO DEALS ===== -->
+                    <div class="menu-category" id="combo">
+                        <div class="category-header">
+                            <div class="category-title">
+                                <span class="cat-emoji">🎁</span>
+                                <div>
+                                    <h2>Combo Deals</h2>
+                                    <p>Best value combos for family & friends!</p>
+                                </div>
+                            </div>
+                            <span class="category-badge combo">💰 Save More</span>
+                        </div>
+
+                        <div class="items-grid combo-grid">
+
+                            <div class="menu-item combo-item" 
+                                 data-type="veg" 
+                                 data-tags="offer bestseller"
+                                 data-name="Family Feast Combo">
+                                <div class="item-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400" 
+                                         alt="Family Feast">
+                                    <div class="item-badges">
+                                        <span class="ibadge offer">🔥 30% OFF</span>
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>👨‍👩‍👧‍👦 Family Feast Combo</h3>
+                                    <div class="combo-includes">
+                                        <span>✅ 2 Large Pizzas</span>
+                                        <span>✅ 4 Cold Drinks</span>
+                                        <span>✅ Garlic Bread</span>
+                                        <span>✅ 1 Dessert</span>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-price">
+                                            <span class="old-price">$59.99</span>
+                                            <span class="curr-price">$39.99</span>
+                                        </div>
+                                        <button class="add-btn" 
+                                                onclick="addToCart('Family Feast Combo', 39.99)">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item combo-item" 
+                                 data-type="veg" 
+                                 data-tags="offer"
+                                 data-name="Couple Combo">
+                                <div class="item-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400" 
+                                         alt="Couple Combo">
+                                    <div class="item-badges">
+                                        <span class="ibadge offer">🔥 25% OFF</span>
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>💑 Couple Combo</h3>
+                                    <div class="combo-includes">
+                                        <span>✅ 1 Medium Pizza</span>
+                                        <span>✅ 2 Cold Drinks</span>
+                                        <span>✅ Garlic Bread</span>
+                                        <span>✅ 1 Dessert</span>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-price">
+                                            <span class="old-price">$29.99</span>
+                                            <span class="curr-price">$21.99</span>
+                                        </div>
+                                        <button class="add-btn" 
+                                                onclick="addToCart('Couple Combo', 21.99)">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item combo-item" 
+                                 data-type="veg" 
+                                 data-tags="offer new"
+                                 data-name="Party Pack">
+                                <div class="item-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=400" 
+                                         alt="Party Pack">
+                                    <div class="item-badges">
+                                        <span class="ibadge new">🎉 Party</span>
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>🎉 Party Pack</h3>
+                                    <div class="combo-includes">
+                                        <span>✅ 4 Large Pizzas</span>
+                                        <span>✅ 8 Cold Drinks</span>
+                                        <span>✅ 2 Garlic Breads</span>
+                                        <span>✅ 2 Desserts</span>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-price">
+                                            <span class="old-price">$109.99</span>
+                                            <span class="curr-price">$74.99</span>
+                                        </div>
+                                        <button class="add-btn" 
+                                                onclick="addToCart('Party Pack', 74.99)">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ===== SIDES & STARTERS ===== -->
+                    <div class="menu-category" id="sides">
+                        <div class="category-header">
+                            <div class="category-title">
+                                <span class="cat-emoji">🍟</span>
+                                <div>
+                                    <h2>Sides & Starters</h2>
+                                    <p>Perfect companions for your pizza!</p>
+                                </div>
+                            </div>
+                            <span class="category-badge sides">🍟 Snacks</span>
+                        </div>
+
+                        <div class="items-grid">
+
+                            <div class="menu-item" 
+                                 data-type="veg" 
+                                 data-tags="bestseller"
+                                 data-name="Garlic Bread">
+                                <div class="item-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?w=400" 
+                                         alt="Garlic Bread">
+                                    <div class="item-badges">
+                                        <span class="ibadge bestseller">⭐ Must Try</span>
+                                        <span class="veg-dot veg"></span>
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>Cheesy Garlic Bread</h3>
+                                    <p>Toasted bread with garlic butter, herbs & melted mozzarella cheese</p>
+                                    <div class="item-rating">
+                                        <span>⭐ 4.8</span>
+                                        <span class="review-count">(342 reviews)</span>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-price">
+                                            <span class="curr-price">$5.99</span>
+                                        </div>
+                                        <button class="add-btn" 
+                                                onclick="addToCart('Cheesy Garlic Bread', 5.99)">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item" 
+                                 data-type="nonveg" 
+                                 data-tags="bestseller"
+                                 data-name="Chicken Wings">
+                                <div class="item-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=400" 
+                                         alt="Chicken Wings">
+                                    <div class="item-badges">
+                                        <span class="ibadge hot">🌶️ Spicy</span>
+                                        <span class="veg-dot nonveg"></span>
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>Spicy Chicken Wings</h3>
+                                    <p>Crispy fried chicken wings with our signature spicy sauce & dip</p>
+                                    <div class="item-rating">
+                                        <span>⭐ 4.7</span>
+                                        <span class="review-count">(198 reviews)</span>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-price">
+                                            <span class="curr-price">$8.99</span>
+                                        </div>
+                                        <button class="add-btn" 
+                                                onclick="addToCart('Spicy Chicken Wings', 8.99)">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item" 
+                                 data-type="veg" 
+                                 data-tags=""
+                                 data-name="Loaded Fries">
+                                <div class="item-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400" 
+                                         alt="Loaded Fries">
+                                    <div class="item-badges">
+                                        <span class="ibadge new">🆕 New</span>
+                                        <span class="veg-dot veg"></span>
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>Loaded Cheese Fries</h3>
+                                    <p>Crispy fries topped with melted cheese sauce, jalapeños & herbs</p>
+                                    <div class="item-rating">
+                                        <span>⭐ 4.5</span>
+                                        <span class="review-count">(145 reviews)</span>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-price">
+                                            <span class="curr-price">$6.99</span>
+                                        </div>
+                                        <button class="add-btn" 
+                                                onclick="addToCart('Loaded Cheese Fries', 6.99)">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ===== DRINKS ===== -->
+                    <div class="menu-category" id="drinks">
+                        <div class="category-header">
+                            <div class="category-title">
+                                <span class="cat-emoji">🥤</span>
+                                <div>
+                                    <h2>Drinks</h2>
+                                    <p>Refresh yourself with our cool beverages!</p>
+                                </div>
+                            </div>
+                            <span class="category-badge drinks">🥤 Cold</span>
+                        </div>
+
+                        <div class="items-grid drinks-grid">
+
+                            <div class="menu-item drink-item" 
+                                 data-type="veg" 
+                                 data-tags=""
+                                 data-name="Coca Cola">
+                                <div class="drink-icon">🥤</div>
+                                <div class="item-details">
+                                    <h3>Coca Cola</h3>
+                                    <p>Regular / Diet / Zero</p>
+                                    <div class="item-footer">
+                                        <span class="curr-price">$2.49</span>
+                                        <button class="add-btn small" 
+                                                onclick="addToCart('Coca Cola', 2.49)">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item drink-item" 
+                                 data-type="veg" 
+                                 data-tags=""
+                                 data-name="Pepsi">
+                                <div class="drink-icon">🥤</div>
+                                <div class="item-details">
+                                    <h3>Pepsi</h3>
+                                    <p>Regular / Diet</p>
+                                    <div class="item-footer">
+                                        <span class="curr-price">$2.49</span>
+                                        <button class="add-btn small" 
+                                                onclick="addToCart('Pepsi', 2.49)">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item drink-item" 
+                                 data-type="veg" 
+                                 data-tags=""
+                                 data-name="Fresh Lime Soda">
+                                <div class="drink-icon">🍋</div>
+                                <div class="item-details">
+                                    <h3>Fresh Lime Soda</h3>
+                                    <p>Sweet / Salted</p>
+                                    <div class="item-footer">
+                                        <span class="curr-price">$3.49</span>
+                                        <button class="add-btn small" 
+                                                onclick="addToCart('Fresh Lime Soda', 3.49)">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item drink-item" 
+                                 data-type="veg" 
+                                 data-tags=""
+                                 data-name="Mango Lassi">
+                                <div class="drink-icon">🥭</div>
+                                <div class="item-details">
+                                    <h3>Mango Lassi</h3>
+                                    <p>Fresh mango yogurt drink</p>
+                                    <div class="item-footer">
+                                        <span class="curr-price">$4.49</span>
+                                        <button class="add-btn small" 
+                                                onclick="addToCart('Mango Lassi', 4.49)">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item drink-item" 
+                                 data-type="veg" 
+                                 data-tags=""
+                                 data-name="Water Bottle">
+                                <div class="drink-icon">💧</div>
+                                <div class="item-details">
+                                    <h3>Mineral Water</h3>
+                                    <p>500ml bottle</p>
+                                    <div class="item-footer">
+                                        <span class="curr-price">$1.49</span>
+                                        <button class="add-btn small" 
+                                                onclick="addToCart('Mineral Water', 1.49)">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item drink-item" 
+                                 data-type="veg" 
+                                 data-tags="new"
+                                 data-name="Chocolate Shake">
+                                <div class="drink-icon">🍫</div>
+                                <div class="item-details">
+                                    <h3>Chocolate Shake</h3>
+                                    <p>Thick creamy chocolate milkshake</p>
+                                    <div class="item-footer">
+                                        <span class="curr-price">$5.49</span>
+                                        <button class="add-btn small" 
+                                                onclick="addToCart('Chocolate Shake', 5.49)">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ===== DESSERTS ===== -->
+                    <div class="menu-category" id="desserts">
+                        <div class="category-header">
+                            <div class="category-title">
+                                <span class="cat-emoji">🍰</span>
+                                <div>
+                                    <h2>Desserts</h2>
+                                    <p>End your meal on a sweet note!</p>
+                                </div>
+                            </div>
+                            <span class="category-badge dessert">🍰 Sweet</span>
+                        </div>
+
+                        <div class="items-grid">
+
+                            <div class="menu-item" 
+                                 data-type="veg" 
+                                 data-tags="bestseller"
+                                 data-name="Choco Lava Cake">
+                                <div class="item-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400" 
+                                         alt="Choco Lava">
+                                    <div class="item-badges">
+                                        <span class="ibadge bestseller">⭐ Must Try</span>
+                                        <span class="veg-dot veg"></span>
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>Choco Lava Cake</h3>
+                                    <p>Warm chocolate cake with gooey molten center & vanilla ice cream</p>
+                                    <div class="item-rating">
+                                        <span>⭐ 4.9</span>
+                                        <span class="review-count">(289 reviews)</span>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-price">
+                                            <span class="curr-price">$6.99</span>
+                                        </div>
+                                        <button class="add-btn" 
+                                                onclick="addToCart('Choco Lava Cake', 6.99)">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item" 
+                                 data-type="veg" 
+                                 data-tags="new"
+                                 data-name="Tiramisu">
+                                <div class="item-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400" 
+                                         alt="Tiramisu">
+                                    <div class="item-badges">
+                                        <span class="ibadge new">🆕 New</span>
+                                        <span class="veg-dot veg"></span>
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>Classic Tiramisu</h3>
+                                    <p>Italian classic with mascarpone, espresso & cocoa dusting</p>
+                                    <div class="item-rating">
+                                        <span>⭐ 4.7</span>
+                                        <span class="review-count">(134 reviews)</span>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-price">
+                                            <span class="curr-price">$7.99</span>
+                                        </div>
+                                        <button class="add-btn" 
+                                                onclick="addToCart('Classic Tiramisu', 7.99)">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item" 
+                                 data-type="veg" 
+                                 data-tags="offer"
+                                 data-name="Ice Cream Scoop">
+                                <div class="item-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1567206563114-c179706e8442?w=400" 
+                                         alt="Ice Cream">
+                                    <div class="item-badges">
+                                        <span class="ibadge offer">🔥 Offer</span>
+                                        <span class="veg-dot veg"></span>
+                                    </div>
+                                </div>
+                                <div class="item-details">
+                                    <h3>Ice Cream Scoop</h3>
+                                    <p>Choose from Vanilla, Chocolate, Strawberry or Mixed flavor</p>
+                                    <div class="item-rating">
+                                        <span>⭐ 4.5</span>
+                                        <span class="review-count">(201 reviews)</span>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-price">
+                                            <span class="old-price">$5.99</span>
+                                            <span class="curr-price">$3.99</span>
+                                        </div>
+                                        <button class="add-btn" 
+                                                onclick="addToCart('Ice Cream Scoop', 3.99)">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- NO RESULTS MESSAGE -->
+                    <div class="no-results" id="noResults" style="display:none">
+                        <span>🍕</span>
+                        <h3>No items found!</h3>
+                        <p>Try searching something else</p>
+                        <button onclick="clearSearch()" class="btn-primary">
+                            Show All Menu
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CART SIDEBAR ========== -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>🛒 Your Order</h3>
+            <button onclick="toggleCart()" class="cart-close">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <span>🍕</span>
+                <p>Your cart is empty</p>
+                <small>Add some pizzas!</small>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <input type="text" 
+                   placeholder="Coupon Code" 
+                   class="coupon-input" 
+                   id="couponInput">
+            <button onclick="applyCoupon()" class="apply-coupon">
+                Apply Coupon
+            </button>
+            <button class="checkout-btn" onclick="checkout()">
+                Proceed to Checkout 🚀
+            </button>
+        </div>
+    </div>
+
+    <!-- ========== FLOAT BUTTONS ========== -->
+    <div class="cart-float" onclick="toggleCart()">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cartCount">0</span>
+    </div>
+
+    <a href="https://wa.me/1234567890?text=Hi! I want to order from Martinoz Pizza" 
+       class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ========== MOBILE CATEGORY BAR ========== -->
+    <div class="mobile-cat-bar" id="mobileCatBar">
+        <button onclick="scrollToCategory('veg-pizza', this)">🌿 Veg</button>
+        <button onclick="scrollToCategory('nonveg-pizza', this)">🍗 Non-Veg</button>
+        <button onclick="scrollToCategory('cheese-burst', this)">🧀 Cheese</button>
+        <button onclick="scrollToCategory('combo', this)">🎁 Combo</button>
+        <button onclick="scrollToCategory('sides', this)">🍟 Sides</button>
+        <button onclick="scrollToCategory('drinks', this)">🥤 Drinks</button>
+        <button onclick="scrollToCategory('desserts', this)">🍰 Desserts</button>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>
