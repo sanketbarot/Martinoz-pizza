@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// ========== MENU FILTER ==========
+// ========== MENU FILTER - UPDATED ==========
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', () => {
