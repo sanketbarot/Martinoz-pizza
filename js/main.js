@@ -89,7 +89,7 @@ function checkout() {
         return;
     }
     const total = cart.reduce((s, i) => s + (i.price * i.qty), 0);
-    alert(`✅ Order Placed!\n\nTotal: $${total.toFixed(2)}\n\nThank you for ordering from Martinoz Pizza! 🍕🌿`);
+    alert(`✅ Order Placed!\n\nTotal: $${total.toFixed(2)}\n\nThank you! 🍕🌿`);
     cart = [];
     updateCart();
     toggleCart();
@@ -226,22 +226,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const targets = document.querySelectorAll(
         '.pizza-card, .why-card, .review-card, ' +
         '.branch-card, .offer-card, .fstat-card, ' +
-        '.location-card'
+        '.location-card, .store-slide-card'
     );
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity    = '1';
-                entry.target.style.transform  = 'translateY(0)';
+                entry.target.style.opacity   = '1';
+                entry.target.style.transform = 'translateY(0)';
                 observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.08 });
 
     targets.forEach((el, i) => {
-        el.style.opacity    = '0';
-        el.style.transform  = 'translateY(30px)';
+        el.style.opacity   = '0';
+        el.style.transform = 'translateY(30px)';
         el.style.transition = `opacity 0.5s ease ${i * 0.05}s,
                                transform 0.5s ease ${i * 0.05}s`;
         observer.observe(el);
@@ -257,3 +257,205 @@ animStyle.textContent = `
     }
 `;
 document.head.appendChild(animStyle);
+
+// ============================================
+// UPCOMING STORES SLIDER
+// ============================================
+let upcomingIndex    = 0;
+let upcomingInterval = null;
+let upcomingTotalDots = 0;
+
+function getVisibleCards() {
+    if (window.innerWidth <= 576) return 1;
+    if (window.innerWidth <= 992) return 2;
+    return 4;
+}
+
+function initUpcomingSlider() {
+    const track    = document.getElementById('upcomingSliderTrack');
+    const sliderEl = document.querySelector('.upcoming-slider-window');
+    if (!track || !sliderEl) return;
+
+    const cards   = track.querySelectorAll('.store-slide-card');
+    const visible = getVisibleCards();
+    const gap     = 20;
+    const windowW = sliderEl.offsetWidth;
+    const cardW   = (windowW - (gap * (visible - 1))) / visible;
+
+    cards.forEach(card => {
+        card.style.flex     = `0 0 ${cardW}px`;
+        card.style.minWidth = `${cardW}px`;
+        card.style.maxWidth = `${cardW}px`;
+    });
+
+    const maxIndex = Math.max(cards.length - visible, 0);
+    if (upcomingIndex > maxIndex) upcomingIndex = 0;
+
+    const moveX = upcomingIndex * (cardW + gap);
+    track.style.transform = `translateX(-${moveX}px)`;
+
+    createUpcomingDots(maxIndex + 1);
+    updateUpcomingDots();
+}
+
+function moveUpcomingSlide(dir) {
+    const track = document.getElementById('upcomingSliderTrack');
+    if (!track) return;
+
+    const cards   = track.querySelectorAll('.store-slide-card');
+    const visible = getVisibleCards();
+    const max     = Math.max(cards.length - visible, 0);
+
+    upcomingIndex += dir;
+    if (upcomingIndex > max) upcomingIndex = 0;
+    if (upcomingIndex < 0)   upcomingIndex = max;
+
+    initUpcomingSlider();
+}
+
+function goToUpcomingSlide(index) {
+    upcomingIndex = index;
+    initUpcomingSlider();
+}
+
+function createUpcomingDots(total) {
+    const dotsEl = document.getElementById('upcomingDots');
+    if (!dotsEl) return;
+
+    // Recreate only if count changed
+    if (upcomingTotalDots === total &&
+        dotsEl.querySelectorAll('.upcoming-dot').length === total) {
+        return;
+    }
+
+    upcomingTotalDots = total;
+    dotsEl.innerHTML  = '';
+
+    for (let i = 0; i < total; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'upcoming-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+        dot.addEventListener('click', () => goToUpcomingSlide(i));
+        dotsEl.appendChild(dot);
+    }
+}
+
+function updateUpcomingDots() {
+    const dotsEl = document.getElementById('upcomingDots');
+    if (!dotsEl) return;
+    dotsEl.querySelectorAll('.upcoming-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === upcomingIndex);
+    });
+}
+
+function startUpcomingAuto() {
+    clearInterval(upcomingInterval);
+    upcomingInterval = setInterval(() => moveUpcomingSlide(1), 3000);
+}
+
+function stopUpcomingAuto() {
+    clearInterval(upcomingInterval);
+}
+
+function initUpcomingSwipe() {
+    const slider = document.querySelector('.upcoming-slider-window');
+    if (!slider) return;
+
+    let startX     = 0;
+    let isDragging = false;
+
+    slider.addEventListener('touchstart', (e) => {
+        startX     = e.touches[0].clientX;
+        isDragging = true;
+        stopUpcomingAuto();
+    }, { passive: true });
+
+    slider.addEventListener('touchend', (e) => {
+        if (!isDragging) return;
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) {
+            diff > 0 ? moveUpcomingSlide(1) : moveUpcomingSlide(-1);
+        }
+        isDragging = false;
+        startUpcomingAuto();
+    }, { passive: true });
+}
+
+// ============================================
+// NOTIFY POPUP - ✅ SINGLE VERSION ONLY
+// ============================================
+function notifyMe(city) {
+    const popup    = document.getElementById('notifyPopup');
+    const backdrop = document.getElementById('notifyBackdrop');
+    const cityText = document.getElementById('notifyCity');
+    if (!popup || !backdrop) return;
+
+    if (cityText) {
+        cityText.textContent =
+            `We'll notify you when Martinoz Pizza opens in ${city}!`;
+    }
+
+    popup.style.display    = 'block';
+    backdrop.style.display = 'block';
+    setTimeout(() => popup.classList.add('active'), 10);
+
+    document.body.style.overflow = 'hidden';
+    stopUpcomingAuto();
+}
+
+function closeNotifyPopup() {
+    const popup    = document.getElementById('notifyPopup');
+    const backdrop = document.getElementById('notifyBackdrop');
+    if (!popup || !backdrop) return;
+
+    popup.classList.remove('active');
+    setTimeout(() => {
+        popup.style.display    = 'none';
+        backdrop.style.display = 'none';
+        document.body.style.overflow = '';
+    }, 350);
+
+    startUpcomingAuto();
+}
+
+function submitNotify(e) {
+    e.preventDefault();
+    closeNotifyPopup();
+    setTimeout(() => {
+        showToast('🔔 You will be notified when we open!');
+    }, 400);
+}
+
+// ============================================
+// GLOBAL ESC KEY - ✅ SINGLE VERSION ONLY
+// ============================================
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeNotifyPopup();
+});
+
+// ============================================
+// DOMContentLoaded - INIT ALL
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Upcoming Slider Init
+    if (document.getElementById('upcomingSliderTrack')) {
+        initUpcomingSlider();
+        startUpcomingAuto();
+        initUpcomingSwipe();
+
+        const wrap = document.getElementById('upcomingSliderWrap');
+        if (wrap) {
+            wrap.addEventListener('mouseenter', stopUpcomingAuto);
+            wrap.addEventListener('mouseleave', startUpcomingAuto);
+        }
+    }
+
+    // Resize
+    window.addEventListener('resize', () => {
+        if (document.getElementById('upcomingSliderTrack')) {
+            upcomingTotalDots = 0; // Force dot recreate
+            initUpcomingSlider();
+        }
+    });
+});
